@@ -3,7 +3,7 @@
     <header class="page-header">
       <div class="left">
         <a href="https://github.com/xuliangzhan/vxe-table">
-          <span class="title">🐬vxe-table</span>
+          <span class="title">🐬jtx-table</span>
         </a>
         <a href='https://gitee.com/xuliangzhan_admin/vxe-table/stargazers'>
           <img src='https://gitee.com/xuliangzhan_admin/vxe-table/badge/star.svg?theme=dark' alt='star'>
