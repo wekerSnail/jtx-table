@@ -1135,7 +1135,7 @@ const Methods = {
             let isRightFixed = fixedType === 'right'
             let fixedColumn = columnStore[`${fixedType}List`]
             wrapperElem.style.top = `${footerHeight + headerHeight - 1}px`
-            fixedWrapperElem.style.height = `${(customHeight > 0 ? customHeight - headerHeight - footerHeight : tableHeight) + headerHeight + footerHeight - scrollbarHeight * (showFooter ? 2 : 1)}px`
+            fixedWrapperElem.style.height = `${(customHeight > 0 ? customHeight - headerHeight - footerHeight : tableHeight) + headerHeight + footerHeight - scrollbarWidth}px`
             fixedWrapperElem.style.width = `${fixedColumn.reduce((previous, column) => previous + column.renderWidth, isRightFixed ? scrollbarWidth : 0) - (border === true ? 1 : 0)}px`
           }
 

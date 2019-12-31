@@ -180,4 +180,4 @@ export default {
 
 ## License
 
-MIT License, 2019-present, Xu Liangzhan
+MIT License, 2019-present, weker
