@@ -1,4 +1,4 @@
-# vxe-table
+# jtx-table(基于vxe-table)
 
 [![gitee star](https://gitee.com/xuliangzhan_admin/vxe-table/badge/star.svg?theme=dark)](https://gitee.com/xuliangzhan_admin/vxe-table/stargazers)
 [![npm version](https://img.shields.io/npm/v/vxe-table.svg?style=flat-square)](https://www.npmjs.org/package/vxe-table)
@@ -177,13 +177,6 @@ export default {
 }
 </script>
 ```
-
-## Donation
-
-If the project is very helpful to you, you can buy the author a cup of coffee.  
-如果这个项目对您有帮助，请作者喝杯咖啡吧。☕
-
-![pay](https://github.com/xuliangzhan/vxe-table/blob/master/public/donation/pay.jpg?raw=true)
 
 ## License
 
