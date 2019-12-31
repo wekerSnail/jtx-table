@@ -1,0 +1,552 @@
+/**Variable**/
+@import './helpers/mixin.scss';
+
+[class*="vxe-icon--"] {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  direction: ltr;
+  font-family: $vxe-font-family;
+  &.rotate45 {
+    transform: rotate(45deg);
+  }
+  &.rotate90 {
+    transform: rotate(90deg);
+  }
+}
+
+%DefaultWidthHeight {
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+}
+
+%PseudoClass {
+  content: "";
+  position: absolute;
+}
+
+.vxe-icon--zoomin {
+  @extend %DefaultWidthHeight;
+  border-width: 0.1em;
+  border-style: solid;
+  border-color: inherit;
+  background-color: #fff;
+  &:before,
+  &:after {
+    @extend %PseudoClass;
+    background-color: inherit;
+  }
+  &:before {
+    left: -0.1em;
+    top: 0.2em;
+    width: 1.1em;
+    height: 0.4em;
+  }
+  &:after {
+    top: -0.1em;
+    left: 0.2em;
+    width: 0.4em;
+    height: 1.1em;
+  }
+}
+
+.vxe-icon--zoomout {
+  @extend %DefaultWidthHeight;
+  position: relative;
+  &:before {
+    @extend %PseudoClass;
+    right: 0;
+    top: 0;
+    width: 0.7em;
+    height: 0.7em;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: inherit;
+  }
+  &:after {
+    @extend %PseudoClass;
+    left: 0.1em;
+    bottom: 0.1em;
+    width: 0.7em;
+    height: 0.7em;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: inherit;
+    background-color: #fff;
+  }
+}
+
+.vxe-icon--menu {
+  @extend %DefaultWidthHeight;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 0.24em;
+    height: 0.24em;
+    box-shadow: 0 -0.38em 0, -0.38em -0.38em 0, 0.38em -0.38em 0, 0 0 0 1em inset, -0.38em 0 0, 0.38em 0 0, 0 0.38em 0, -0.38em 0.38em 0, 0.38em 0.38em 0;
+    margin: 0.24em;
+  }
+}
+
+.vxe-icon--caret-top {
+  @extend %DefaultWidthHeight;
+  &:before {
+    @extend %PseudoClass;
+    left: 0;
+    bottom: 0.25em;
+    border-width: 0.5em;
+    border-style: solid;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: inherit;
+    border-left-color: transparent;
+  }
+}
+
+.vxe-icon--caret-bottom {
+  @extend .vxe-icon--caret-top;
+  &:before {
+    left: 0;
+    bottom: -0.25em;
+    transform: rotate(180deg);
+  }
+}
+
+.vxe-icon--caret-left {
+  @extend .vxe-icon--caret-top;
+  &:before {
+    left: -0.25em;
+    bottom: 0;
+    transform: rotate(-90deg);
+  }
+}
+
+.vxe-icon--caret-right {
+  @extend .vxe-icon--caret-top;
+  &:before {
+    left: 0.25em;
+    bottom: 0;
+    transform: rotate(90deg);
+  }
+}
+
+%BeforeArrowTop {
+  &:before {
+    @extend %PseudoClass;
+    top: 0.32em;
+    left: 0.12em;
+    width: 0.6em;
+    height: 0.6em;
+    border-width: 0.1em;
+    border-style: solid;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+.vxe-icon--arrow-top {
+  @extend %DefaultWidthHeight;
+  &:before {
+    @extend %PseudoClass;
+    top: 0.4em;
+    left: 0.14em;
+    width: 0.7em;
+    height: 0.7em;
+    border-width: 0.15em;
+    border-style: solid;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(-45deg);
+  }
+}
+
+.vxe-icon--arrow-bottom {
+  @extend .vxe-icon--arrow-top;
+  &:before {
+    top: 0;
+    left: 0.14em;
+    transform: rotate(135deg);
+  }
+}
+
+.vxe-icon--arrow-left {
+  @extend .vxe-icon--arrow-top;
+  &:before {
+    top: 0.14em;
+    left: 0.4em;
+    transform: rotate(-135deg);
+  }
+}
+
+.vxe-icon--arrow-right {
+  @extend .vxe-icon--arrow-top;
+  &:before {
+    top: 0.14em;
+    left: 0;
+    transform: rotate(45deg);
+  }
+}
+
+.vxe-icon--d-arrow-left {
+  @extend %DefaultWidthHeight;
+  &:before {
+    left: 0.20em;
+  }
+  &:after {
+    left: 0.58em;
+  }
+  &:before,
+  &:after {
+    @extend %PseudoClass;
+    top: 0.14em;
+    width: 0.7em;
+    height: 0.7em;
+    border-width: 0.15em;
+    border-style: solid;
+    border-top-color: inherit;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: inherit;
+    transform: rotate(-45deg);
+  }
+}
+
+.vxe-icon--d-arrow-right {
+  @extend .vxe-icon--d-arrow-left;
+  &:before,
+  &:after {
+    transform: rotate(135deg);
+  }
+  &:before {
+    left: -0.22em;
+  }
+  &:after {
+    left: 0.16em;
+  }
+}
+
+.vxe-icon--funnel {
+  @extend %DefaultWidthHeight;
+  &:before {
+    @extend %PseudoClass;
+    top: 0.05em;
+    left: 0;
+    border-width: 0.5em;
+    border-style: solid;
+    border-top-color: inherit;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  &:after {
+    @extend %PseudoClass;
+    left: 0.41em;
+    top: 0.4em;
+    width: 0;
+    height: 0.5em;
+    border-width: 0 0.2em 0 0;
+    border-style: solid;
+    border-right-color: inherit;
+  }
+}
+
+.vxe-icon--edit-outline {
+  height: 0.88em;
+  width: 0.88em;
+  margin: 0 0.06em 0.12em 0.06em;
+  border-radius: 0.2em;
+  border-width: 0.1em;
+  border-style: solid;
+  border-color: inherit;
+  &:before {
+    @extend %PseudoClass;
+    top: -0.1em;
+    right: -0.1em;
+    width: 0.4em;
+    height: 0.4em;
+    background-color: #fff;
+  }
+  &:after {
+    @extend %PseudoClass;
+    left: 0.15em;
+    top: 0.12em;
+    width: 0.8em;
+    height: 0;
+    border-radius: 0.2em;
+    border-width: 0 0 0.15em 0;
+    border-style: solid;
+    border-color: inherit;
+    transform: rotate(-45deg);
+  }
+}
+
+.vxe-icon--more {
+  @extend %DefaultWidthHeight;
+  &:before {
+    content: "...";
+    position: absolute;
+    top: 0;
+    left: 0.1em;
+    line-height: 0.5em;
+    font-weight: 700;
+  }
+}
+
+.vxe-icon--plus {
+  @extend %DefaultWidthHeight;
+  &:before {
+    @extend %PseudoClass;
+    content: "+";
+    top: 0.01em;
+    left: -0.08em;
+    font-size: 2em;
+    font-weight: normal;
+  }
+}
+
+.vxe-icon--close {
+  @extend %DefaultWidthHeight;
+  &:before {
+    @extend %PseudoClass;
+    content: "+";
+    top: -0.02em;
+    left: -0.12em;
+    font-size: 2.4em;
+    font-weight: normal;
+    transform: rotate(45deg);
+  }
+}
+
+.vxe-icon--minus {
+  @extend %DefaultWidthHeight;
+  &:before {
+    @extend %PseudoClass;
+    left: 0;
+    top: 0.42em;
+    border-width: 0 0 0.15em 0;
+    border-color: inherit;
+    border-style: solid;
+    height: 0;
+    width: 100%;
+  }
+}
+
+.vxe-icon--refresh {
+  @extend %DefaultWidthHeight;
+  border-width: 0.1em;
+  border-style: solid;
+  border-radius: 50%;
+  border-right-color: transparent !important;
+  border-left-color: transparent !important;
+  &:before {
+    left: 50%;
+    top: 0;
+    transform: translateX(50%) rotate(-45deg);
+  }
+  &:after {
+    right: 50%;
+    bottom: 0;
+    transform: translateX(-50%) rotate(135deg);
+  }
+  &:before,
+  &:after {
+    @extend %PseudoClass;
+    width: 0;
+    height: 0;
+    border-width: 0.25em;
+    border-style: solid;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  &.roll {
+    animation: rollCircle 1s infinite linear;
+  }
+}
+
+@keyframes rollCircle {
+  0% { 
+    transform: rotate(0deg);
+  }
+  100% { 
+    transform: rotate(360deg);
+  }
+}
+ 
+%BeforeSolidRadius {
+  content: "";
+  border-radius: 50%;
+  border-width: 0.5em;
+  border-style: solid;
+  border-color: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.vxe-icon--question {
+  @extend %DefaultWidthHeight;
+  &:before {
+    @extend %BeforeSolidRadius;
+  }
+  &:after {
+    @extend %PseudoClass;
+    content: "?";
+    top: 0.06em;
+    left: 0.28em;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
+.vxe-icon--info {
+  @extend %DefaultWidthHeight;
+  &:before {
+    @extend %BeforeSolidRadius;
+  }
+  &:after {
+    @extend %PseudoClass;
+    content: "!";
+    top: -0.02em;
+    left: 0.46em;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #fff;
+    transform: rotate(180deg);
+  }
+}
+
+.vxe-icon--warning {
+  @extend %DefaultWidthHeight;
+  &:before {
+    @extend %BeforeSolidRadius;
+  }
+  &:after {
+    @extend %PseudoClass;
+    content: "!";
+    top: 0.02em;
+    left: 0.4em;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
+.vxe-icon--success {
+  @extend %DefaultWidthHeight;
+  &:before {
+    @extend %BeforeSolidRadius;
+  }
+  &:after {
+    @extend %PseudoClass;
+    height: 0.55em;
+    width: 0.3em;
+    left: 0.35em;
+    top: 0.15em;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: #fff;
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(45deg);
+  }
+}
+
+.vxe-icon--circle-plus {
+  @extend %DefaultWidthHeight;
+  &:before {
+    @extend %BeforeSolidRadius;
+  }
+  &:after {
+    @extend %PseudoClass;
+    content: "+";
+    top: 0;
+    left: 0.08em;
+    font-size: 1.22em;
+    font-weight: normal;
+    color: #fff;
+  }
+}
+
+.vxe-icon--remove {
+  @extend .vxe-icon--circle-plus;
+  &:after {
+    content: "-";
+    top: 0.38em;
+    left: 0.22em;
+    border-width: 0 0 0.1em 0;
+    border-color: #fff;
+    border-style: solid;
+    height: 0;
+    width: 0.4em;
+  }
+}
+
+.vxe-icon--error {
+  @extend .vxe-icon--circle-plus;
+  &:after {
+    transform: rotate(45deg);
+  }
+}
+
+.vxe-icon--upload,
+.vxe-icon--download {
+  @extend %DefaultWidthHeight;
+  height: 0.9em;
+  border-width: 0;
+  border-style: solid;
+  border-color: inherit;
+  &:before {
+    @extend %PseudoClass;
+    left: 0.47em;
+    height: 0.6em;
+    border-width: 0;
+    border-style: solid;
+    border-color: inherit;
+    border-right-width: 0.1em;
+  }
+  &:after {
+    @extend %PseudoClass;
+    left: 0.23em;
+    bottom: 0.26em;
+    width: 0.6em;
+    height: 0.6em;
+    border-width: 0.1em;
+    border-style: solid;
+    transform: rotate(135deg);
+  }
+}
+
+.vxe-icon--upload {
+  border-top-width: 0.1em;
+  &:before {
+    top: 0.2em;
+  }
+  &:after {
+    top: 0.2em;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: inherit;
+    border-left-color: inherit;
+  }
+}
+
+.vxe-icon--download {
+  border-bottom-width: 0.1em;
+  &:before {
+    bottom: 0.2em;
+  }
+  &:after {
+    bottom: 0.2em;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
