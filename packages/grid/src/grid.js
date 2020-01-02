@@ -196,7 +196,6 @@ export default {
         column: columns.find(column => column.property === prop),
         property: prop,
         prop: prop,
-        prop: prop,
         order,
         $table
       }

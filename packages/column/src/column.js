@@ -4,14 +4,10 @@ import { UtilTools } from '../../tools'
 const props = {
   // 渲染类型 index,radio,checkbox,expand
   type: String,
-  // 在 v3.0 中废弃 prop
-  prop: String,
-  // 在 v3.0 中废弃 label
-  label: String,
   // 列属性
   prop: String,
   // 列标题
-  title: String,
+  label: String,
   // 列宽度
   width: [Number, String],
   // 列最小宽度，把剩余宽度按比例分配
