@@ -8,15 +8,15 @@
       :loading="loading"
       :data="tableData"
       :tree-config="{children: 'children'}">
-      <vxe-table-column field="name" title="名称" tree-node>
+      <vxe-table-column prop="name" label="名称" tree-node>
         <template v-slot:header="{ row }">
           <div>名称</div>
           <input v-model="filterName" type="type" placeholder="Filter" @keyup="searchEvent">
         </template>
       </vxe-table-column>
-      <vxe-table-column field="size" title="大小" width="140"></vxe-table-column>
-      <vxe-table-column field="type" title="类型" width="140"></vxe-table-column>
-      <vxe-table-column field="date" title="修改日期" width="260"></vxe-table-column>
+      <vxe-table-column prop="size" label="大小" width="140"></vxe-table-column>
+      <vxe-table-column prop="type" label="类型" width="140"></vxe-table-column>
+      <vxe-table-column prop="date" label="修改日期" width="260"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -47,15 +47,15 @@ export default {
           :loading="loading"
           :data="tableData"
           :tree-config="{children: 'children'}">
-          <vxe-table-column field="name" title="名称" tree-node>
+          <vxe-table-column prop="name" label="名称" tree-node>
             <template v-slot:header="{ row }">
               <div>名称</div>
               <input v-model="filterName" type="type" placeholder="Filter" @keyup="searchEvent">
             </template>
           </vxe-table-column>
-          <vxe-table-column field="size" title="大小" width="140"></vxe-table-column>
-          <vxe-table-column field="type" title="类型" width="140"></vxe-table-column>
-          <vxe-table-column field="date" title="修改日期" width="260"></vxe-table-column>
+          <vxe-table-column prop="size" label="大小" width="140"></vxe-table-column>
+          <vxe-table-column prop="type" label="类型" width="140"></vxe-table-column>
+          <vxe-table-column prop="date" label="修改日期" width="260"></vxe-table-column>
         </vxe-table>
         `,
         `

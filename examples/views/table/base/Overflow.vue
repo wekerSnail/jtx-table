@@ -3,7 +3,7 @@
     <p class="tip">
       当内容或表头超过隐藏时显示为省略号，<table-column-api-link prop="show-overflow"/> 和 <table-api-link prop="show-header-overflow"/><br>
       <table-column-api-link prop="ellipsis"/> 当内容超过时显示为省略号<br>
-      <table-column-api-link prop="title"/> 当内容超过时显示为省略号并用原生 title 显示<br>
+      <table-column-api-link prop="label"/> 当内容超过时显示为省略号并用原生 label 显示<br>
       <table-column-api-link prop="tooltip"/> 当内容超过隐藏时显示为省略号并用 tooltip 显示<br>
       还可以通过 <table-api-link prop="enterable"/> 开启鼠标是否可进入到 tooltip 中
     </p>
@@ -12,18 +12,18 @@
       highlight-hover-row
       :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="address" title="超过隐藏时显示为省略号————————————" show-header-overflow show-overflow></vxe-table-column>
-      <vxe-table-column field="date" title="内容超过隐藏时显示为省略号并用原生 title 显示" show-overflow="title">
+      <vxe-table-column prop="address" label="超过隐藏时显示为省略号————————————" show-header-overflow show-overflow></vxe-table-column>
+      <vxe-table-column prop="date" label="内容超过隐藏时显示为省略号并用原生 label 显示" show-overflow="label">
         <template>
           <span>111111111111 111111111111111111 22222222222222222222222222222222222</span>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="age" title="表头超过隐藏时显示为省略号并用原生 title 显示" show-header-overflow="title">
+      <vxe-table-column prop="age" label="表头超过隐藏时显示为省略号并用原生 label 显示" show-header-overflow="label">
         <template v-slot:header>
           <span>33333333333333333333333333 5555555555555555555555555555555555555555555555</span>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -42,20 +42,20 @@
       :data="tableData"
       :tooltip-config="{theme: 'light'}">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="address" title="超过隐藏时显示为省略号————————————" show-overflow></vxe-table-column>
-      <vxe-table-column field="date" title="内容超过隐藏时显示为省略号并用原生 title 显示" show-overflow="title">
+      <vxe-table-column prop="address" label="超过隐藏时显示为省略号————————————" show-overflow></vxe-table-column>
+      <vxe-table-column prop="date" label="内容超过隐藏时显示为省略号并用原生 label 显示" show-overflow="label">
         <template>
           <span>111111111111 111111111111111111 22222222222222222222222222222222222</span>
         </template>
       </vxe-table-column>
-      <vxe-table-column title="基本信息">
-        <vxe-table-column field="age" title="表头超过隐藏时显示为省略号并用原生 title 显示" show-header-overflow="title">
+      <vxe-table-column label="基本信息">
+        <vxe-table-column prop="age" label="表头超过隐藏时显示为省略号并用原生 label 显示" show-header-overflow="label">
           <template v-slot:header>
             <span>33333333333333333333333333 5555555555555555555555555555555555555555555555</span>
           </template>
         </vxe-table-column>
-        <vxe-table-column title="详细信息">
-          <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+        <vxe-table-column label="详细信息">
+          <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
         </vxe-table-column>
       </vxe-table-column>
     </vxe-table>
@@ -82,18 +82,18 @@ export default {
           highlight-hover-row
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="address" title="超过隐藏时显示为省略号————————————" show-header-overflow show-overflow></vxe-table-column>
-          <vxe-table-column field="date" title="内容超过隐藏时显示为省略号并用原生 title 显示" show-overflow="title">
+          <vxe-table-column prop="address" label="超过隐藏时显示为省略号————————————" show-header-overflow show-overflow></vxe-table-column>
+          <vxe-table-column prop="date" label="内容超过隐藏时显示为省略号并用原生 label 显示" show-overflow="label">
             <template>
               <span>111111111111 111111111111111111 22222222222222222222222222222222222</span>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="age" title="表头超过隐藏时显示为省略号并用原生 title 显示" show-header-overflow="title">
+          <vxe-table-column prop="age" label="表头超过隐藏时显示为省略号并用原生 label 显示" show-header-overflow="label">
             <template v-slot:header>
               <span>33333333333333333333333333 5555555555555555555555555555555555555555555555</span>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -116,20 +116,20 @@ export default {
           :data="tableData"
           :tooltip-config="{theme: 'light'}">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="address" title="超过隐藏时显示为省略号————————————" show-overflow></vxe-table-column>
-          <vxe-table-column field="date" title="内容超过隐藏时显示为省略号并用原生 title 显示" show-overflow="title">
+          <vxe-table-column prop="address" label="超过隐藏时显示为省略号————————————" show-overflow></vxe-table-column>
+          <vxe-table-column prop="date" label="内容超过隐藏时显示为省略号并用原生 label 显示" show-overflow="label">
             <template>
               <span>111111111111 111111111111111111 22222222222222222222222222222222222</span>
             </template>
           </vxe-table-column>
-          <vxe-table-column title="基本信息">
-            <vxe-table-column field="age" title="表头超过隐藏时显示为省略号并用原生 title 显示" show-header-overflow="title">
+          <vxe-table-column label="基本信息">
+            <vxe-table-column prop="age" label="表头超过隐藏时显示为省略号并用原生 label 显示" show-header-overflow="label">
               <template v-slot:header>
                 <span>33333333333333333333333333 5555555555555555555555555555555555555555555555</span>
               </template>
             </vxe-table-column>
-            <vxe-table-column title="详细信息">
-              <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+            <vxe-table-column label="详细信息">
+              <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
             </vxe-table-column>
           </vxe-table-column>
         </vxe-table>

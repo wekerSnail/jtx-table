@@ -28,20 +28,20 @@ export default {
       tableColumn: [
         { type: 'seq', width: 50 },
         {
-          title: '基本信息',
+          label: '基本信息',
           children: [
-            { field: 'name', title: 'Name' },
+            { prop: 'name', label: 'Name' },
             {
-              title: '其他信息',
+              label: '其他信息',
               children: [
-                { field: 'rate', title: 'Rate' },
-                { field: 'age', title: 'Age' }
+                { prop: 'rate', label: 'Rate' },
+                { prop: 'age', label: 'Age' }
               ]
             },
-            { field: 'sex', title: 'Sex' }
+            { prop: 'sex', label: 'Sex' }
           ]
         },
-        { field: 'address', title: 'Address', showOverflow: true }
+        { prop: 'address', label: 'Address', showOverflow: true }
       ],
       tableData: [],
       demoCodes: [
@@ -61,20 +61,20 @@ export default {
               tableColumn: [
                 { type: 'seq', width: 50 },
                 {
-                  title: '基本信息',
+                  label: '基本信息',
                   children: [
-                    { field: 'name', title: 'Name' },
+                    { prop: 'name', label: 'Name' },
                     {
-                      title: '其他信息',
+                      label: '其他信息',
                       children: [
-                        { field: 'rate', title: 'Rate' },
-                        { field: 'age', title: 'Age' }
+                        { prop: 'rate', label: 'Rate' },
+                        { prop: 'age', label: 'Age' }
                       ]
                     },
-                    { field: 'sex', title: 'Sex' }
+                    { prop: 'sex', label: 'Sex' }
                   ]
                 },
-                { field: 'address', title: 'Address', showOverflow: true }
+                { prop: 'address', label: 'Address', showOverflow: true }
               ],
               tableData: []
             }

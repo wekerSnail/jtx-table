@@ -24,7 +24,7 @@
       :edit-config="{trigger: 'click', mode: 'cell'}">
     </vxe-grid>
 
-    <vxe-modal v-model="showDetails" title="查看详情" width="800" height="400" resize>
+    <vxe-modal v-model="showDetails" label="查看详情" width="800" height="400" resize>
       <template>
         <div v-if="selectRow" v-html="selectRow.html3"></div>
       </template>
@@ -51,8 +51,8 @@ export default {
       tableColumn: [
         { type: 'seq', width: 50 },
         {
-          field: 'name',
-          title: 'Name',
+          prop: 'name',
+          label: 'Name',
           slots: {
             default: ({ row, column }) => {
               return [
@@ -63,8 +63,8 @@ export default {
           }
         },
         {
-          field: 'sex',
-          title: 'Sex',
+          prop: 'sex',
+          label: 'Sex',
           showHeaderOverflow: true,
           filters: [{ data: '' }],
           filterMethod: this.filterSexMethod,
@@ -79,7 +79,7 @@ export default {
               return [
                 <span>
                   <i>@</i>
-                  <span style="color: red;" onClick={ this.headerClickEvent }>{ column.title }</span>
+                  <span style="color: red;" onClick={ this.headerClickEvent }>{ column.label }</span>
                 </span>
               ]
             },
@@ -96,8 +96,8 @@ export default {
           }
         },
         {
-          field: 'address',
-          title: 'Address',
+          prop: 'address',
+          label: 'Address',
           slots: {
             default: ({ row }, h) => {
               return [
@@ -114,8 +114,8 @@ export default {
           }
         },
         {
-          field: 'html2',
-          title: 'Html片段',
+          prop: 'html2',
+          label: 'Html片段',
           slots: {
             default: ({ row }, h) => {
               return [
@@ -125,8 +125,8 @@ export default {
           }
         },
         {
-          field: 'img1',
-          title: '图片路径',
+          prop: 'img1',
+          label: '图片路径',
           slots: {
             default: ({ row }, h) => {
               return [
@@ -163,7 +163,7 @@ export default {
           :edit-config="{trigger: 'click', mode: 'cell'}">
         </vxe-grid>
 
-        <vxe-modal v-model="showDetails" title="查看详情" width="800" height="400" resize>
+        <vxe-modal v-model="showDetails" label="查看详情" width="800" height="400" resize>
           <template>
             <div v-if="selectRow" v-html="selectRow.html3"></div>
           </template>
@@ -179,8 +179,8 @@ export default {
               tableColumn: [
                 { type: 'seq', width: 50 },
                 {
-                  field: 'name',
-                  title: 'Name',
+                  prop: 'name',
+                  label: 'Name',
                   slots: {
                     default: ({ row, column }) => {
                       return [
@@ -191,8 +191,8 @@ export default {
                   }
                 },
                 {
-                  field: 'sex',
-                  title: 'Sex',
+                  prop: 'sex',
+                  label: 'Sex',
                   showHeaderOverflow: true,
                   filters: [{ data: '' }],
                   filterMethod: this.filterSexMethod,
@@ -207,7 +207,7 @@ export default {
                       return [
                         <span>
                           <i>@</i>
-                          <span style="color: red;" onClick={ this.headerClickEvent }>{ column.title }</span>
+                          <span style="color: red;" onClick={ this.headerClickEvent }>{ column.label }</span>
                         </span>
                       ]
                     },
@@ -224,8 +224,8 @@ export default {
                   }
                 },
                 {
-                  field: 'address',
-                  title: 'Address',
+                  prop: 'address',
+                  label: 'Address',
                   slots: {
                     default: ({ row }, h) => {
                       return [
@@ -242,8 +242,8 @@ export default {
                   }
                 },
                 {
-                  field: 'html2',
-                  title: 'Html片段',
+                  prop: 'html2',
+                  label: 'Html片段',
                   slots: {
                     default: ({ row }, h) => {
                       return [
@@ -253,8 +253,8 @@ export default {
                   }
                 },
                 {
-                  field: 'img1',
-                  title: '图片路径',
+                  prop: 'img1',
+                  label: '图片路径',
                   slots: {
                     default: ({ row }, h) => {
                       return [

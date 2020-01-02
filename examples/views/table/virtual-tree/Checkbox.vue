@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @version: 1.0.0
+ * @Author: weikang
+ * @Date: 2019-12-30 16:18:10
+ * @LastEditors: weikang
+ * @LastEditTime: 2020-01-02 11:00:43
+ -->
 <template>
   <div>
     <p class="tip">多选树表格</p>
@@ -69,22 +77,22 @@ export default {
       tableData: [],
       tableColumn1: [
         { type: 'checkbox', treeNode: true },
-        { field: 'name', title: 'Name' },
-        { field: 'size', title: 'Size' },
-        { field: 'type', title: 'Type' },
-        { field: 'date', title: 'Date' }
+        { prop: 'name', label: 'Name' },
+        { prop: 'size', label: 'Size' },
+        { prop: 'type', label: 'Type' },
+        { prop: 'date', label: 'Date' }
       ],
       tableColumn2: [
-        { type: 'checkbox', title: 'Name', width: 400, treeNode: true },
-        { field: 'size', title: 'Size' },
-        { field: 'type', title: 'Type' },
-        { field: 'date', title: 'Date' }
+        { type: 'checkbox', label: 'Name', width: 400, treeNode: true },
+        { prop: 'size', label: 'Size' },
+        { prop: 'type', label: 'Type' },
+        { prop: 'date', label: 'Date' }
       ],
       tableColumn3: [
-        { type: 'checkbox', title: 'Name', width: 280, treeNode: true },
-        { field: 'size', title: 'Size' },
-        { field: 'type', title: 'Type' },
-        { field: 'date', title: 'Date' }
+        { type: 'checkbox', label: 'Name', width: 280, treeNode: true },
+        { prop: 'size', label: 'Size' },
+        { prop: 'type', label: 'Type' },
+        { prop: 'date', label: 'Date' }
       ],
       demoCodes: [
         `
@@ -105,10 +113,10 @@ export default {
               tableData: [],
               tableColumn: [
                 { type: 'checkbox', treeNode: true },
-                { field: 'name', title: 'Name' },
-                { field: 'size', title: 'Size' },
-                { field: 'type', title: 'Type' },
-                { field: 'date', title: 'Date' }
+                { prop: 'name', label: 'Name' },
+                { prop: 'size', label: 'Size' },
+                { prop: 'type', label: 'Type' },
+                { prop: 'date', label: 'Date' }
               ]
             }
           },
@@ -140,10 +148,10 @@ export default {
             return {
               tableData: [],
               tableColumn: [
-                { type: 'checkbox', title: 'Name', width: 400, treeNode: true },
-                { field: 'size', title: 'Size' },
-                { field: 'type', title: 'Type' },
-                { field: 'date', title: 'Date' }
+                { type: 'checkbox', label: 'Name', width: 400, treeNode: true },
+                { prop: 'size', label: 'Size' },
+                { prop: 'type', label: 'Type' },
+                { prop: 'date', label: 'Date' }
               ]
             }
           },
@@ -174,10 +182,10 @@ export default {
             return {
               tableData: [],
               tableColumn: [
-                { type: 'checkbox', title: 'Name', width: 280, treeNode: true },
-                { field: 'size', title: 'Size' },
-                { field: 'type', title: 'Type' },
-                { field: 'date', title: 'Date' }
+                { type: 'checkbox', label: 'Name', width: 280, treeNode: true },
+                { prop: 'size', label: 'Size' },
+                { prop: 'type', label: 'Type' },
+                { prop: 'date', label: 'Date' }
               ]
             }
           },

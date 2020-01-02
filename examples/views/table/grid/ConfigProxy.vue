@@ -75,13 +75,13 @@ export default {
       },
       tableColumn: [
         { type: 'seq', width: 60, fixed: 'left' },
-        { type: 'checkbox', title: 'ID', width: 140, fixed: 'left' },
-        { field: 'name', title: 'Name', remoteSort: true, editRender: { name: 'input' } },
-        { field: 'nickname', title: 'Nickname', remoteSort: true, editRender: { name: 'input' } },
-        { field: 'age', title: 'Age', remoteSort: true, editRender: { name: 'input' } },
+        { type: 'checkbox', label: 'ID', width: 140, fixed: 'left' },
+        { prop: 'name', label: 'Name', remoteSort: true, editRender: { name: 'input' } },
+        { prop: 'nickname', label: 'Nickname', remoteSort: true, editRender: { name: 'input' } },
+        { prop: 'age', label: 'Age', remoteSort: true, editRender: { name: 'input' } },
         {
-          field: 'role',
-          title: 'Role',
+          prop: 'role',
+          label: 'Role',
           remoteSort: true,
           width: 200,
           filters: [
@@ -93,7 +93,7 @@ export default {
           filterMultiple: false,
           editRender: { name: 'input' }
         },
-        { field: 'describe', title: 'Describe', showOverflow: true, editRender: { name: 'input' } }
+        { prop: 'describe', label: 'Describe', showOverflow: true, editRender: { name: 'input' } }
       ],
       demoCodes: [
         `
@@ -153,13 +153,13 @@ export default {
                 },
                 columns: [
                   { type: 'seq', width: 60, fixed: 'left' },
-                  { type: 'checkbox', title: 'ID', width: 140, fixed: 'left' },
-                  { field: 'name', title: 'Name', remoteSort: true, editRender: { name: 'input' } },
-                  { field: 'nickname', title: 'Nickname', remoteSort: true, editRender: { name: 'input' } },
-                  { field: 'age', title: 'Age', remoteSort: true, editRender: { name: 'input' } },
+                  { type: 'checkbox', label: 'ID', width: 140, fixed: 'left' },
+                  { prop: 'name', label: 'Name', remoteSort: true, editRender: { name: 'input' } },
+                  { prop: 'nickname', label: 'Nickname', remoteSort: true, editRender: { name: 'input' } },
+                  { prop: 'age', label: 'Age', remoteSort: true, editRender: { name: 'input' } },
                   {
-                    field: 'role',
-                    title: 'Role',
+                    prop: 'role',
+                    label: 'Role',
                     remoteSort: true,
                     width: 200,
                     filters: [
@@ -171,7 +171,7 @@ export default {
                     filterMultiple: false,
                     editRender: { name: 'input' }
                   },
-                  { field: 'describe', title: 'Describe', showOverflow: true, editRender: { name: 'input' } }
+                  { prop: 'describe', label: 'Describe', showOverflow: true, editRender: { name: 'input' } }
                 ]
               }
             }

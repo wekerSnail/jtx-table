@@ -24,7 +24,7 @@ export default {
       delEvent: 'The event "{{0}}" is deprecated, please use "{{1}}"',
       notType: 'Unsupported file types "{{0}}"',
       notExp: 'The browser does not support import / export.',
-      impFields: 'Import failed, please check that the field name and data format are correct.',
+      impFields: 'Import failed, please check that the prop name and data format are correct.',
       treeNotImp: 'Tree table does not support import.'
     },
     table: {
@@ -109,8 +109,8 @@ export default {
       expMode: 'Data to export',
       expAll: 'All data',
       expSelected: 'Selected data',
-      expAllColumn: 'All the field',
-      expColumn: 'The field to export',
+      expAllColumn: 'All the prop',
+      expColumn: 'The prop to export',
       expOpts: 'Export option',
       expOptHeader: 'Header',
       expHeaderTitle: 'Need to export header',

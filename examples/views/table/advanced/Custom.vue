@@ -10,10 +10,10 @@
       border
       height="200"
       :data="tableData">
-      <vxe-table-column field="name" title="Name"></vxe-table-column>
-      <vxe-table-column field="role" title="Role"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" :visible="false"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" :visible="false"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -27,7 +27,7 @@
 
     <div>
       <template v-for="(column,index) in columns2">
-        <vxe-checkbox v-model="column.visible" :key="index" @change="$refs.xTable2.refreshColumn()">{{ column.title }}</vxe-checkbox>
+        <vxe-checkbox v-model="column.visible" :key="index" @change="$refs.xTable2.refreshColumn()">{{ column.label }}</vxe-checkbox>
       </template>
     </div>
 
@@ -38,11 +38,11 @@
       :loading="loading"
       :data="tableData"
       :customs.sync="columns2">
-      <vxe-table-column type="seq" title="序号" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name"></vxe-table-column>
-      <vxe-table-column field="role" title="Role"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
+      <vxe-table-column type="seq" label="序号" width="60"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -56,7 +56,7 @@
 
     <div>
       <template v-for="(column,index) in columns3">
-        <vxe-checkbox v-if="column.title" v-model="column.visible" :key="index">{{ column.title }}</vxe-checkbox>
+        <vxe-checkbox v-if="column.label" v-model="column.visible" :key="index">{{ column.label }}</vxe-checkbox>
       </template>
       <vxe-button @click="$refs.xTable3.refreshColumn()">刷新列信息</vxe-button>
       <vxe-button @click="$refs.xTable3.resetCustoms()">重置自定义列</vxe-button>
@@ -69,14 +69,14 @@
       :data="tableData"
       :customs.sync="columns3">
       <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :visible="false"></vxe-table-column>
-      <vxe-table-column field="role" title="Role"></vxe-table-column>
-      <vxe-table-column title="基本信息">
-        <vxe-table-column field="sex" title="Sex" :visible="false"></vxe-table-column>
-        <vxe-table-column field="age" title="Age"></vxe-table-column>
-        <vxe-table-column title="其他信息">
-          <vxe-table-column field="rate" title="Rate"></vxe-table-column>
-          <vxe-table-column field="flag" title="Flag"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" :visible="false"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role"></vxe-table-column>
+      <vxe-table-column label="基本信息">
+        <vxe-table-column prop="sex" label="Sex" :visible="false"></vxe-table-column>
+        <vxe-table-column prop="age" label="Age"></vxe-table-column>
+        <vxe-table-column label="其他信息">
+          <vxe-table-column prop="rate" label="Rate"></vxe-table-column>
+          <vxe-table-column prop="flag" label="Flag"></vxe-table-column>
         </vxe-table-column>
       </vxe-table-column>
     </vxe-table>
@@ -106,10 +106,10 @@ export default {
           border
           height="200"
           :data="tableData">
-          <vxe-table-column field="name" title="Name"></vxe-table-column>
-          <vxe-table-column field="role" title="Role"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" :visible="false"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" :visible="false"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -127,7 +127,7 @@ export default {
         `
         <div>
           <template v-for="(column,index) in columns">
-            <vxe-checkbox v-model="column.visible" :key="index" @change="$refs.xTable.refreshColumn()">{{ column.title }}</vxe-checkbox>
+            <vxe-checkbox v-model="column.visible" :key="index" @change="$refs.xTable.refreshColumn()">{{ column.label }}</vxe-checkbox>
           </template>
         </div>
 
@@ -138,11 +138,11 @@ export default {
           :loading="loading"
           :data="tableData"
           :customs.sync="columns">
-          <vxe-table-column type="seq" title="序号" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name"></vxe-table-column>
-          <vxe-table-column field="role" title="Role"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
+          <vxe-table-column type="seq" label="序号" width="60"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -172,7 +172,7 @@ export default {
         `
         <div>
           <template v-for="(column,index) in columns">
-            <vxe-checkbox v-if="column.title" v-model="column.visible" :key="index">{{ column.title }}</vxe-checkbox>
+            <vxe-checkbox v-if="column.label" v-model="column.visible" :key="index">{{ column.label }}</vxe-checkbox>
           </template>
           <vxe-button @click="$refs.xTable.refreshColumn()">刷新列信息</vxe-button>
           <vxe-button @click="$refs.xTable.resetCustoms()">重置自定义列</vxe-button>
@@ -185,14 +185,14 @@ export default {
           :data="tableData"
           :customs.sync="columns">
           <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :visible="false"></vxe-table-column>
-          <vxe-table-column field="role" title="Role"></vxe-table-column>
-          <vxe-table-column title="基本信息">
-            <vxe-table-column field="sex" title="Sex" :visible="false"></vxe-table-column>
-            <vxe-table-column field="age" title="Age"></vxe-table-column>
-            <vxe-table-column title="其他信息">
-              <vxe-table-column field="rate" title="Rate"></vxe-table-column>
-              <vxe-table-column field="flag" title="Flag"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" :visible="false"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role"></vxe-table-column>
+          <vxe-table-column label="基本信息">
+            <vxe-table-column prop="sex" label="Sex" :visible="false"></vxe-table-column>
+            <vxe-table-column prop="age" label="Age"></vxe-table-column>
+            <vxe-table-column label="其他信息">
+              <vxe-table-column prop="rate" label="Rate"></vxe-table-column>
+              <vxe-table-column prop="flag" label="Flag"></vxe-table-column>
             </vxe-table-column>
           </vxe-table-column>
         </vxe-table>

@@ -39,8 +39,7 @@ class ColumnConfig {
       id: `col_${++columnUniqueId}`,
       type: _vm.type,
       prop: _vm.prop,
-      property: _vm.field || _vm.prop,
-      title: _vm.title,
+      property: _vm.prop || _vm.prop,
       label: _vm.label,
       width: _vm.width,
       minWidth: _vm.minWidth,
@@ -91,8 +90,7 @@ class ColumnConfig {
     })
   }
   getTitle () {
-    // 在 v3.0 中废弃 label、type=index
-    return UtilTools.getFuncText(this.own.title || this.own.label || (this.type === 'seq' || this.type === 'index' ? GlobalConfig.i18n('vxe.table.seqTitle') : ''))
+    return UtilTools.getFuncText(this.own.label || (this.type === 'seq' || this.type === 'index' ? GlobalConfig.i18n('vxe.table.seqTitle') : ''))
   }
   update (name, value) {
     // 不支持双向的属性

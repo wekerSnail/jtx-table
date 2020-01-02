@@ -78,19 +78,19 @@ export default {
       },
       tableColumn: [
         { type: 'checkbox', width: 50 },
-        { field: 'seq', title: '排序', width: 80, editRender: { name: 'input' } },
-        { field: 'key', title: '列键值', width: 100, editRender: { name: 'input' } },
-        { field: 'name', title: '列名称', width: 100, editRender: { name: 'input' } },
-        { field: 'type', title: '列类型', width: 100, editRender: { name: 'input' } },
-        { field: 'width', title: '列宽度', width: 100, editRender: { name: 'input' } },
-        { field: 'link', title: '是否链接', width: 150, editRender: { name: 'input' } },
-        { field: 'isEdit', title: '是否编辑', width: 100, editRender: { name: 'input' } },
-        { field: 'required', title: '是否必填', width: 140, editRender: { name: 'input' } },
-        { field: 'validator', title: '校验规则', width: 140, editRender: { name: 'input' } },
-        { field: 'validMsg', title: '校验提示消息', width: 150, editRender: { name: 'input' } },
-        { field: 'describe', title: '描述', width: 200, showOverflow: true, editRender: { name: 'input' } },
-        { field: 'createTime', title: '创建时间', width: 100, showOverflow: true, formatter: this.formatterDate, editRender: { name: 'input' } },
-        { field: 'updateTime', title: '更新时间', width: 200, showOverflow: true, formatter: this.formatterDate, editRender: { name: 'input' } }
+        { prop: 'seq', label: '排序', width: 80, editRender: { name: 'input' } },
+        { prop: 'key', label: '列键值', width: 100, editRender: { name: 'input' } },
+        { prop: 'name', label: '列名称', width: 100, editRender: { name: 'input' } },
+        { prop: 'type', label: '列类型', width: 100, editRender: { name: 'input' } },
+        { prop: 'width', label: '列宽度', width: 100, editRender: { name: 'input' } },
+        { prop: 'link', label: '是否链接', width: 150, editRender: { name: 'input' } },
+        { prop: 'isEdit', label: '是否编辑', width: 100, editRender: { name: 'input' } },
+        { prop: 'required', label: '是否必填', width: 140, editRender: { name: 'input' } },
+        { prop: 'validator', label: '校验规则', width: 140, editRender: { name: 'input' } },
+        { prop: 'validMsg', label: '校验提示消息', width: 150, editRender: { name: 'input' } },
+        { prop: 'describe', label: '描述', width: 200, showOverflow: true, editRender: { name: 'input' } },
+        { prop: 'createTime', label: '创建时间', width: 100, showOverflow: true, formatter: this.formatterDate, editRender: { name: 'input' } },
+        { prop: 'updateTime', label: '更新时间', width: 200, showOverflow: true, formatter: this.formatterDate, editRender: { name: 'input' } }
       ],
       loading2: false,
       tablePage2: {
@@ -166,19 +166,19 @@ export default {
               },
               tableColumn: [
                 { type: 'checkbox', width: 50 },
-                { field: 'seq', title: '排序', width: 80, editRender: { name: 'input' } },
-                { field: 'key', title: '列键值', width: 100, editRender: { name: 'input' } },
-                { field: 'name', title: '列名称', width: 100, editRender: { name: 'input' } },
-                { field: 'type', title: '列类型', width: 100, editRender: { name: 'input' } },
-                { field: 'width', title: '列宽度', width: 100, editRender: { name: 'input' } },
-                { field: 'link', title: '是否链接', width: 150, editRender: { name: 'input' } },
-                { field: 'isEdit', title: '是否编辑', width: 100, editRender: { name: 'input' } },
-                { field: 'required', title: '是否必填', width: 140, editRender: { name: 'input' } },
-                { field: 'validator', title: '校验规则', width: 140, editRender: { name: 'input' } },
-                { field: 'validMsg', title: '校验提示消息', width: 150, editRender: { name: 'input' } },
-                { field: 'describe', title: '描述', width: 200, showOverflow: true, editRender: { name: 'input' } },
-                { field: 'createTime', title: '创建时间', width: 200, showOverflow: true, formatter: this.formatterDate, editRender: { name: 'input' } },
-                { field: 'updateTime', title: '更新时间', width: 200, showOverflow: true, formatter: this.formatterDate, editRender: { name: 'input' } }
+                { prop: 'seq', label: '排序', width: 80, editRender: { name: 'input' } },
+                { prop: 'key', label: '列键值', width: 100, editRender: { name: 'input' } },
+                { prop: 'name', label: '列名称', width: 100, editRender: { name: 'input' } },
+                { prop: 'type', label: '列类型', width: 100, editRender: { name: 'input' } },
+                { prop: 'width', label: '列宽度', width: 100, editRender: { name: 'input' } },
+                { prop: 'link', label: '是否链接', width: 150, editRender: { name: 'input' } },
+                { prop: 'isEdit', label: '是否编辑', width: 100, editRender: { name: 'input' } },
+                { prop: 'required', label: '是否必填', width: 140, editRender: { name: 'input' } },
+                { prop: 'validator', label: '校验规则', width: 140, editRender: { name: 'input' } },
+                { prop: 'validMsg', label: '校验提示消息', width: 150, editRender: { name: 'input' } },
+                { prop: 'describe', label: '描述', width: 200, showOverflow: true, editRender: { name: 'input' } },
+                { prop: 'createTime', label: '创建时间', width: 200, showOverflow: true, formatter: this.formatterDate, editRender: { name: 'input' } },
+                { prop: 'updateTime', label: '更新时间', width: 200, showOverflow: true, formatter: this.formatterDate, editRender: { name: 'input' } }
               ]
             }
           },
@@ -247,7 +247,7 @@ export default {
                 let validRules = {}
                 this.tableColumn2 = data.map(item => {
                   let config = {
-                    title: item.name,
+                    label: item.name,
                     width: item.width,
                     slots: {
                       default: ({ row, column }) => {
@@ -280,7 +280,7 @@ export default {
                     }
                   }
                   if (item.key) {
-                    config.field = item.key
+                    config.prop = item.key
                   }
                   if (item.type) {
                     config.type = item.type
@@ -322,7 +322,7 @@ export default {
         let validRules = {}
         this.tableColumn2 = data.map(item => {
           let config = {
-            title: item.name,
+            label: item.name,
             width: item.width
           }
           if (item.type) {
@@ -362,7 +362,7 @@ export default {
               }
             }
             if (item.key) {
-              config.field = item.key
+              config.prop = item.key
             }
             if (item.isEdit) {
               config.editRender = { name: 'input' }

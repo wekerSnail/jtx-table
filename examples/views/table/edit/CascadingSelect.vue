@@ -17,16 +17,16 @@
       :edit-config="{trigger: 'click', mode: 'row'}"
       @edit-actived="editActivedEvent">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="attr3" title="Project type" :edit-render="{name: 'select', options: ptypeList, events: {change: ptypeChangeEvent}}"></vxe-table-column>
-      <vxe-table-column field="attr4" title="Project name" :formatter="formatPanmeLabel" :edit-render="{}">
+      <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="attr3" label="Project type" :edit-render="{name: 'select', options: ptypeList, events: {change: ptypeChangeEvent}}"></vxe-table-column>
+      <vxe-table-column prop="attr4" label="Project name" :formatter="formatPanmeLabel" :edit-render="{}">
         <template v-slot:edit="{ row }">
           <select class="vxe-default-select" v-model="row.attr4">
             <option v-for="item in pnameList" :key="item.value" :value="item.value">{{ item.label }}</option>
           </select>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="date12" title="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
+      <vxe-table-column prop="date12" label="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -83,16 +83,16 @@ export default {
           :edit-config="{trigger: 'click', mode: 'row'}"
           @edit-actived="editActivedEvent">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="attr3" title="Project type" :edit-render="{name: 'select', options: ptypeList, events: {change: ptypeChangeEvent}}"></vxe-table-column>
-          <vxe-table-column field="attr4" title="Project name" :formatter="formatPanmeLabel" :edit-render="{}">
+          <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="attr3" label="Project type" :edit-render="{name: 'select', options: ptypeList, events: {change: ptypeChangeEvent}}"></vxe-table-column>
+          <vxe-table-column prop="attr4" label="Project name" :formatter="formatPanmeLabel" :edit-render="{}">
             <template v-slot:edit="{ row }">
               <select class="vxe-default-select" v-model="row.attr4">
                 <option v-for="item in pnameList" :key="item.value" :value="item.value">{{ item.label }}</option>
               </select>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="date12" title="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
+          <vxe-table-column prop="date12" label="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
         </vxe-table>
         `,
         `

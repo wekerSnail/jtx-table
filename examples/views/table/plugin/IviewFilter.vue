@@ -10,14 +10,14 @@
       height="400"
       :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Input" :filters="[{data: ''}]" :filter-render="{name: 'Input', props: {placeholder: '请输入名称'}}"></vxe-table-column>
-      <vxe-table-column field="age" title="InputNumber" sortable width="160" :filters="[{data: 0}]" :filter-render="{name: 'InputNumber', props: {min: 0, max: 100}}"></vxe-table-column>
-      <vxe-table-column field="role" title="AutoComplete" width="160" :filters="[{data: ''}]" :filter-render="{name: 'AutoComplete', props: {data: restaurants, filterMethod: roleFilterMethod, placeholder: '请输入角色名称'}}"></vxe-table-column>
-      <vxe-table-column field="sex" title="Select" :formatter="formatterSex" :filters="[{data: null}]" :filter-render="{name: 'Select', options: sexList, props: {placeholder: '请选择'}}"></vxe-table-column>
-      <vxe-table-column field="sex1" title="Select" :formatter="formatterSexs" :filters="[{data: []}]" :filter-render="{name: 'Select', options: sexList, props: {multiple: true, placeholder: '请选择'}}"></vxe-table-column>
-      <vxe-table-column field="date3" title="DatePicker" :filters="[{data: []}]" :filter-render="{name: 'DatePicker', props: {type: 'daterange', rangeSeparator: '至', startPlaceholder: '开始日期', endPlaceholder: '结束日期'}}"></vxe-table-column>
-      <vxe-table-column field="flag" title="iSwitch" width="100" :filters="[{data: false}]" :filter-render="{name: 'iSwitch'}" :cell-render="{name: 'iSwitch', props: {disabled: true}}"></vxe-table-column>
-      <vxe-table-column field="rate" title="Rate" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'Rate'}" :cell-render="{name: 'Rate', props: {disabled: true}}"></vxe-table-column>
+      <vxe-table-column prop="name" label="Input" :filters="[{data: ''}]" :filter-render="{name: 'Input', props: {placeholder: '请输入名称'}}"></vxe-table-column>
+      <vxe-table-column prop="age" label="InputNumber" sortable width="160" :filters="[{data: 0}]" :filter-render="{name: 'InputNumber', props: {min: 0, max: 100}}"></vxe-table-column>
+      <vxe-table-column prop="role" label="AutoComplete" width="160" :filters="[{data: ''}]" :filter-render="{name: 'AutoComplete', props: {data: restaurants, filterMethod: roleFilterMethod, placeholder: '请输入角色名称'}}"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Select" :formatter="formatterSex" :filters="[{data: null}]" :filter-render="{name: 'Select', options: sexList, props: {placeholder: '请选择'}}"></vxe-table-column>
+      <vxe-table-column prop="sex1" label="Select" :formatter="formatterSexs" :filters="[{data: []}]" :filter-render="{name: 'Select', options: sexList, props: {multiple: true, placeholder: '请选择'}}"></vxe-table-column>
+      <vxe-table-column prop="date3" label="DatePicker" :filters="[{data: []}]" :filter-render="{name: 'DatePicker', props: {type: 'daterange', rangeSeparator: '至', startPlaceholder: '开始日期', endPlaceholder: '结束日期'}}"></vxe-table-column>
+      <vxe-table-column prop="flag" label="iSwitch" width="100" :filters="[{data: false}]" :filter-render="{name: 'iSwitch'}" :cell-render="{name: 'iSwitch', props: {disabled: true}}"></vxe-table-column>
+      <vxe-table-column prop="rate" label="Rate" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'Rate'}" :cell-render="{name: 'Rate', props: {disabled: true}}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -48,14 +48,14 @@ export default {
           height="400"
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Input" :filters="[{data: ''}]" :filter-render="{name: 'Input', props: {placeholder: '请输入名称'}}"></vxe-table-column>
-          <vxe-table-column field="age" title="InputNumber" sortable width="160" :filters="[{data: 0}]" :filter-render="{name: 'InputNumber', props: {min: 0, max: 100}}"></vxe-table-column>
-          <vxe-table-column field="role" title="AutoComplete" width="160" :filters="[{data: ''}]" :filter-render="{name: 'AutoComplete', props: {data: restaurants, filterMethod: roleFilterMethod, placeholder: '请输入角色名称'}}"></vxe-table-column>
-          <vxe-table-column field="sex" title="Select" :formatter="formatterSex" :filters="[{data: null}]" :filter-render="{name: 'Select', options: sexList, props: {placeholder: '请选择'}}"></vxe-table-column>
-          <vxe-table-column field="sex1" title="Select" :formatter="formatterSexs" :filters="[{data: []}]" :filter-render="{name: 'Select', options: sexList, props: {multiple: true, placeholder: '请选择'}}"></vxe-table-column>
-          <vxe-table-column field="date3" title="DatePicker" :filters="[{data: []}]" :filter-render="{name: 'DatePicker', props: {type: 'daterange', rangeSeparator: '至', startPlaceholder: '开始日期', endPlaceholder: '结束日期'}}"></vxe-table-column>
-          <vxe-table-column field="flag" title="iSwitch" width="100" :filters="[{data: false}]" :filter-render="{name: 'iSwitch'}" :cell-render="{name: 'iSwitch', props: {disabled: true}}"></vxe-table-column>
-          <vxe-table-column field="rate" title="Rate" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'Rate'}" :cell-render="{name: 'Rate', props: {disabled: true}}"></vxe-table-column>
+          <vxe-table-column prop="name" label="Input" :filters="[{data: ''}]" :filter-render="{name: 'Input', props: {placeholder: '请输入名称'}}"></vxe-table-column>
+          <vxe-table-column prop="age" label="InputNumber" sortable width="160" :filters="[{data: 0}]" :filter-render="{name: 'InputNumber', props: {min: 0, max: 100}}"></vxe-table-column>
+          <vxe-table-column prop="role" label="AutoComplete" width="160" :filters="[{data: ''}]" :filter-render="{name: 'AutoComplete', props: {data: restaurants, filterMethod: roleFilterMethod, placeholder: '请输入角色名称'}}"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Select" :formatter="formatterSex" :filters="[{data: null}]" :filter-render="{name: 'Select', options: sexList, props: {placeholder: '请选择'}}"></vxe-table-column>
+          <vxe-table-column prop="sex1" label="Select" :formatter="formatterSexs" :filters="[{data: []}]" :filter-render="{name: 'Select', options: sexList, props: {multiple: true, placeholder: '请选择'}}"></vxe-table-column>
+          <vxe-table-column prop="date3" label="DatePicker" :filters="[{data: []}]" :filter-render="{name: 'DatePicker', props: {type: 'daterange', rangeSeparator: '至', startPlaceholder: '开始日期', endPlaceholder: '结束日期'}}"></vxe-table-column>
+          <vxe-table-column prop="flag" label="iSwitch" width="100" :filters="[{data: false}]" :filter-render="{name: 'iSwitch'}" :cell-render="{name: 'iSwitch', props: {disabled: true}}"></vxe-table-column>
+          <vxe-table-column prop="rate" label="Rate" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'Rate'}" :cell-render="{name: 'Rate', props: {disabled: true}}"></vxe-table-column>
         </vxe-table>
         `,
         `

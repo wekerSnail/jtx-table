@@ -64,11 +64,11 @@ export default {
         ]
       ],
       tableColumn: [
-        { field: 'id', title: 'ID', width: 180, treeNode: true },
-        { field: 'name', title: '名称', editRender: { name: 'input' } },
-        { field: 'size', title: '大小', editRender: { name: 'input' } },
-        { field: 'createTime', title: '创建时间', formatter: this.formatterDate },
-        { field: 'updateTime', title: '修改时间', formatter: this.formatterDate }
+        { prop: 'id', label: 'ID', width: 180, treeNode: true },
+        { prop: 'name', label: '名称', editRender: { name: 'input' } },
+        { prop: 'size', label: '大小', editRender: { name: 'input' } },
+        { prop: 'createTime', label: '创建时间', formatter: this.formatterDate },
+        { prop: 'updateTime', label: '修改时间', formatter: this.formatterDate }
       ],
       demoCodes: [
         `
@@ -123,11 +123,11 @@ export default {
                 ]
               ],
               tableColumn: [
-                { field: 'id', title: 'ID', width: 180, treeNode: true },
-                { field: 'name', title: '名称', editRender: { name: 'input' } },
-                { field: 'size', title: '大小', editRender: { name: 'input' } },
-                { field: 'createTime', title: '创建时间', formatter: this.formatterDate },
-                { field: 'updateTime', title: '修改时间', formatter: this.formatterDate }
+                { prop: 'id', label: 'ID', width: 180, treeNode: true },
+                { prop: 'name', label: '名称', editRender: { name: 'input' } },
+                { prop: 'size', label: '大小', editRender: { name: 'input' } },
+                { prop: 'createTime', label: '创建时间', formatter: this.formatterDate },
+                { prop: 'updateTime', label: '修改时间', formatter: this.formatterDate }
               ]
             }
           },

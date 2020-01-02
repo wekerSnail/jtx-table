@@ -1,20 +1,28 @@
+/*
+ * @Description: 
+ * @version: 1.0.0
+ * @Author: weikang
+ * @Date: 2019-12-30 16:18:12
+ * @LastEditors: weikang
+ * @LastEditTime: 2020-01-02 10:36:17
+ */
 function mockColumns (size) {
   var columns = []
   for (var index = 0; index < size; index++) {
     var colItem = {
-      field: index % 2 === 0 ? 'age' : (index % 3 === 0 ? 'rate' : 'name'),
-      title: 'col_' + index,
+      prop: index % 2 === 0 ? 'age' : (index % 3 === 0 ? 'rate' : 'name'),
+      label: 'col_' + index,
       width: index % 6 === 0 ? 340 : index % 4 === 0 ? 260 : index % 3 === 0 ? 120 : 160,
       resizable: true
     }
     if (index === 0) {
       colItem.width = 100
       colItem.type = 'seq'
-      colItem.title = '序号'
+      colItem.label = '序号'
     }
     if (index === 1) {
       colItem.type = 'checkbox'
-      colItem.title = '多选'
+      colItem.label = '多选'
     }
     if (index < 4) {
       colItem.fixed = 'left'

@@ -17,10 +17,10 @@
       :edit-config="{trigger: 'click', mode: 'cell', showStatus: true}">
       <vxe-table-column type="checkbox" width="60"></vxe-table-column>
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="age" title="Age" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column title="操作">
+      <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column label="操作">
         <template v-slot="{ row }">
           <vxe-button @click="$refs.xTable.revertData(row)">还原</vxe-button>
         </template>
@@ -60,10 +60,10 @@ export default {
           :edit-config="{trigger: 'click', mode: 'cell', showStatus: true}">
           <vxe-table-column type="checkbox" width="60"></vxe-table-column>
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="age" title="Age" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column title="操作">
+          <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column label="操作">
             <template v-slot="{ row }">
               <vxe-button @click="$refs.xTable.revertData(row)">还原</vxe-button>
             </template>

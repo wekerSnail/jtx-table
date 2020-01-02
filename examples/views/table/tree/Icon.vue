@@ -16,10 +16,10 @@
       ref="xTree1"
       :tree-config="{children: 'children', iconOpen: 'fa fa-minus-square-o', iconClose: 'fa fa-plus-square-o'}"
       :data="tableData">
-      <vxe-table-column field="name" title="app.body.label.name" tree-node></vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column prop="name" label="app.body.label.name" tree-node></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -37,7 +37,7 @@
       ref="xTree2"
       :tree-config="{children: 'children', iconOpen: 'fa fa-minus-circle', iconClose: 'fa fa-plus-circle'}"
       :data="tableData">
-      <vxe-table-column field="name" title="Name" tree-node>
+      <vxe-table-column prop="name" label="Name" tree-node>
         <template v-slot="{ row }">
           <span>
             <template v-if="row.children && row.children.length">
@@ -50,9 +50,9 @@
           </span>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -88,10 +88,10 @@ export default {
           ref="xTree"
           :tree-config="{children: 'children', iconOpen: 'fa fa-minus-square-o', iconClose: 'fa fa-plus-square-o'}"
           :data="tableData">
-          <vxe-table-column field="name" title="app.body.label.name"  tree-node></vxe-table-column>
-          <vxe-table-column field="size" title="Size"></vxe-table-column>
-          <vxe-table-column field="type" title="Type"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
+          <vxe-table-column prop="name" label="app.body.label.name"  tree-node></vxe-table-column>
+          <vxe-table-column prop="size" label="Size"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -119,7 +119,7 @@ export default {
           ref="xTree"
           :tree-config="{children: 'children', iconOpen: 'fa fa-minus-circle', iconClose: 'fa fa-plus-circle'}"
           :data="tableData">
-          <vxe-table-column field="name" title="Name" tree-node>
+          <vxe-table-column prop="name" label="Name" tree-node>
             <template v-slot="{ row }">
               <span>
                 <template v-if="row.children && row.children.length">
@@ -132,9 +132,9 @@ export default {
               </span>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="size" title="Size"></vxe-table-column>
-          <vxe-table-column field="type" title="Type"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
+          <vxe-table-column prop="size" label="Size"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
         </vxe-table>
         `,
         `

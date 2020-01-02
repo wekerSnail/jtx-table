@@ -68,16 +68,16 @@ export default {
     return {
       tableData: [],
       tableColumn1: [
-        { field: 'name', title: 'Name', width: 400, treeNode: true },
-        { field: 'size', title: 'Size' },
-        { field: 'type', title: 'Type' },
-        { field: 'date', title: 'Date' }
+        { prop: 'name', label: 'Name', width: 400, treeNode: true },
+        { prop: 'size', label: 'Size' },
+        { prop: 'type', label: 'Type' },
+        { prop: 'date', label: 'Date' }
       ],
       tableColumn2: [
-        { type: 'radio', title: 'Name', width: 400, treeNode: true },
-        { field: 'size', title: 'Size' },
-        { field: 'type', title: 'Type' },
-        { field: 'date', title: 'Date' }
+        { type: 'radio', label: 'Name', width: 400, treeNode: true },
+        { prop: 'size', label: 'Size' },
+        { prop: 'type', label: 'Type' },
+        { prop: 'date', label: 'Date' }
       ],
       tableColumn3: [
         {
@@ -92,9 +92,9 @@ export default {
             }
           }
         },
-        { field: 'size', title: 'Size' },
-        { field: 'type', title: 'Type' },
-        { field: 'date', title: 'Date' }
+        { prop: 'size', label: 'Size' },
+        { prop: 'type', label: 'Type' },
+        { prop: 'date', label: 'Date' }
       ],
       selectRow: null,
       demoCodes: [
@@ -114,10 +114,10 @@ export default {
             return {
               tableData: [],
               tableColumn: [
-                { field: 'name', title: 'Name', width: 400, treeNode: true },
-                { field: 'size', title: 'Size' },
-                { field: 'type', title: 'Type' },
-                { field: 'date', title: 'Date' }
+                { prop: 'name', label: 'Name', width: 400, treeNode: true },
+                { prop: 'size', label: 'Size' },
+                { prop: 'type', label: 'Type' },
+                { prop: 'date', label: 'Date' }
               ]
             }
           },
@@ -142,10 +142,10 @@ export default {
             return {
               tableData: [],
               tableColumn: [
-                { type: 'radio', title: 'Name', width: 400, treeNode: true },
-                { field: 'size', title: 'Size' },
-                { field: 'type', title: 'Type' },
-                { field: 'date', title: 'Date' }
+                { type: 'radio', label: 'Name', width: 400, treeNode: true },
+                { prop: 'size', label: 'Size' },
+                { prop: 'type', label: 'Type' },
+                { prop: 'date', label: 'Date' }
               ]
             }
           },
@@ -186,9 +186,9 @@ export default {
                     }
                   }
                 },
-                { field: 'size', title: 'Size' },
-                { field: 'type', title: 'Type' },
-                { field: 'date', title: 'Date' }
+                { prop: 'size', label: 'Size' },
+                { prop: 'type', label: 'Type' },
+                { prop: 'date', label: 'Date' }
               ],
               selectRow: null
             }

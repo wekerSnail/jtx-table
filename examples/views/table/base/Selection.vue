@@ -20,10 +20,10 @@
       @select-all="selectAllEvent"
       @select-change="selectChangeEvent">
       <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
-      <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+      <vxe-table-column prop="name" label="Name"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -52,10 +52,10 @@
       ref="xTable2"
       :data="tableData"
       :checkbox-config="{labelField: 'name', checkMethod}">
-      <vxe-table-column type="checkbox" title="All"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
-      <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+      <vxe-table-column type="checkbox" label="All"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -84,10 +84,10 @@
       :data="tableData"
       :checkbox-config="{checkField: 'checked', trigger: 'row'}">
       <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
-      <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+      <vxe-table-column prop="name" label="Name"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -107,10 +107,10 @@
       :checkbox-config="{checkRowKeys: ['2', '3'], highlight: true}"
       :radio-config="{labelField: 'name'}">
       <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-      <vxe-table-column type="radio" width="300" title="Name"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
-      <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+      <vxe-table-column type="radio" width="300" label="Name"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -136,10 +136,10 @@
       :data="tableData"
       :checkbox-config="{checkStrictly: true}">
       <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
-      <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+      <vxe-table-column prop="name" label="Name"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -157,10 +157,10 @@
       :data="tableData"
       :radio-config="{labelField: 'name'}">
       <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-      <vxe-table-column type="radio" width="300" title="Name"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
-      <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+      <vxe-table-column type="radio" width="300" label="Name"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -180,11 +180,11 @@
       :data="tableData"
       :radio-config="{labelField: 'role'}"
       :checkbox-config="{labelField: 'name', highlight: true, range: true}">
-      <vxe-table-column type="checkbox" title="Name"></vxe-table-column>
-      <vxe-table-column type="radio" title="Role"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
-      <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+      <vxe-table-column type="checkbox" label="Name"></vxe-table-column>
+      <vxe-table-column type="radio" label="Role"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -223,10 +223,10 @@ export default {
           @select-all="selectAllEvent"
           @select-change="selectChangeEvent">
           <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
-          <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+          <vxe-table-column prop="name" label="Name"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -271,10 +271,10 @@ export default {
           ref="xTable2"
           :data="tableData"
           :checkbox-config="{labelField: 'name', checkMethod}">
-          <vxe-table-column type="checkbox" title="All"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
-          <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+          <vxe-table-column type="checkbox" label="All"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -312,10 +312,10 @@ export default {
           :data="tableData"
           :checkbox-config="{checkField: 'checked', trigger: 'row'}">
           <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
-          <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+          <vxe-table-column prop="name" label="Name"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -339,10 +339,10 @@ export default {
           :checkbox-config="{checkRowKeys: ['2', '3'], highlight: true}"
           :radio-config="{labelField: 'name'}">
           <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-          <vxe-table-column type="radio" width="300" title="Name"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
-          <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+          <vxe-table-column type="radio" width="300" label="Name"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -372,10 +372,10 @@ export default {
           :data="tableData"
           :checkbox-config="{checkStrictly: true}">
           <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
-          <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+          <vxe-table-column prop="name" label="Name"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -397,10 +397,10 @@ export default {
           :data="tableData"
           :radio-config="{labelField: 'name'}">
           <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-          <vxe-table-column type="radio" width="300" title="Name"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
-          <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+          <vxe-table-column type="radio" width="300" label="Name"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -424,11 +424,11 @@ export default {
           :data="tableData"
           :radio-config="{labelField: 'role'}"
           :checkbox-config="{labelField: 'name', highlight: true, range: true}">
-          <vxe-table-column type="checkbox" title="Name"></vxe-table-column>
-          <vxe-table-column type="radio" title="Role"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
-          <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+          <vxe-table-column type="checkbox" label="Name"></vxe-table-column>
+          <vxe-table-column type="radio" label="Role"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
         </vxe-table>
         `,
         `

@@ -20,10 +20,10 @@
           </vxe-tooltip>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="name" title="Name"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
-      <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+      <vxe-table-column prop="name" label="Name"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -90,10 +90,10 @@ export default {
             }
           }
         },
-        { field: 'name', title: 'Name', treeNode: true },
-        { field: 'size', title: 'Size' },
-        { field: 'type', title: 'Type' },
-        { field: 'date', title: 'Date' }
+        { prop: 'name', label: 'Name', treeNode: true },
+        { prop: 'size', label: 'Size' },
+        { prop: 'type', label: 'Type' },
+        { prop: 'date', label: 'Date' }
       ],
       tableTreeData: [],
       demoCodes: [
@@ -116,10 +116,10 @@ export default {
               </vxe-tooltip>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="name" title="Name"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
-          <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+          <vxe-table-column prop="name" label="Name"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -201,10 +201,10 @@ export default {
                     }
                   }
                 },
-                { field: 'name', title: 'Name', treeNode: true },
-                { field: 'size', title: 'Size' },
-                { field: 'type', title: 'Type' },
-                { field: 'date', title: 'Date' }
+                { prop: 'name', label: 'Name', treeNode: true },
+                { prop: 'size', label: 'Size' },
+                { prop: 'type', label: 'Type' },
+                { prop: 'date', label: 'Date' }
               ]
             }
           },

@@ -1,15 +1,15 @@
 <template>
   <div>
-    <p class="tip">局部自定义 <table-column-api-link prop="formatter"/> 格式化内容，<table-column-api-link prop="formatter"/> 会确保在指定的 <table-column-api-link prop="field"/> 值发生改变时调用，如果想要多字段关联变化请使用<router-link class="nav-link" :to="{name: 'TableTemplate'}">自定义模板</router-link></p>
+    <p class="tip">局部自定义 <table-column-api-link prop="formatter"/> 格式化内容，<table-column-api-link prop="formatter"/> 会确保在指定的 <table-column-api-link prop="prop"/> 值发生改变时调用，如果想要多字段关联变化请使用<router-link class="nav-link" :to="{name: 'TableTemplate'}">自定义模板</router-link></p>
 
     <vxe-table
       border
       :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" sortable></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" :formatter="formatterSex"></vxe-table-column>
-      <vxe-table-column field="time" title="Time" :formatter="formatTime"></vxe-table-column>
-      <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" sortable></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" :formatter="formatterSex"></vxe-table-column>
+      <vxe-table-column prop="time" label="Time" :formatter="formatTime"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -28,13 +28,13 @@
       border
       :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="date" title="转日期" width="180" formatter="toDateString"></vxe-table-column>
-      <vxe-table-column field="time" title="转日期格式" width="140" :formatter="['toDateString', 'yyyy-MM-dd']"></vxe-table-column>
-      <vxe-table-column field="amount" title="格式化金额" formatter="commafy"></vxe-table-column>
-      <vxe-table-column field="bankCard" title="银行卡" width="180" :formatter="['commafy', {spaceNumber: 4, separator: ' '}]"></vxe-table-column>
-      <vxe-table-column field="num" title="转整数" formatter="toInteger"></vxe-table-column>
-      <vxe-table-column field="num" title="截取两位小数" :formatter="['toFixedString', 2]"></vxe-table-column>
-      <vxe-table-column field="sex" title="格式化性别" :formatter="['formatSelect', sexList]"></vxe-table-column>
+      <vxe-table-column prop="date" label="转日期" width="180" formatter="toDateString"></vxe-table-column>
+      <vxe-table-column prop="time" label="转日期格式" width="140" :formatter="['toDateString', 'yyyy-MM-dd']"></vxe-table-column>
+      <vxe-table-column prop="amount" label="格式化金额" formatter="commafy"></vxe-table-column>
+      <vxe-table-column prop="bankCard" label="银行卡" width="180" :formatter="['commafy', {spaceNumber: 4, separator: ' '}]"></vxe-table-column>
+      <vxe-table-column prop="num" label="转整数" formatter="toInteger"></vxe-table-column>
+      <vxe-table-column prop="num" label="截取两位小数" :formatter="['toFixedString', 2]"></vxe-table-column>
+      <vxe-table-column prop="sex" label="格式化性别" :formatter="['formatSelect', sexList]"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -78,10 +78,10 @@ export default {
           border
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" sortable></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" :formatter="formatterSex"></vxe-table-column>
-          <vxe-table-column field="time" title="Time" :formatter="formatTime"></vxe-table-column>
-          <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" sortable></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" :formatter="formatterSex"></vxe-table-column>
+          <vxe-table-column prop="time" label="Time" :formatter="formatTime"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -120,13 +120,13 @@ export default {
           border
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="date" title="转日期" width="180" formatter="toDateString"></vxe-table-column>
-          <vxe-table-column field="time" title="转日期格式" width="140" :formatter="['toDateString', 'yyyy-MM-dd']"></vxe-table-column>
-          <vxe-table-column field="amount" title="格式化金额" formatter="commafy"></vxe-table-column>
-          <vxe-table-column field="bankCard" title="银行卡" width="180" :formatter="['commafy', {spaceNumber: 4, separator: ' '}]"></vxe-table-column>
-          <vxe-table-column field="num" title="转整数" formatter="toInteger"></vxe-table-column>
-          <vxe-table-column field="num" title="截取两位小数" :formatter="['toFixedString', 2]"></vxe-table-column>
-          <vxe-table-column field="sex" title="格式化性别" :formatter="['formatSelect', sexList]"></vxe-table-column>
+          <vxe-table-column prop="date" label="转日期" width="180" formatter="toDateString"></vxe-table-column>
+          <vxe-table-column prop="time" label="转日期格式" width="140" :formatter="['toDateString', 'yyyy-MM-dd']"></vxe-table-column>
+          <vxe-table-column prop="amount" label="格式化金额" formatter="commafy"></vxe-table-column>
+          <vxe-table-column prop="bankCard" label="银行卡" width="180" :formatter="['commafy', {spaceNumber: 4, separator: ' '}]"></vxe-table-column>
+          <vxe-table-column prop="num" label="转整数" formatter="toInteger"></vxe-table-column>
+          <vxe-table-column prop="num" label="截取两位小数" :formatter="['toFixedString', 2]"></vxe-table-column>
+          <vxe-table-column prop="sex" label="格式化性别" :formatter="['formatSelect', sexList]"></vxe-table-column>
         </vxe-table>
         `,
         `

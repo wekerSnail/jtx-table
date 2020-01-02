@@ -9,12 +9,12 @@
       :loading="loading"
       :data="tableData">
       <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-      <vxe-table-column field="nickname" title="nickname"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
-      <vxe-table-column field="date12" title="Date"></vxe-table-column>
-      <vxe-table-column field="region" title="Region"></vxe-table-column>
-      <vxe-table-column field="rate" title="Rate"></vxe-table-column>
+      <vxe-table-column prop="nickname" label="nickname"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
+      <vxe-table-column prop="date12" label="Date"></vxe-table-column>
+      <vxe-table-column prop="region" label="Region"></vxe-table-column>
+      <vxe-table-column prop="rate" label="Rate"></vxe-table-column>
     </vxe-table>
   </div>
 </template>

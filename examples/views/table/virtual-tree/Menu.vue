@@ -1,3 +1,11 @@
+<!--
+ * @Description:
+ * @version: 1.0.0
+ * @Author: weikang
+ * @Date: 2019-12-30 16:18:10
+ * @LastEditors  : weikang
+ * @LastEditTime : 2020-01-02 11:06:22
+ -->
 <template>
   <div>
     <p class="tip">快捷菜单操作</p>
@@ -49,11 +57,11 @@ export default {
     return {
       tableData: [],
       tableColumn: [
-        { type: 'checkbox', title: 'ID', width: 280, treeNode: true },
-        { field: 'name', title: 'Name', editRender: { name: 'input' } },
-        { field: 'size', title: 'Size', editRender: { name: 'input' } },
-        { field: 'type', title: 'Type', editRender: { name: 'input' } },
-        { field: 'date', title: 'Date', editRender: { name: 'input' } }
+        { type: 'checkbox', label: 'ID', width: 280, treeNode: true },
+        { prop: 'name', label: 'Name', editRender: { name: 'input' } },
+        { prop: 'size', label: 'Size', editRender: { name: 'input' } },
+        { prop: 'type', label: 'Type', editRender: { name: 'input' } },
+        { prop: 'date', label: 'Date', editRender: { name: 'input' } }
       ],
       headerMenus: [
         [
@@ -114,11 +122,11 @@ export default {
             return {
               tableData: [],
               tableColumn: [
-                { type: 'checkbox', title: 'ID', width: 280, treeNode: true },
-                { field: 'name', title: 'Name', editRender: { name: 'input' } },
-                { field: 'size', title: 'Size', editRender: { name: 'input' } },
-                { field: 'type', title: 'Type', editRender: { name: 'input' } },
-                { field: 'date', title: 'Date', editRender: { name: 'input' } }
+                { type: 'checkbox', label: 'ID', width: 280, treeNode: true },
+                { prop: 'name', label: 'Name', editRender: { name: 'input' } },
+                { prop: 'size', label: 'Size', editRender: { name: 'input' } },
+                { prop: 'type', label: 'Type', editRender: { name: 'input' } },
+                { prop: 'date', label: 'Date', editRender: { name: 'input' } }
               ],
               headerMenus: [
                 [

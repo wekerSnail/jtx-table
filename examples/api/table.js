@@ -229,7 +229,7 @@ const exportDataAPI = [
     version: '',
     type: 'Function',
     enum: '',
-    defVal: '默认过滤掉 type=index,selection,radio 和 field 为空的列',
+    defVal: '默认过滤掉 type=index,selection,radio 和 prop 为空的列',
     list: []
   },
   {
@@ -274,7 +274,7 @@ const apis = [
         name: 'customs',
         descKey: 'app.api.table.desc.customs',
         version: '',
-        type: 'Array<{field, visible}>',
+        type: 'Array<{prop, visible}>',
         enum: '',
         defVal: '',
         list: []
@@ -751,7 +751,7 @@ const apis = [
             defVal: '',
             list: [
               {
-                name: 'field',
+                name: 'prop',
                 desc: '列字段名',
                 version: '',
                 type: 'String',
@@ -2197,12 +2197,12 @@ const apis = [
         list: []
       },
       {
-        name: 'reloadRow(row, record, field)',
+        name: 'reloadRow(row, record, prop)',
         desc: '局部加载行数据并恢复到初始状态（对于行数据需要局部更改的场景中可能会用到）',
         version: '2.5.18',
         type: 'Promise',
         enum: '',
-        defVal: 'rows: Row, record: object, field?: string',
+        defVal: 'rows: Row, record: object, prop?: string',
         list: []
       },
       {
@@ -2296,21 +2296,21 @@ const apis = [
         list: []
       },
       {
-        name: 'revert(rows, field)',
+        name: 'revert(rows, prop)',
         desc: '即将废弃，请使用 revertData',
         version: '',
         type: 'Promise',
         enum: '',
-        defVal: 'rows: Row | Array<Row>, field?: string',
+        defVal: 'rows: Row | Array<Row>, prop?: string',
         list: []
       },
       {
-        name: 'revertData(rows, field)',
+        name: 'revertData(rows, prop)',
         desc: '还原更改，还原指定行 row 或者整个表格的数据',
         version: '',
         type: 'Promise',
         enum: '',
-        defVal: 'rows: Row | Array<Row>, field?: string',
+        defVal: 'rows: Row | Array<Row>, prop?: string',
         list: []
       },
       {
@@ -2386,12 +2386,12 @@ const apis = [
         list: []
       },
       {
-        name: 'getColumnByField(field)',
+        name: 'getColumnByField(prop)',
         desc: '根据列的字段名获取列',
         version: '2.1.4',
         type: 'Column',
         enum: '',
-        defVal: 'field: string',
+        defVal: 'prop: string',
         list: []
       },
       {
@@ -2678,22 +2678,22 @@ const apis = [
         list: []
       },
       {
-        name: 'hasRowChange(row, field)',
+        name: 'hasRowChange(row, prop)',
         disabled: true,
         desc: '即将废弃，请使用 isUpdateByRow',
         version: '',
         type: 'Boolean',
         enum: '',
-        defVal: 'row: Row, field?: string',
+        defVal: 'row: Row, prop?: string',
         list: []
       },
       {
-        name: 'isUpdateByRow(row, field)',
+        name: 'isUpdateByRow(row, prop)',
         desc: '用于 edit-config，判断行数据是否发生改变',
         version: '2.6.1',
         type: 'Boolean',
         enum: '',
-        defVal: 'row: Row, field?: string',
+        defVal: 'row: Row, prop?: string',
         list: []
       },
       {
@@ -2780,21 +2780,21 @@ const apis = [
         list: []
       },
       {
-        name: 'setActiveCell(row, field)',
+        name: 'setActiveCell(row, prop)',
         desc: '用于 edit-config，激活单元格编辑',
         version: '',
         type: 'Promise',
         enum: '',
-        defVal: 'row: Row, field: string',
+        defVal: 'row: Row, prop: string',
         list: []
       },
       {
-        name: 'setSelectCell(row, field)',
+        name: 'setSelectCell(row, prop)',
         desc: '用于 mouse-config.mouse-config，选中某个单元格',
         version: '',
         type: 'Promise',
         enum: '',
-        defVal: 'row: Row, field: string',
+        defVal: 'row: Row, prop: string',
         list: []
       },
       {
@@ -3065,12 +3065,12 @@ const apis = [
         list: []
       },
       {
-        name: 'clearFilter(field)',
-        desc: '手动清空筛选条件（如果不传 field 则清空所有筛选条件），数据会恢复成未筛选的状态',
+        name: 'clearFilter(prop)',
+        desc: '手动清空筛选条件（如果不传 prop 则清空所有筛选条件），数据会恢复成未筛选的状态',
         version: '',
         type: 'Promise',
         enum: '',
-        defVal: 'field?: string',
+        defVal: 'prop?: string',
         list: []
       },
       // {
@@ -3108,12 +3108,12 @@ const apis = [
       //   list: []
       // },
       {
-        name: 'clearData(rows, field)',
+        name: 'clearData(rows, prop)',
         desc: '手动清空单元格内容，如果不创参数，则清空整个表格内容，如果传了行则清空指定行内容，如果传了指定字段，则清空该字段内容',
         version: '',
         type: 'Promise',
         enum: '',
-        defVal: 'rows?: Row | Array<Row>, field?: string',
+        defVal: 'rows?: Row | Array<Row>, prop?: string',
         list: []
       },
       {
@@ -3261,21 +3261,21 @@ const apis = [
         list: []
       },
       {
-        name: 'sort(field, order)',
+        name: 'sort(prop, order)',
         desc: '手动对表格进行排序（如果 order 为空则自动切换排序）',
         version: '',
         type: 'Promise',
         enum: '',
-        defVal: 'field: string, order?: \'desc\' | \'asc\'',
+        defVal: 'prop: string, order?: \'desc\' | \'asc\'',
         list: []
       },
       {
-        name: 'filter(field, callback)',
+        name: 'filter(prop, callback)',
         desc: '手动对表格进行筛选，还可以通过 callback 返回新的选项列表',
         version: '2.1.4',
         type: 'Promise<options>',
         enum: '',
-        defVal: 'field: string, callback?: Function',
+        defVal: 'prop: string, callback?: Function',
         list: []
       },
       {

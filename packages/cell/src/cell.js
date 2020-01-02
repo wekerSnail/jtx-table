@@ -58,7 +58,7 @@ export const Cell = {
       return slots.header(params, h)
     }
     // 在 v3.0 中废弃 label
-    return [UtilTools.formatText(UtilTools.getFuncText(own.title || own.label), 1)]
+    return [UtilTools.formatText(UtilTools.getFuncText(own.label), 1)]
   },
   renderCell (h, params) {
     let { $table, row, column } = params
@@ -168,7 +168,7 @@ export const Cell = {
       return slots.header(params, h)
     }
     // 在 v3.0 中废弃 label
-    return [UtilTools.formatText(UtilTools.getFuncText(own.title || own.label), 1)]
+    return [UtilTools.formatText(UtilTools.getFuncText(own.label), 1)]
   },
   renderRadioCell (h, params) {
     let { $table, column, isHidden } = params
@@ -213,8 +213,7 @@ export const Cell = {
     let { isIndeterminate, isAllCheckboxDisabled } = $table
     let { slots, own } = column
     let checkboxOpts = $table.checkboxOpts
-    // 在 v3.0 中废弃 label
-    let headerTitle = own.title || own.label
+    let headerTitle = own.label
     let isChecked = false
     let on
     if (checkboxOpts.checkStrictly ? !checkboxOpts.showHeader : checkboxOpts.showHeader === false) {

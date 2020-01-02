@@ -69,8 +69,8 @@ export default {
         }
       ].concat(columns.map(name => {
         return {
-          field: name,
-          title: name,
+          prop: name,
+          label: name,
           minWidth: 76,
           headerAlign: 'center',
           sortable: true,
@@ -120,8 +120,8 @@ export default {
                 }
               ].concat(columns.map(name => {
                 return {
-                  field: name,
-                  title: name,
+                  prop: name,
+                  label: name,
                   minWidth: 76,
                   headerAlign: 'center',
                   sortable: true,

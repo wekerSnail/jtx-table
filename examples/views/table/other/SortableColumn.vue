@@ -8,10 +8,10 @@
       ref="xTable1"
       class="sortable-column-demo"
       :data="tableData">
-      <vxe-table-column field="name" title="Name"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
-      <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+      <vxe-table-column prop="name" label="Name"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -56,12 +56,12 @@ export default {
   data () {
     return {
       tableColumn: [
-        { field: 'name', title: 'Name', fixed: 'left', minWidth: 200 },
-        { field: 'role', title: 'Role', minWidth: 220 },
-        { field: 'sex', title: 'Sex', minWidth: 220 },
-        { field: 'age', title: 'Age', minWidth: 220 },
-        { field: 'date3', title: 'Date', minWidth: 220 },
-        { field: 'address', title: 'Address', minWidth: 300, showOverflow: true }
+        { prop: 'name', label: 'Name', fixed: 'left', minWidth: 200 },
+        { prop: 'role', label: 'Role', minWidth: 220 },
+        { prop: 'sex', label: 'Sex', minWidth: 220 },
+        { prop: 'age', label: 'Age', minWidth: 220 },
+        { prop: 'date3', label: 'Date', minWidth: 220 },
+        { prop: 'address', label: 'Address', minWidth: 300, showOverflow: true }
       ],
       toolbar: {
         custom: true
@@ -75,10 +75,10 @@ export default {
           ref="xTable"
           class="sortable-column-demo"
           :data="tableData">
-          <vxe-table-column field="name" title="Name"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
-          <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+          <vxe-table-column prop="name" label="Name"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -153,12 +153,12 @@ export default {
           data () {
             return {
               tableColumn: [
-                { field: 'name', title: 'Name', fixed: 'left', minWidth: 200 },
-                { field: 'role', title: 'Role', minWidth: 220 },
-                { field: 'sex', title: 'Sex', minWidth: 220 },
-                { field: 'age', title: 'Age', minWidth: 220 },
-                { field: 'date3', title: 'Date', minWidth: 220 },
-                { field: 'address', title: 'Address', minWidth: 300, showOverflow: true }
+                { prop: 'name', label: 'Name', fixed: 'left', minWidth: 200 },
+                { prop: 'role', label: 'Role', minWidth: 220 },
+                { prop: 'sex', label: 'Sex', minWidth: 220 },
+                { prop: 'age', label: 'Age', minWidth: 220 },
+                { prop: 'date3', label: 'Date', minWidth: 220 },
+                { prop: 'address', label: 'Address', minWidth: 300, showOverflow: true }
               ],
               toolbar: {
                 custom: true

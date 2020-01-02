@@ -31,10 +31,10 @@ export default {
     return {
       tableColumn: [
         { type: 'seq', width: 60 },
-        { field: 'name', title: 'app.body.label.name' },
-        { field: 'sex', title: 'app.body.label.sex' },
-        { field: 'age', title: 'Age' },
-        { field: 'rate', title: 'Rate' }
+        { prop: 'name', label: 'app.body.label.name' },
+        { prop: 'sex', label: 'app.body.label.sex' },
+        { prop: 'age', label: 'Age' },
+        { prop: 'rate', label: 'Rate' }
       ],
       tableToolbar: {
         export: true,
@@ -60,10 +60,10 @@ export default {
             return {
               tableColumn: [
                 { type: 'seq', width: 60 },
-                { field: 'name', title: 'app.body.label.name' },
-                { field: 'sex', title: 'app.body.label.sex' },
-                { field: 'age', title: 'Age' },
-                { field: 'rate', title: 'Rate' }
+                { prop: 'name', label: 'app.body.label.name' },
+                { prop: 'sex', label: 'app.body.label.sex' },
+                { prop: 'age', label: 'Age' },
+                { prop: 'rate', label: 'Rate' }
               ],
               tableToolbar: {
                 export: true,

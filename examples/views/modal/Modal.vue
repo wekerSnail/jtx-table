@@ -22,7 +22,7 @@
       <vxe-button @click="$XModal.alert({ message: 'warning 提示框', status: 'warning' })">warning</vxe-button>
       <vxe-button @click="$XModal.alert({ message: 'question 提示框', status: 'question' })">question</vxe-button>
       <vxe-button @click="$XModal.alert({ message: 'success 提示框', status: 'success' })">success</vxe-button>
-      <vxe-button @click="$XModal.alert({ message: 'error 提示框', title:'app.body.msg.error', status: 'error' })">error</vxe-button>
+      <vxe-button @click="$XModal.alert({ message: 'error 提示框', label:'app.body.msg.error', status: 'error' })">error</vxe-button>
       <vxe-button @click="$XModal.alert({ message: 'loading 提示框', status: 'loading' })">loading</vxe-button>
       <vxe-button @click="$XModal.alert({ message: 'iconStatus 自定义图标', status:'error', iconStatus: 'fa fa-hand-peace-o' })">自定义图标</vxe-button>
       <vxe-button @click="$XModal.confirm('您确定要删除吗？')">确认提示框</vxe-button>
@@ -45,9 +45,9 @@
             :sync-resize="value1"
             :data="tableData">
             <vxe-table-column type="seq" width="60"></vxe-table-column>
-            <vxe-table-column field="name" title="app.body.label.name"></vxe-table-column>
-            <vxe-table-column field="sex" title="app.body.label.sex"></vxe-table-column>
-            <vxe-table-column field="age" title="app.body.label.age"></vxe-table-column>
+            <vxe-table-column prop="name" label="app.body.label.name"></vxe-table-column>
+            <vxe-table-column prop="sex" label="app.body.label.sex"></vxe-table-column>
+            <vxe-table-column prop="age" label="app.body.label.age"></vxe-table-column>
           </vxe-table>
         </template>
       </vxe-modal>
@@ -65,7 +65,7 @@
       </vxe-modal>
 
       <vxe-button @click="value3 = !value3">记忆功能的窗口</vxe-button>
-      <vxe-modal v-model="value3" title="记忆功能的窗口" width="600" height="400" resize remember>
+      <vxe-modal v-model="value3" label="记忆功能的窗口" width="600" height="400" resize remember>
         <template>
           <p style="color: red">会记忆最后一次操作的状态，单重新打开后悔还原</p>
           <p style="color: red">按住头部移动！！！！！！！！！！！！！！！</p>
@@ -78,7 +78,7 @@
       </vxe-modal>
 
       <vxe-button @click="value4 = !value4">缩放表格的窗口</vxe-button>
-      <vxe-modal v-model="value4" title="缩放表格的窗口" width="800" height="400" resize>
+      <vxe-modal v-model="value4" label="缩放表格的窗口" width="800" height="400" resize>
         <template>
           <vxe-table
             border
@@ -89,16 +89,16 @@
             :sync-resize="value4"
             :data="tableData">
             <vxe-table-column type="seq" width="60"></vxe-table-column>
-            <vxe-table-column field="name" title="app.body.label.name"></vxe-table-column>
-            <vxe-table-column field="sex" title="app.body.label.sex"></vxe-table-column>
-            <vxe-table-column field="age" title="app.body.label.age"></vxe-table-column>
+            <vxe-table-column prop="name" label="app.body.label.name"></vxe-table-column>
+            <vxe-table-column prop="sex" label="app.body.label.sex"></vxe-table-column>
+            <vxe-table-column prop="age" label="app.body.label.age"></vxe-table-column>
           </vxe-table>
         </template>
       </vxe-modal>
 
       <vxe-button @click="value5 = !value5">完整功能的窗口</vxe-button>
       <vxe-modal v-model="value5" width="800" height="400" min-width="400" min-height="320" resize remember>
-        <template v-slot:title>
+        <template v-slot:label>
           <span style="color: red;">完整功能的窗口</span>
         </template>
         <template>
@@ -160,11 +160,11 @@ export default {
       tableColumn: [
         { type: 'checkbox', width: 50 },
         { type: 'seq', width: 60 },
-        { field: 'name', title: 'Name' },
-        { field: 'nickname', title: 'Nickname' },
+        { prop: 'name', label: 'Name' },
+        { prop: 'nickname', label: 'Nickname' },
         {
-          field: 'role',
-          title: 'Role',
+          prop: 'role',
+          label: 'Role',
           filters: [
             {
               label: '前端',
@@ -176,7 +176,7 @@ export default {
             }
           ]
         },
-        { field: 'describe', title: 'Describe' }
+        { prop: 'describe', label: 'Describe' }
       ],
       demoCodes: [
         `
@@ -198,7 +198,7 @@ export default {
           <vxe-button @click="$XModal.alert({ message: 'warning 提示框', status: 'warning' })">warning</vxe-button>
           <vxe-button @click="$XModal.alert({ message: 'question 提示框', status: 'question' })">question</vxe-button>
           <vxe-button @click="$XModal.alert({ message: 'success 提示框', status: 'success' })">success</vxe-button>
-          <vxe-button @click="$XModal.alert({ message: 'error 提示框', title:'app.body.msg.error', status: 'error' })">error</vxe-button>
+          <vxe-button @click="$XModal.alert({ message: 'error 提示框', label:'app.body.msg.error', status: 'error' })">error</vxe-button>
           <vxe-button @click="$XModal.alert({ message: 'loading 提示框', status: 'loading' })">loading</vxe-button>
           <vxe-button @click="$XModal.alert({ message: 'iconStatus 自定义图标', status:'error', iconStatus: 'fa fa-hand-peace-o' })">自定义图标</vxe-button>
           <vxe-button @click="$XModal.confirm('您确定要删除吗？')">确认提示框</vxe-button>
@@ -221,9 +221,9 @@ export default {
                 :sync-resize="value1"
                 :data="tableData">
                 <vxe-table-column type="seq" width="60"></vxe-table-column>
-                <vxe-table-column field="name" title="app.body.label.name"></vxe-table-column>
-                <vxe-table-column field="sex" title="app.body.label.sex"></vxe-table-column>
-                <vxe-table-column field="age" title="app.body.label.age"></vxe-table-column>
+                <vxe-table-column prop="name" label="app.body.label.name"></vxe-table-column>
+                <vxe-table-column prop="sex" label="app.body.label.sex"></vxe-table-column>
+                <vxe-table-column prop="age" label="app.body.label.age"></vxe-table-column>
               </vxe-table>
             </template>
           </vxe-modal>
@@ -241,7 +241,7 @@ export default {
           </vxe-modal>
 
           <vxe-button @click="value3 = !value3">记忆功能的窗口</vxe-button>
-          <vxe-modal v-model="value3" title="记忆功能的窗口" width="600" height="400" resize remember>
+          <vxe-modal v-model="value3" label="记忆功能的窗口" width="600" height="400" resize remember>
             <template>
               <p style="color: red">会记忆最后一次操作的状态，单重新打开后悔还原</p>
               <p style="color: red">按住头部移动！！！！！！！！！！！！！！！</p>
@@ -254,7 +254,7 @@ export default {
           </vxe-modal>
 
           <vxe-button @click="value4 = !value4">缩放表格的窗口</vxe-button>
-          <vxe-modal v-model="value4" title="缩放表格的窗口" width="800" height="400" resize>
+          <vxe-modal v-model="value4" label="缩放表格的窗口" width="800" height="400" resize>
             <template>
               <vxe-table
                 border
@@ -265,16 +265,16 @@ export default {
                 :sync-resize="value4"
                 :data="tableData">
                 <vxe-table-column type="seq" width="60"></vxe-table-column>
-                <vxe-table-column field="name" title="app.body.label.name"></vxe-table-column>
-                <vxe-table-column field="sex" title="app.body.label.sex"></vxe-table-column>
-                <vxe-table-column field="age" title="app.body.label.age"></vxe-table-column>
+                <vxe-table-column prop="name" label="app.body.label.name"></vxe-table-column>
+                <vxe-table-column prop="sex" label="app.body.label.sex"></vxe-table-column>
+                <vxe-table-column prop="age" label="app.body.label.age"></vxe-table-column>
               </vxe-table>
             </template>
           </vxe-modal>
 
           <vxe-button @click="value5 = !value5">完整功能的窗口</vxe-button>
           <vxe-modal v-model="value5" width="800" height="400" min-width="400" min-height="320" resize remember>
-            <template v-slot:title>
+            <template v-slot:label>
               <span style="color: red;">完整功能的窗口</span>
             </template>
             <template>
@@ -325,11 +325,11 @@ export default {
               tableColumn: [
                 { type: 'checkbox', width: 50 },
                 { type: 'seq', width: 60 },
-                { field: 'name', title: 'Name' },
-                { field: 'nickname', title: 'Nickname' },
+                { prop: 'name', label: 'Name' },
+                { prop: 'nickname', label: 'Nickname' },
                 {
-                  field: 'role',
-                  title: 'Role',
+                  prop: 'role',
+                  label: 'Role',
                   filters: [
                     {
                       label: '前端',
@@ -341,7 +341,7 @@ export default {
                     }
                   ]
                 },
-                { field: 'describe', title: 'Describe' }
+                { prop: 'describe', label: 'Describe' }
               ]
             }
           },

@@ -11,10 +11,10 @@
       highlight-hover-row
       :tree-config="{children: 'children', line: true}"
       :data="tableData">
-      <vxe-table-column field="name" title="Name" tree-node></vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" tree-node></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -35,10 +35,10 @@
       :tree-config="{children: 'children', line: true, iconOpen: 'vxe-icon--caret-right rotate45', iconClose: 'vxe-icon--caret-right'}"
       :checkbox-config="{labelField: 'name'}"
       :data="tableData">
-      <vxe-table-column type="checkbox" title="Name" width="280" tree-node></vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column type="checkbox" label="Name" width="280" tree-node></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -58,10 +58,10 @@
       :radio-config="{labelField: 'name'}"
       :tree-config="{children: 'children', line: true, iconOpen: 'fa fa-minus-square-o', iconClose: 'fa fa-plus-square-o'}"
       :data="tableData">
-      <vxe-table-column type="radio" title="Name" tree-node></vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column type="radio" label="Name" tree-node></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -82,7 +82,7 @@
       :checkbox-config="{labelField: 'name'}"
       :tree-config="{children: 'children', line: true, iconOpen: 'fa fa-caret-down', iconClose: 'fa fa-caret-right'}"
       :data="tableData">
-      <vxe-table-column type="checkbox" title="Name" tree-node>
+      <vxe-table-column type="checkbox" label="Name" tree-node>
         <template v-slot="{ row }">
           <span>
             <template v-if="row.children && row.children.length">
@@ -95,9 +95,9 @@
           </span>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -125,10 +125,10 @@ export default {
           highlight-hover-row
           :tree-config="{children: 'children', line: true}"
           :data="tableData">
-          <vxe-table-column field="name" title="Name" tree-node></vxe-table-column>
-          <vxe-table-column field="size" title="Size"></vxe-table-column>
-          <vxe-table-column field="type" title="Type"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" tree-node></vxe-table-column>
+          <vxe-table-column prop="size" label="Size"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -153,10 +153,10 @@ export default {
           :tree-config="{children: 'children', line: true, iconOpen: 'vxe-icon--caret-right rotate45', iconClose: 'vxe-icon--caret-right'}"
           :checkbox-config="{labelField: 'name'}"
           :data="tableData">
-          <vxe-table-column type="checkbox" title="Name" width="280" tree-node></vxe-table-column>
-          <vxe-table-column field="size" title="Size"></vxe-table-column>
-          <vxe-table-column field="type" title="Type"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
+          <vxe-table-column type="checkbox" label="Name" width="280" tree-node></vxe-table-column>
+          <vxe-table-column prop="size" label="Size"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -180,10 +180,10 @@ export default {
           :radio-config="{labelField: 'name'}"
           :tree-config="{children: 'children', line: true, iconOpen: 'fa fa-minus-square-o', iconClose: 'fa fa-plus-square-o'}"
           :data="tableData">
-          <vxe-table-column type="radio" title="Name" tree-node></vxe-table-column>
-          <vxe-table-column field="size" title="Size"></vxe-table-column>
-          <vxe-table-column field="type" title="Type"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
+          <vxe-table-column type="radio" label="Name" tree-node></vxe-table-column>
+          <vxe-table-column prop="size" label="Size"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -207,7 +207,7 @@ export default {
           size="mini"
           :tree-config="{children: 'children', line: true, iconOpen: 'fa fa-caret-down', iconClose: 'fa fa-caret-right'}"
           :data="tableData">
-          <vxe-table-column field="name" title="Name" tree-node>
+          <vxe-table-column prop="name" label="Name" tree-node>
             <template v-slot="{ row }">
               <span>
                 <template v-if="row.children && row.children.length">
@@ -220,9 +220,9 @@ export default {
               </span>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="size" title="Size"></vxe-table-column>
-          <vxe-table-column field="type" title="Type"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
+          <vxe-table-column prop="size" label="Size"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
         </vxe-table>
         `,
         `

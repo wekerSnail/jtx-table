@@ -6,10 +6,10 @@
       highlight-current-row
       :tree-config="{children: 'children'}"
       :data="tableData">
-      <vxe-table-column field="name" title="Name" tree-node></vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" tree-node></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -25,10 +25,10 @@
       :tree-config="{children: 'children'}"
       :radio-config="{labelField: 'name', highlight: true}"
       :data="tableData">
-      <vxe-table-column type="radio" title="Name" width="400" tree-node></vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column type="radio" label="Name" width="400" tree-node></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -53,9 +53,9 @@
           <vxe-button type="text" @click="clearCurrentRowEvent" :disabled="!selectRow">取消</vxe-button>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -81,10 +81,10 @@ export default {
           highlight-current-row
           :tree-config="{children: 'children'}"
           :data="tableData">
-          <vxe-table-column field="name" title="Name" tree-node></vxe-table-column>
-          <vxe-table-column field="size" title="Size"></vxe-table-column>
-          <vxe-table-column field="type" title="Type"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" tree-node></vxe-table-column>
+          <vxe-table-column prop="size" label="Size"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -104,10 +104,10 @@ export default {
           :tree-config="{children: 'children'}"
           :radio-config="{labelField: 'name', highlight: true}"
           :data="tableData">
-          <vxe-table-column type="radio" title="Name" width="400" tree-node></vxe-table-column>
-          <vxe-table-column field="size" title="Size"></vxe-table-column>
-          <vxe-table-column field="type" title="Type"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
+          <vxe-table-column type="radio" label="Name" width="400" tree-node></vxe-table-column>
+          <vxe-table-column prop="size" label="Size"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -136,9 +136,9 @@ export default {
               <vxe-button type="text" @click="clearCurrentRowEvent" :disabled="!selectRow">取消</vxe-button>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="size" title="Size"></vxe-table-column>
-          <vxe-table-column field="type" title="Type"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
+          <vxe-table-column prop="size" label="Size"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
         </vxe-table>
         `,
         `

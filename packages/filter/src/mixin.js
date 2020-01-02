@@ -7,11 +7,11 @@ export default {
      * 手动调用筛选的方法
      * 如果不传回调则返回一个选项列表的 Promise 对象
      * 如果传回调则通过回调返回的值更新选项列表，并返回一个新选项列表的 Promise 对象
-     * @param {String} field 字段名
+     * @param {String} prop 字段名
      * @param {Function} callback 重置列表的回调函数，返回新的选项列表
      */
-    _filter (field, callback) {
-      let column = this.getColumnByField(field)
+    _filter (prop, callback) {
+      let column = this.getColumnByProp(prop)
       if (column) {
         let filters = column.filters
         if (callback) {
@@ -120,11 +120,11 @@ export default {
             }
           })
           // 在 v3.0 中废弃 prop
-          filterList.push({ column, property, field: property, prop: property, values: valueList, datas: dataList })
+          filterList.push({ column, property, prop: property, values: valueList, datas: dataList })
         }
       })
       // 在 v3.0 中废弃 prop
-      UtilTools.emitEvent(this, 'filter-change', [{ column, property, field: property, prop: property, values, datas, filters: filterList, $table: this }])
+      UtilTools.emitEvent(this, 'filter-change', [{ column, property, prop: property, values, datas, filters: filterList, $table: this }])
       this.updateFooter()
       if (scrollXLoad || scrollYLoad) {
         this.clearScroll()
@@ -150,10 +150,10 @@ export default {
     /**
      * 清空指定列的筛选条件
      * 如果为空则清空所有列的筛选条件
-     * @param {String} field 字段名
+     * @param {String} prop 字段名
      */
-    _clearFilter (field) {
-      let column = arguments.length ? this.getColumnByField(field) : null
+    _clearFilter (prop) {
+      let column = arguments.length ? this.getColumnByProp(prop) : null
       let filterStore = this.filterStore
       let handleClear = column => {
         let { filters } = column

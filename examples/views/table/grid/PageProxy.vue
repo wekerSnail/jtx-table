@@ -45,10 +45,10 @@ export default {
       tableColumn: [
         { type: 'checkbox', width: 50 },
         { type: 'seq', width: 60 },
-        { field: 'name', title: 'Name' },
-        { field: 'nickname', title: 'Nickname' },
-        { field: 'role', title: 'Role' },
-        { field: 'describe', title: 'Describe', showOverflow: true }
+        { prop: 'name', label: 'Name' },
+        { prop: 'nickname', label: 'Nickname' },
+        { prop: 'role', label: 'Role' },
+        { prop: 'describe', label: 'Describe', showOverflow: true }
       ],
       demoCodes: [
         `
@@ -80,10 +80,10 @@ export default {
               tableColumn: [
                 { type: 'checkbox', width: 50 },
                 { type: 'seq', width: 60 },
-                { field: 'name', title: 'Name' },
-                { field: 'nickname', title: 'Nickname' },
-                { field: 'role', title: 'Role' },
-                { field: 'describe', title: 'Describe', showOverflow: true }
+                { prop: 'name', label: 'Name' },
+                { prop: 'nickname', label: 'Nickname' },
+                { prop: 'role', label: 'Role' },
+                { prop: 'describe', label: 'Describe', showOverflow: true }
               ]
             }
           }

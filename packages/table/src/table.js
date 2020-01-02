@@ -474,16 +474,6 @@ export default {
       if (this.$toolbar) {
         this.$toolbar.updateColumn(tableFullColumn)
       }
-      // 在 v3.0 中废弃 prop、label
-      if (tableFullColumn.length) {
-        let cIndex = Math.floor((tableFullColumn.length - 1) / 2)
-        if (tableFullColumn[cIndex].prop) {
-          UtilTools.warn('vxe.error.delProp', ['prop', 'field'])
-        }
-        if (tableFullColumn[cIndex].label) {
-          UtilTools.warn('vxe.error.delProp', ['label', 'title'])
-        }
-      }
       if (this.treeConfig && tableFullColumn.some(column => column.fixed) && tableFullColumn.some(column => column.type === 'expand')) {
         UtilTools.warn('vxe.error.treeFixedExpand')
       }

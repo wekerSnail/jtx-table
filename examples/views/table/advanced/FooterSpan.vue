@@ -14,10 +14,10 @@
       :footer-method="footerMethod"
       :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" sortable></vxe-table-column>
-      <vxe-table-column field="role" title="Role" sortable></vxe-table-column>
-      <vxe-table-column field="rate" title="Rate" footer-align="center"></vxe-table-column>
-      <vxe-table-column field="age" title="Age" footer-align="center"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" sortable></vxe-table-column>
+      <vxe-table-column prop="role" label="Role" sortable></vxe-table-column>
+      <vxe-table-column prop="rate" label="Rate" footer-align="center"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age" footer-align="center"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -38,9 +38,9 @@
       :footer-method="footerMethod"
       :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="key" title="Key"></vxe-table-column>
-      <vxe-table-column field="content" title="Translate"></vxe-table-column>
-      <vxe-table-column field="language" title="Language" :filters="[{label: '中文', value: 'zh_CN'}, {label: 'English', value: 'en_US'}]"></vxe-table-column>
+      <vxe-table-column prop="key" label="Key"></vxe-table-column>
+      <vxe-table-column prop="content" label="Translate"></vxe-table-column>
+      <vxe-table-column prop="language" label="Language" :filters="[{label: '中文', value: 'zh_CN'}, {label: 'English', value: 'en_US'}]"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -70,10 +70,10 @@ export default {
           :footer-method="footerMethod"
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" sortable></vxe-table-column>
-          <vxe-table-column field="role" title="Role" sortable></vxe-table-column>
-          <vxe-table-column field="rate" title="Rate" footer-align="center"></vxe-table-column>
-          <vxe-table-column field="age" title="Age" footer-align="center"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" sortable></vxe-table-column>
+          <vxe-table-column prop="role" label="Role" sortable></vxe-table-column>
+          <vxe-table-column prop="rate" label="Rate" footer-align="center"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age" footer-align="center"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -153,9 +153,9 @@ export default {
           :footer-method="footerMethod"
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="key" title="Key"></vxe-table-column>
-          <vxe-table-column field="content" title="Translate"></vxe-table-column>
-          <vxe-table-column field="language" title="Language" :filters="[{label: '中文', value: 'zh_CN'}, {label: 'English', value: 'en_US'}]"></vxe-table-column>
+          <vxe-table-column prop="key" label="Key"></vxe-table-column>
+          <vxe-table-column prop="content" label="Translate"></vxe-table-column>
+          <vxe-table-column prop="language" label="Language" :filters="[{label: '中文', value: 'zh_CN'}, {label: 'English', value: 'en_US'}]"></vxe-table-column>
         </vxe-table>
         `,
         `

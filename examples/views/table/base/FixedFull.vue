@@ -9,11 +9,11 @@
       highlight-hover-row
       :data="tableData">
       <vxe-table-column type="seq" width="60" fixed="left"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" width="300"></vxe-table-column>
-      <vxe-table-column field="role" title="Role" width="300"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" width="300"></vxe-table-column>
-      <vxe-table-column field="date" title="Date" width="300"></vxe-table-column>
-      <vxe-table-column title="操作" fixed="right" width="200">
+      <vxe-table-column prop="name" label="Name" width="300"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role" width="300"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" width="300"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date" width="300"></vxe-table-column>
+      <vxe-table-column label="操作" fixed="right" width="200">
         <template>
           <vxe-button type="text">按钮1</vxe-button>
           <vxe-button type="text">按钮2</vxe-button>
@@ -37,11 +37,11 @@
       show-overflow
       :data="tableData">
       <vxe-table-column type="seq" width="60" fixed="left"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" width="300"></vxe-table-column>
-      <vxe-table-column field="role" title="Role" width="300"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" width="300"></vxe-table-column>
-      <vxe-table-column field="date" title="Date" width="300"></vxe-table-column>
-      <vxe-table-column title="操作" fixed="right" width="200">
+      <vxe-table-column prop="name" label="Name" width="300"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role" width="300"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" width="300"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date" width="300"></vxe-table-column>
+      <vxe-table-column label="操作" fixed="right" width="200">
         <template>
           <vxe-button type="primary">按钮1</vxe-button>
           <vxe-button>按钮2</vxe-button>
@@ -88,11 +88,11 @@ export default {
           highlight-hover-row
           :data="tableData">
           <vxe-table-column type="seq" width="60" fixed="left"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" width="300"></vxe-table-column>
-          <vxe-table-column field="role" title="Role" width="300"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" width="300"></vxe-table-column>
-          <vxe-table-column field="date" title="Date" width="300"></vxe-table-column>
-          <vxe-table-column title="操作" fixed="right" width="200">
+          <vxe-table-column prop="name" label="Name" width="300"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role" width="300"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" width="300"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date" width="300"></vxe-table-column>
+          <vxe-table-column label="操作" fixed="right" width="200">
             <template>
               <vxe-button type="text">按钮1</vxe-button>
               <vxe-button type="text">按钮2</vxe-button>
@@ -120,11 +120,11 @@ export default {
           show-overflow
           :data="tableData">
           <vxe-table-column type="seq" width="60" fixed="left"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" width="300"></vxe-table-column>
-          <vxe-table-column field="role" title="Role" width="300"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" width="300"></vxe-table-column>
-          <vxe-table-column field="date" title="Date" width="300"></vxe-table-column>
-          <vxe-table-column title="操作" fixed="right" width="200">
+          <vxe-table-column prop="name" label="Name" width="300"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role" width="300"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" width="300"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date" width="300"></vxe-table-column>
+          <vxe-table-column label="操作" fixed="right" width="200">
             <template>
               <vxe-button type="primary">按钮1</vxe-button>
               <vxe-button>按钮2</vxe-button>

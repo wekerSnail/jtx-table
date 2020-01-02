@@ -22,9 +22,9 @@
       :keyboard-config="{isArrow: true, isDel: true, isEnter: true, isTab: true, isEdit: true}"
       :edit-config="{trigger: 'click', mode: 'cell'}">
       <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-      <vxe-table-column field="key" title="Key" :edit-render="{name: 'input', props: {placeholder: '请输入键值'}}"></vxe-table-column>
-      <vxe-table-column field="name" title="Translate" :edit-render="{name: 'input', props: {placeholder: '请输入翻译的内容'}}"></vxe-table-column>
-      <vxe-table-column field="language" title="Language" :edit-render="{name: 'select', options: optionList}"></vxe-table-column>
+      <vxe-table-column prop="key" label="Key" :edit-render="{name: 'input', props: {placeholder: '请输入键值'}}"></vxe-table-column>
+      <vxe-table-column prop="name" label="Translate" :edit-render="{name: 'input', props: {placeholder: '请输入翻译的内容'}}"></vxe-table-column>
+      <vxe-table-column prop="language" label="Language" :edit-render="{name: 'select', options: optionList}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -84,9 +84,9 @@ export default {
           :keyboard-config="{isArrow: true, isDel: true, isEnter: true, isTab: true, isEdit: true}"
           :edit-config="{trigger: 'click', mode: 'cell'}">
           <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-          <vxe-table-column field="key" title="Key" :edit-render="{name: 'input', props: {placeholder: '请输入键值'}}"></vxe-table-column>
-          <vxe-table-column field="name" title="Translate" :edit-render="{name: 'input', props: {placeholder: '请输入翻译的内容'}}"></vxe-table-column>
-          <vxe-table-column field="language" title="Language" :edit-render="{name: 'select', options: optionList}"></vxe-table-column>
+          <vxe-table-column prop="key" label="Key" :edit-render="{name: 'input', props: {placeholder: '请输入键值'}}"></vxe-table-column>
+          <vxe-table-column prop="name" label="Translate" :edit-render="{name: 'input', props: {placeholder: '请输入翻译的内容'}}"></vxe-table-column>
+          <vxe-table-column prop="language" label="Language" :edit-render="{name: 'select', options: optionList}"></vxe-table-column>
         </vxe-table>
         `,
         `

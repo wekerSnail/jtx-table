@@ -10,13 +10,13 @@
       height="400"
       :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="AInput" :filters="[{data: ''}]" :filter-render="{name: 'AInput', props: {placeholder: '请输入名称'}}"></vxe-table-column>
-      <vxe-table-column field="age" title="AInputNumber" sortable width="160" :filters="[{data: 0}]" :filter-render="{name: 'AInputNumber', props: {min: 0, max: 100}}"></vxe-table-column>
-      <vxe-table-column field="sex" title="ASelect" :formatter="formatterSex" :filters="[{data: null}]" :filter-render="{name: 'ASelect', options: sexList, props: {placeholder: '请选择'}}"></vxe-table-column>
-      <vxe-table-column field="sex1" title="ASelect" :formatter="formatterSexs" :filters="[{data: []}]" :filter-render="{name: 'ASelect', options: sexList, props: {mode: 'multiple', placeholder: '请选择'}}"></vxe-table-column>
-      <vxe-table-column field="role" title="AAutoComplete" width="160" :filters="[{data: ''}]" :filter-render="{name: 'AAutoComplete', props: ACProps, events: {search: roleSearchEvent}}"></vxe-table-column>
-      <vxe-table-column field="flag" title="ASwitch" width="100" :filters="[{data: false}]" :filter-render="{name: 'ASwitch'}" :cell-render="{name: 'ASwitch', props: {disabled: true}}"></vxe-table-column>
-      <vxe-table-column field="rate" title="ARate" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'ARate'}" :cell-render="{name: 'ARate', props: {disabled: true}}"></vxe-table-column>
+      <vxe-table-column prop="name" label="AInput" :filters="[{data: ''}]" :filter-render="{name: 'AInput', props: {placeholder: '请输入名称'}}"></vxe-table-column>
+      <vxe-table-column prop="age" label="AInputNumber" sortable width="160" :filters="[{data: 0}]" :filter-render="{name: 'AInputNumber', props: {min: 0, max: 100}}"></vxe-table-column>
+      <vxe-table-column prop="sex" label="ASelect" :formatter="formatterSex" :filters="[{data: null}]" :filter-render="{name: 'ASelect', options: sexList, props: {placeholder: '请选择'}}"></vxe-table-column>
+      <vxe-table-column prop="sex1" label="ASelect" :formatter="formatterSexs" :filters="[{data: []}]" :filter-render="{name: 'ASelect', options: sexList, props: {mode: 'multiple', placeholder: '请选择'}}"></vxe-table-column>
+      <vxe-table-column prop="role" label="AAutoComplete" width="160" :filters="[{data: ''}]" :filter-render="{name: 'AAutoComplete', props: ACProps, events: {search: roleSearchEvent}}"></vxe-table-column>
+      <vxe-table-column prop="flag" label="ASwitch" width="100" :filters="[{data: false}]" :filter-render="{name: 'ASwitch'}" :cell-render="{name: 'ASwitch', props: {disabled: true}}"></vxe-table-column>
+      <vxe-table-column prop="rate" label="ARate" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'ARate'}" :cell-render="{name: 'ARate', props: {disabled: true}}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -51,13 +51,13 @@ export default {
           height="400"
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="AInput" :filters="[{data: ''}]" :filter-render="{name: 'AInput', props: {placeholder: '请输入名称'}}"></vxe-table-column>
-          <vxe-table-column field="age" title="AInputNumber" sortable width="160" :filters="[{data: 0}]" :filter-render="{name: 'AInputNumber', props: {min: 0, max: 100}}"></vxe-table-column>
-          <vxe-table-column field="sex" title="ASelect" :formatter="formatterSex" :filters="[{data: null}]" :filter-render="{name: 'ASelect', options: sexList, props: {placeholder: '请选择'}}"></vxe-table-column>
-          <vxe-table-column field="sex1" title="ASelect" :formatter="formatterSexs" :filters="[{data: []}]" :filter-render="{name: 'ASelect', options: sexList, props: {mode: 'multiple', placeholder: '请选择'}}"></vxe-table-column>
-          <vxe-table-column field="role" title="AAutoComplete" width="160" :filters="[{data: ''}]" :filter-render="{name: 'AAutoComplete', props: ACProps, events: {search: roleSearchEvent}}"></vxe-table-column>
-          <vxe-table-column field="flag" title="ASwitch" width="100" :filters="[{data: false}]" :filter-render="{name: 'ASwitch'}" :cell-render="{name: 'ASwitch', props: {disabled: true}}"></vxe-table-column>
-          <vxe-table-column field="rate" title="ARate" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'ARate'}" :cell-render="{name: 'ARate', props: {disabled: true}}"></vxe-table-column>
+          <vxe-table-column prop="name" label="AInput" :filters="[{data: ''}]" :filter-render="{name: 'AInput', props: {placeholder: '请输入名称'}}"></vxe-table-column>
+          <vxe-table-column prop="age" label="AInputNumber" sortable width="160" :filters="[{data: 0}]" :filter-render="{name: 'AInputNumber', props: {min: 0, max: 100}}"></vxe-table-column>
+          <vxe-table-column prop="sex" label="ASelect" :formatter="formatterSex" :filters="[{data: null}]" :filter-render="{name: 'ASelect', options: sexList, props: {placeholder: '请选择'}}"></vxe-table-column>
+          <vxe-table-column prop="sex1" label="ASelect" :formatter="formatterSexs" :filters="[{data: []}]" :filter-render="{name: 'ASelect', options: sexList, props: {mode: 'multiple', placeholder: '请选择'}}"></vxe-table-column>
+          <vxe-table-column prop="role" label="AAutoComplete" width="160" :filters="[{data: ''}]" :filter-render="{name: 'AAutoComplete', props: ACProps, events: {search: roleSearchEvent}}"></vxe-table-column>
+          <vxe-table-column prop="flag" label="ASwitch" width="100" :filters="[{data: false}]" :filter-render="{name: 'ASwitch'}" :cell-render="{name: 'ASwitch', props: {disabled: true}}"></vxe-table-column>
+          <vxe-table-column prop="rate" label="ARate" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'ARate'}" :cell-render="{name: 'ARate', props: {disabled: true}}"></vxe-table-column>
         </vxe-table>
         `,
         `

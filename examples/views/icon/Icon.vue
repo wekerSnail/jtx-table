@@ -4,9 +4,9 @@
     <p class="tip">内置轻量级的 icon 图标，还可以通过修改 <router-link class="link" :to="{name: 'StartIcons'}">icon</router-link> 替换默认的</p>
 
     <ul class="icon-list">
-      <li v-for="item in list" :key="item.icon" @click="copyEvent(item)" title="点击复制内容">
+      <li v-for="item in list" :key="item.icon" @click="copyEvent(item)" label="点击复制内容">
         <i :class="item.icon"></i>
-        <div class="title">{{ item.icon }}</div>
+        <div class="label">{{ item.icon }}</div>
       </li>
     </ul>
 
@@ -169,7 +169,7 @@ export default {
         border-color: #5CB6FF;
       }
     }
-    .title {
+    .label {
       font-size: 14px;
       margin-top: 10px;
     }

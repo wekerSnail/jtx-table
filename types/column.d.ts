@@ -11,7 +11,7 @@ export declare class Column extends VXETableModule {
   /**
    * 列属性
    */
-  field: string;
+  prop: string;
   /**
    * 列标题
    */

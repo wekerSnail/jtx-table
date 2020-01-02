@@ -105,7 +105,7 @@ export default {
           }
         },
         {
-          title: '操作',
+          label: '操作',
           width: 140,
           slots: {
             default: ({ row }) => {
@@ -230,7 +230,7 @@ export default {
                   }
                 },
                 {
-                  title: '操作',
+                  label: '操作',
                   width: 140,
                   slots: {
                     default: ({ row }) => {

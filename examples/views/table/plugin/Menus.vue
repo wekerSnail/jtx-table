@@ -14,10 +14,10 @@
       :keyboard-config="{isArrow: true, isDel: true, isEnter: true, isTab: true, isEdit: true}"
       :edit-config="{trigger: 'dblclick', mode: 'cell'}">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" sortable :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="sex" title="sex" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="age" title="Age" sortable :filters="[{ data: [] }]" :filter-render="{name: 'input'}" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="rate" title="Rate" sortable></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" sortable :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="sex" label="sex" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age" sortable :filters="[{ data: [] }]" :filter-render="{name: 'input'}" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="rate" label="Rate" sortable></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -97,10 +97,10 @@ export default {
           :keyboard-config="{isArrow: true, isDel: true, isEnter: true, isTab: true, isEdit: true}"
           :edit-config="{trigger: 'dblclick', mode: 'cell'}">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" sortable :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="sex" title="sex" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="age" title="Age" sortable :filters="[{ data: [] }]" :filter-render="{name: 'input'}" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="rate" title="Rate" sortable></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" sortable :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="sex" label="sex" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age" sortable :filters="[{ data: [] }]" :filter-render="{name: 'input'}" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="rate" label="Rate" sortable></vxe-table-column>
         </vxe-table>
         `,
         `

@@ -25,11 +25,11 @@
       row-id="id"
       :loading="loading">
       <vxe-table-column type="seq" width="100"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" sortable></vxe-table-column>
-      <vxe-table-column field="role" title="Role"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
-      <vxe-table-column field="address" title="Address"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" sortable></vxe-table-column>
+      <vxe-table-column prop="role" label="Role"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -71,11 +71,11 @@ export default {
           row-id="id"
           :loading="loading">
           <vxe-table-column type="seq" width="100"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" sortable></vxe-table-column>
-          <vxe-table-column field="role" title="Role"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
-          <vxe-table-column field="address" title="Address"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" sortable></vxe-table-column>
+          <vxe-table-column prop="role" label="Role"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address"></vxe-table-column>
         </vxe-table>
         `,
         `

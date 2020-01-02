@@ -12,14 +12,14 @@
       :context-menu="{body: {options: bodyMenus}}"
       :edit-config="{trigger: 'dblclick', mode: 'cell'}">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="nickname" title="Nickname" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="age" title="Age" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="rate" title="Rate" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="num" title="Num" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="num1" title="Num1" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="num2" title="Num2" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="num3" title="Num3" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="num4" title="Num4" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="nickname" label="Nickname" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="rate" label="Rate" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="num" label="Num" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="num1" label="Num1" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="num2" label="Num2" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="num3" label="Num3" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="num4" label="Num4" :edit-render="{name: 'input'}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -126,14 +126,14 @@ export default {
           :context-menu="{body: {options: bodyMenus}}"
           :edit-config="{trigger: 'dblclick', mode: 'cell'}">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="nickname" title="Nickname" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="age" title="Age" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="rate" title="Rate" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="num" title="Num" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="num1" title="Num1" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="num2" title="Num2" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="num3" title="Num3" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="num4" title="Num4" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="nickname" label="Nickname" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="rate" label="Rate" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="num" label="Num" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="num1" label="Num1" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="num2" label="Num2" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="num3" label="Num3" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="num4" label="Num4" :edit-render="{name: 'input'}"></vxe-table-column>
         </vxe-table>
         `,
         `

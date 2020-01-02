@@ -8,11 +8,11 @@
       highlight-hover-row
       highlight-current-column
       :data="tableData">
-      <vxe-table-column field="name" title="app.api.title.prop" min-width="280" tree-node></vxe-table-column>
-      <vxe-table-column field="desc" title="app.api.title.desc" min-width="200"></vxe-table-column>
-      <vxe-table-column field="type" title="app.api.title.type" min-width="140"></vxe-table-column>
-      <vxe-table-column field="enum" title="app.api.title.enum" min-width="150"></vxe-table-column>
-      <vxe-table-column field="defVal" title="app.api.title.defVal" min-width="160"></vxe-table-column>
+      <vxe-table-column prop="name" label="app.api.label.prop" min-width="280" tree-node></vxe-table-column>
+      <vxe-table-column prop="desc" label="app.api.label.desc" min-width="200"></vxe-table-column>
+      <vxe-table-column prop="type" label="app.api.label.type" min-width="140"></vxe-table-column>
+      <vxe-table-column prop="enum" label="app.api.label.enum" min-width="150"></vxe-table-column>
+      <vxe-table-column prop="defVal" label="app.api.label.defVal" min-width="160"></vxe-table-column>
     </vxe-table>
     <h2>示例</h2>
     <pre>
@@ -61,9 +61,9 @@ export default {
           :context-menu="{body: {options: bodyMenus}}"
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="sex" title="sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="sex" label="sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
         </vxe-table>
         `,
         `

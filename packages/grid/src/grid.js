@@ -191,12 +191,12 @@ export default {
     }
     // 如果使用默认排序
     if (defaultSort) {
-      let { field, order } = defaultSort
+      let { prop, order } = defaultSort
       this.sortData = {
-        column: columns.find(column => column.property === field),
-        property: field,
-        field: field,
-        prop: field,
+        column: columns.find(column => column.property === prop),
+        property: prop,
+        prop: prop,
+        prop: prop,
         order,
         $table
       }

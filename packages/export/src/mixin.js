@@ -430,12 +430,12 @@ function getElementsByTagName (elem, qualifiedName) {
 function checkImportData (columns, fields, rows) {
   let tableFields = []
   columns.forEach(column => {
-    let field = column.property
-    if (field) {
-      tableFields.push(field)
+    let prop = column.property
+    if (prop) {
+      tableFields.push(prop)
     }
   })
-  return tableFields.every(field => fields.indexOf(field) > -1)
+  return tableFields.every(prop => fields.indexOf(prop) > -1)
 }
 
 function handleImport ($table, content, opts) {

@@ -38,23 +38,23 @@ export default {
       tableData: [],
       tableColumn: [
         { type: 'checkbox', width: 60 },
-        { type: 'seq', title: 'Number', width: 80 },
-        { field: 'name', title: 'AInput', minWidth: 140, editRender: { name: 'AInput' } },
-        { field: 'role', title: 'AAutoComplete', width: 160, editRender: { name: 'AAutoComplete', props: { dataSource: [] }, events: { search: this.roleSearchEvent } } },
-        { field: 'age', title: 'AInputNumber', width: 160, editRender: { name: 'AInputNumber', props: { max: 35, min: 18 } } },
-        { field: 'sex', title: 'ASelect', width: 140, editRender: { name: 'ASelect', options: [] } },
-        { field: 'sex1', title: 'ASelect', width: 160, editRender: { name: 'ASelect', options: [], props: { mode: 'multiple' } } },
-        { field: 'sex2', title: 'ASelect', width: 140, editRender: { name: 'ASelect', optionGroups: [] } },
-        { field: 'region', title: 'ACascader', width: 200, editRender: { name: 'ACascader', props: { options: [] } } },
-        { field: 'date7', title: 'ADatePicker', width: 140, editRender: { name: 'ADatePicker', props: { type: 'date', format: 'YYYY/MM/DD' } } },
-        { field: 'date8', title: 'AMonthPicker', width: 140, editRender: { name: 'AMonthPicker' } },
-        { field: 'date9', title: 'AWeekPicker', width: 140, editRender: { name: 'AWeekPicker' } },
-        { field: 'date11', title: 'ARangePicker', width: 140, editRender: { name: 'ARangePicker' } },
-        { field: 'date10', title: 'ATimePicker', width: 140, editRender: { name: 'ATimePicker' } },
-        { field: 'attr1', title: 'ATreeSelect', width: 140, editRender: { name: 'ATreeSelect', props: { treeData: [] } } },
-        { field: 'attr2', title: 'ATreeSelect', width: 140, editRender: { name: 'ATreeSelect', props: { treeData: [], treeCheckable: true } } },
-        { field: 'flag', title: 'ASwitch', width: 100, editRender: { name: 'ASwitch', type: 'visible' } },
-        { field: 'rate', title: 'ARate', width: 200, editRender: { name: 'ARate', type: 'visible' } }
+        { type: 'seq', label: 'Number', width: 80 },
+        { prop: 'name', label: 'AInput', minWidth: 140, editRender: { name: 'AInput' } },
+        { prop: 'role', label: 'AAutoComplete', width: 160, editRender: { name: 'AAutoComplete', props: { dataSource: [] }, events: { search: this.roleSearchEvent } } },
+        { prop: 'age', label: 'AInputNumber', width: 160, editRender: { name: 'AInputNumber', props: { max: 35, min: 18 } } },
+        { prop: 'sex', label: 'ASelect', width: 140, editRender: { name: 'ASelect', options: [] } },
+        { prop: 'sex1', label: 'ASelect', width: 160, editRender: { name: 'ASelect', options: [], props: { mode: 'multiple' } } },
+        { prop: 'sex2', label: 'ASelect', width: 140, editRender: { name: 'ASelect', optionGroups: [] } },
+        { prop: 'region', label: 'ACascader', width: 200, editRender: { name: 'ACascader', props: { options: [] } } },
+        { prop: 'date7', label: 'ADatePicker', width: 140, editRender: { name: 'ADatePicker', props: { type: 'date', format: 'YYYY/MM/DD' } } },
+        { prop: 'date8', label: 'AMonthPicker', width: 140, editRender: { name: 'AMonthPicker' } },
+        { prop: 'date9', label: 'AWeekPicker', width: 140, editRender: { name: 'AWeekPicker' } },
+        { prop: 'date11', label: 'ARangePicker', width: 140, editRender: { name: 'ARangePicker' } },
+        { prop: 'date10', label: 'ATimePicker', width: 140, editRender: { name: 'ATimePicker' } },
+        { prop: 'attr1', label: 'ATreeSelect', width: 140, editRender: { name: 'ATreeSelect', props: { treeData: [] } } },
+        { prop: 'attr2', label: 'ATreeSelect', width: 140, editRender: { name: 'ATreeSelect', props: { treeData: [], treeCheckable: true } } },
+        { prop: 'flag', label: 'ASwitch', width: 100, editRender: { name: 'ASwitch', type: 'visible' } },
+        { prop: 'rate', label: 'ARate', width: 200, editRender: { name: 'ARate', type: 'visible' } }
       ],
       tableToolbar: {},
       restaurants: ['前端', '后端', '开发', '测试'],
@@ -84,23 +84,23 @@ export default {
               tableData: [],
               tableColumn: [
                 { type: 'checkbox', width: 60 },
-                { type: 'seq', title: 'Number', width: 80 },
-                { field: 'name', title: 'AInput', minWidth: 140, editRender: { name: 'AInput' } },
-                { field: 'role', title: 'AAutoComplete', width: 160, editRender: { name: 'AAutoComplete', props: { dataSource: [] }, events: { search: this.roleSearchEvent } } },
-                { field: 'age', title: 'AInputNumber', width: 160, editRender: { name: 'AInputNumber', props: { max: 35, min: 18 } } },
-                { field: 'sex', title: 'ASelect', width: 140, editRender: { name: 'ASelect', options: [] } },
-                { field: 'sex1', title: 'ASelect', width: 160, editRender: { name: 'ASelect', options: [], props: { mode: 'multiple' } } },
-                { field: 'sex2', title: 'ASelect', width: 140, editRender: { name: 'ASelect', optionGroups: [] } },
-                { field: 'region', title: 'ACascader', width: 200, editRender: { name: 'ACascader', props: { options: [] } } },
-                { field: 'date7', title: 'ADatePicker', width: 140, editRender: { name: 'ADatePicker', props: { type: 'date', format: 'YYYY/MM/DD' } } },
-                { field: 'date8', title: 'AMonthPicker', width: 140, editRender: { name: 'AMonthPicker' } },
-                { field: 'date9', title: 'AWeekPicker', width: 140, editRender: { name: 'AWeekPicker' } },
-                { field: 'date11', title: 'ARangePicker', width: 140, editRender: { name: 'ARangePicker' } },
-                { field: 'date10', title: 'ATimePicker', width: 140, editRender: { name: 'ATimePicker' } },
-                { field: 'attr1', title: 'ATreeSelect', width: 140, editRender: { name: 'ATreeSelect', props: { treeData: [] } } },
-                { field: 'attr2', title: 'ATreeSelect', width: 140, editRender: { name: 'ATreeSelect', props: { treeData: [], treeCheckable: true } } },
-                { field: 'flag', title: 'ASwitch', width: 100, editRender: { name: 'ASwitch', type: 'visible' } },
-                { field: 'rate', title: 'ARate', width: 200, editRender: { name: 'ARate', type: 'visible' } }
+                { type: 'seq', label: 'Number', width: 80 },
+                { prop: 'name', label: 'AInput', minWidth: 140, editRender: { name: 'AInput' } },
+                { prop: 'role', label: 'AAutoComplete', width: 160, editRender: { name: 'AAutoComplete', props: { dataSource: [] }, events: { search: this.roleSearchEvent } } },
+                { prop: 'age', label: 'AInputNumber', width: 160, editRender: { name: 'AInputNumber', props: { max: 35, min: 18 } } },
+                { prop: 'sex', label: 'ASelect', width: 140, editRender: { name: 'ASelect', options: [] } },
+                { prop: 'sex1', label: 'ASelect', width: 160, editRender: { name: 'ASelect', options: [], props: { mode: 'multiple' } } },
+                { prop: 'sex2', label: 'ASelect', width: 140, editRender: { name: 'ASelect', optionGroups: [] } },
+                { prop: 'region', label: 'ACascader', width: 200, editRender: { name: 'ACascader', props: { options: [] } } },
+                { prop: 'date7', label: 'ADatePicker', width: 140, editRender: { name: 'ADatePicker', props: { type: 'date', format: 'YYYY/MM/DD' } } },
+                { prop: 'date8', label: 'AMonthPicker', width: 140, editRender: { name: 'AMonthPicker' } },
+                { prop: 'date9', label: 'AWeekPicker', width: 140, editRender: { name: 'AWeekPicker' } },
+                { prop: 'date11', label: 'ARangePicker', width: 140, editRender: { name: 'ARangePicker' } },
+                { prop: 'date10', label: 'ATimePicker', width: 140, editRender: { name: 'ATimePicker' } },
+                { prop: 'attr1', label: 'ATreeSelect', width: 140, editRender: { name: 'ATreeSelect', props: { treeData: [] } } },
+                { prop: 'attr2', label: 'ATreeSelect', width: 140, editRender: { name: 'ATreeSelect', props: { treeData: [], treeCheckable: true } } },
+                { prop: 'flag', label: 'ASwitch', width: 100, editRender: { name: 'ASwitch', type: 'visible' } },
+                { prop: 'rate', label: 'ARate', width: 200, editRender: { name: 'ARate', type: 'visible' } }
               ],
               tableToolbar: {},
               restaurants: ['前端', '后端', '开发', '测试']
@@ -154,29 +154,29 @@ export default {
             },
             findTreeSelectList () {
               let treeData = [{
-                title: 'Node1',
+                label: 'Node1',
                 value: '0-0',
                 key: '0-0',
                 children: [{
-                  title: 'Child Node1',
+                  label: 'Child Node1',
                   value: '0-0-0',
                   key: '0-0-0'
                 }]
               }, {
-                title: 'Node2',
+                label: 'Node2',
                 value: '0-1',
                 key: '0-1',
                 children: [{
-                  title: 'Child Node3',
+                  label: 'Child Node3',
                   value: '0-1-0',
                   key: '0-1-0',
                   disabled: true
                 }, {
-                  title: 'Child Node4',
+                  label: 'Child Node4',
                   value: '0-1-1',
                   key: '0-1-1'
                 }, {
-                  title: 'Child Node5',
+                  label: 'Child Node5',
                   value: '0-1-2',
                   key: '0-1-2'
                 }]
@@ -266,29 +266,29 @@ export default {
     },
     findTreeSelectList () {
       let treeData = [{
-        title: 'Node1',
+        label: 'Node1',
         value: '0-0',
         key: '0-0',
         children: [{
-          title: 'Child Node1',
+          label: 'Child Node1',
           value: '0-0-0',
           key: '0-0-0'
         }]
       }, {
-        title: 'Node2',
+        label: 'Node2',
         value: '0-1',
         key: '0-1',
         children: [{
-          title: 'Child Node3',
+          label: 'Child Node3',
           value: '0-1-0',
           key: '0-1-0',
           disabled: true
         }, {
-          title: 'Child Node4',
+          label: 'Child Node4',
           value: '0-1-1',
           key: '0-1-1'
         }, {
-          title: 'Child Node5',
+          label: 'Child Node5',
           value: '0-1-2',
           key: '0-1-2'
         }]

@@ -45,9 +45,9 @@ export default {
     return {
       tableColumn: [
         { type: 'seq', width: 50 },
-        { field: 'name', title: 'app.body.label.name' },
-        { field: 'age', title: 'app.body.label.age' },
-        { field: 'date3', title: 'Date', showOverflow: true }
+        { prop: 'name', label: 'app.body.label.name' },
+        { prop: 'age', label: 'app.body.label.age' },
+        { prop: 'date3', label: 'Date', showOverflow: true }
       ],
       headerMenus: [
         [
@@ -92,9 +92,9 @@ export default {
             return {
               tableColumn: [
                 { type: 'seq', width: 50 },
-                { field: 'name', title: 'app.body.label.name' },
-                { field: 'age', title: 'app.body.label.age' },
-                { field: 'date3', title: 'Date', showOverflow: true }
+                { prop: 'name', label: 'app.body.label.name' },
+                { prop: 'age', label: 'app.body.label.age' },
+                { prop: 'date3', label: 'Date', showOverflow: true }
               ],
               headerMenus: [
                 [

@@ -49,12 +49,12 @@ export default {
         custom: true
       },
       tableColumn: [
-        { type: 'seq', title: '序号', width: 180, treeNode: true },
-        { type: 'checkbox', title: '全选', width: 120 },
-        { field: 'name', title: '名称', editRender: { name: 'input' } },
-        { field: 'size', title: '大小', editRender: { name: 'input' } },
-        { field: 'createTime', title: 'app.body.label.createTime', formatter: this.formatterDate },
-        { field: 'updateTime', title: 'app.body.label.updateTime', formatter: this.formatterDate }
+        { type: 'seq', label: '序号', width: 180, treeNode: true },
+        { type: 'checkbox', label: '全选', width: 120 },
+        { prop: 'name', label: '名称', editRender: { name: 'input' } },
+        { prop: 'size', label: '大小', editRender: { name: 'input' } },
+        { prop: 'createTime', label: 'app.body.label.createTime', formatter: this.formatterDate },
+        { prop: 'updateTime', label: 'app.body.label.updateTime', formatter: this.formatterDate }
       ],
       demoCodes: [
         `
@@ -94,12 +94,12 @@ export default {
                 custom: true
               },
               tableColumn: [
-                { type: 'seq', title: '序号', width: 180, treeNode: true },
-                { type: 'checkbox', title: '全选', width: 120 },
-                { field: 'name', title: '名称', editRender: { name: 'input' } },
-                { field: 'size', title: '大小', editRender: { name: 'input' } },
-                { field: 'createTime', title: 'app.body.label.createTime', formatter: this.formatterDate },
-                { field: 'updateTime', title: 'app.body.label.updateTime', formatter: this.formatterDate }
+                { type: 'seq', label: '序号', width: 180, treeNode: true },
+                { type: 'checkbox', label: '全选', width: 120 },
+                { prop: 'name', label: '名称', editRender: { name: 'input' } },
+                { prop: 'size', label: '大小', editRender: { name: 'input' } },
+                { prop: 'createTime', label: 'app.body.label.createTime', formatter: this.formatterDate },
+                { prop: 'updateTime', label: 'app.body.label.updateTime', formatter: this.formatterDate }
               ]
             }
           },

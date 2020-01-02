@@ -71,7 +71,7 @@
           </span>
         </template>
       </vxe-table-column>
-      <vxe-table-column title="操作" width="140">
+      <vxe-table-column label="操作" width="140">
         <template v-slot="{ row }">
           <vxe-button type="text" icon="fa fa-eye"></vxe-button>
           <vxe-button type="text" icon="fa fa-edit"></vxe-button>
@@ -188,7 +188,7 @@ export default {
               </span>
             </template>
           </vxe-table-column>
-          <vxe-table-column title="操作" width="140">
+          <vxe-table-column label="操作" width="140">
             <template v-slot="{ row }">
               <vxe-button type="text" icon="fa fa-eye"></vxe-button>
               <vxe-button type="text" icon="fa fa-edit"></vxe-button>

@@ -152,9 +152,9 @@ Vue.use(VXETable)
   <div>
     <vxe-table :data="tableData">
       <vxe-table-column type="seq" title="序号" width="80"></vxe-table-column>
-      <vxe-table-column field="name" title="名字"></vxe-table-column>
-      <vxe-table-column field="sex" title="性别"></vxe-table-column>
-      <vxe-table-column field="address" title="地址"></vxe-table-column>
+      <vxe-table-column prop="name" title="名字"></vxe-table-column>
+      <vxe-table-column prop="sex" title="性别"></vxe-table-column>
+      <vxe-table-column prop="address" title="地址"></vxe-table-column>
     </vxe-table>
   </div>
 </template>

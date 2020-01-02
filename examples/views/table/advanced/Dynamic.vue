@@ -43,11 +43,11 @@ export default {
       tableColumn: [
         { type: 'seq', width: 60, fixed: null },
         { type: 'checkbox', width: 50, fixed: null },
-        { field: 'name', title: 'Name', width: 200 },
-        { field: 'nickname', title: 'Nickname', width: 300 },
-        { field: 'sex', title: 'Sex', width: 200, filters: [{ value: '1', label: '男' }] },
-        { field: 'role', title: 'Role', width: 200 },
-        { field: 'address', title: 'Address', width: 300, showOverflow: true }
+        { prop: 'name', label: 'Name', width: 200 },
+        { prop: 'nickname', label: 'Nickname', width: 300 },
+        { prop: 'sex', label: 'Sex', width: 200, filters: [{ value: '1', label: '男' }] },
+        { prop: 'role', label: 'Role', width: 200 },
+        { prop: 'address', label: 'Address', width: 300, showOverflow: true }
       ],
       demoCodes: [
         `
@@ -80,11 +80,11 @@ export default {
               tableColumn: [
                 { type: 'seq', width: 60, fixed: null },
                 { type: 'checkbox', width: 50, fixed: null },
-                { field: 'name', title: 'Name', width: 200 },
-                { field: 'nickname', title: 'Nickname', width: 300 },
-                { field: 'sex', title: 'Sex', width: 200 },
-                { field: 'role', title: 'Role', width: 200 },
-                { field: 'address', title: 'Address', width: 300, showOverflow: true }
+                { prop: 'name', label: 'Name', width: 200 },
+                { prop: 'nickname', label: 'Nickname', width: 300 },
+                { prop: 'sex', label: 'Sex', width: 200 },
+                { prop: 'role', label: 'Role', width: 200 },
+                { prop: 'address', label: 'Address', width: 300, showOverflow: true }
               ]
             }
           },
@@ -95,8 +95,8 @@ export default {
             addColumn () {
               const uniqueId = this.$utils.uniqueId()
               this.tableColumn.push({
-                field: \`new_\${uniqueId}\`,
-                title: \`新列_\${uniqueId}\`,
+                prop: \`new_\${uniqueId}\`,
+                label: \`新列_\${uniqueId}\`,
                 minWidth: 100
               })
             },
@@ -105,7 +105,7 @@ export default {
             },
             updateFilter (index) {
               let xTable = this.$refs.xTable
-              xTable.filter(this.tableColumn[index].field, options => {
+              xTable.filter(this.tableColumn[index].prop, options => {
                 // 修改筛选列表，可以通过 checked 属性设置默认勾选
                 return [
                   { value: '1', label: '男' },
@@ -151,8 +151,8 @@ export default {
     addColumn () {
       const uniqueId = this.$utils.uniqueId()
       this.tableColumn.push({
-        field: `new_${uniqueId}`,
-        title: `新列_${uniqueId}`,
+        prop: `new_${uniqueId}`,
+        label: `新列_${uniqueId}`,
         minWidth: 100
       })
     },
@@ -161,7 +161,7 @@ export default {
     },
     updateFilter (index) {
       let xTable = this.$refs.xTable
-      xTable.filter(this.tableColumn[index].field, options => {
+      xTable.filter(this.tableColumn[index].prop, options => {
         // 修改筛选列表，可以通过 checked 属性设置默认勾选
         return [
           { value: '1', label: '男' },

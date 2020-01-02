@@ -17,9 +17,9 @@
       :edit-config="{trigger: 'click', mode: 'row'}"
       @edit-actived="editActivedEvent">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="role1" title="Role" :edit-render="{name: 'select', options: roleList, events: {change: roleChangeEvent}}"></vxe-table-column>
-      <vxe-table-column field="date12" title="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="role1" label="Role" :edit-render="{name: 'select', options: roleList, events: {change: roleChangeEvent}}"></vxe-table-column>
+      <vxe-table-column prop="date12" label="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -88,9 +88,9 @@ export default {
           :edit-config="{trigger: 'click', mode: 'row'}"
           @edit-actived="editActivedEvent">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="role1" title="Role" :edit-render="{name: 'select', options: roleList, events: {change: roleChangeEvent}}"></vxe-table-column>
-          <vxe-table-column field="date12" title="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="role1" label="Role" :edit-render="{name: 'select', options: roleList, events: {change: roleChangeEvent}}"></vxe-table-column>
+          <vxe-table-column prop="date12" label="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
         </vxe-table>
         `,
         `

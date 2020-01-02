@@ -25,10 +25,10 @@
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'row'}">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="age" title="Age" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="date" title="Date" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="address" title="Address" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" :edit-render="{name: 'input'}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -69,10 +69,10 @@ export default {
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'row'}">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="age" title="Age" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="date" title="Date" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="address" title="Address" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" :edit-render="{name: 'input'}"></vxe-table-column>
         </vxe-table>
         `,
         `

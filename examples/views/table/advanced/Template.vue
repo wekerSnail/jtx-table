@@ -38,12 +38,12 @@
           <vxe-button @click="showDetailEvent(row)">弹框{{ seq }}</vxe-button>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="name" title="app.body.label.name" sortable>
+      <vxe-table-column prop="name" label="app.body.label.name" sortable>
         <template v-slot="{ row }">
           <a href="https://github.com/xuliangzhan/vxe-table" target="_black">我是超链接：{{ row.name }}</a>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="sex" title="app.body.label.sex" :filters="[{data: ''}]" :filter-method="filterSexMethod">
+      <vxe-table-column prop="sex" label="app.body.label.sex" :filters="[{data: ''}]" :filter-method="filterSexMethod">
         <template v-slot:header="{ column }">
           <vxe-tooltip v-model="showSexTip" content="这样玩也行？">
             <span style="color: red;" @click="showSexTip = !showSexTip">这样玩也行</span>
@@ -60,7 +60,7 @@
           <vxe-button type="text">删除</vxe-button>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="time" title="Time">
+      <vxe-table-column prop="time" label="Time">
         <template v-slot:header="{ column }">
           <vxe-input placeholder="这样也行" size="mini"></vxe-input>
         </template>
@@ -68,7 +68,7 @@
           <span>{{ formatDate(row.time) }}</span>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="address" title="Address" show-overflow>
+      <vxe-table-column prop="address" label="Address" show-overflow>
         <template v-slot="{ row, rowIndex }">
           <select v-if="rowIndex === 1">
             <option value="1">还可以这样</option>
@@ -76,12 +76,12 @@
           <a href="https://github.com/xuliangzhan/vxe-table">{{ row.name }}</a>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="html1" title="Html片段" width="160" show-overflow>
+      <vxe-table-column prop="html1" label="Html片段" width="160" show-overflow>
         <template v-slot="{ row }">
           <span v-html="row.html1"></span>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="img1" title="图片路径" width="120">
+      <vxe-table-column prop="img1" label="图片路径" width="120">
         <template v-slot="{ row, rowIndex }">
           <img v-if="row.img1" :src="row.img1" style="width: 100px;">
           <span v-else>无</span>
@@ -89,7 +89,7 @@
       </vxe-table-column>
     </vxe-table>
 
-    <vxe-modal v-model="showDetails" title="查看详情" width="800" height="400" resize>
+    <vxe-modal v-model="showDetails" label="查看详情" width="800" height="400" resize>
       <template>{{ selectRow ? selectRow.text : '' }}</template>
     </vxe-modal>
 
@@ -146,12 +146,12 @@ export default {
               <vxe-button @click="showDetailEvent(row)">弹框{{ seq }}</vxe-button>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="name" title="app.body.label.name" sortable>
+          <vxe-table-column prop="name" label="app.body.label.name" sortable>
             <template v-slot="{ row }">
               <a href="https://github.com/xuliangzhan/vxe-table" target="_black">我是超链接：{{ row.name }}</a>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="sex" title="app.body.label.sex" :filters="[{data: ''}]" :filter-method="filterSexMethod">
+          <vxe-table-column prop="sex" label="app.body.label.sex" :filters="[{data: ''}]" :filter-method="filterSexMethod">
             <template v-slot:header="{ column }">
               <vxe-tooltip v-model="showSexTip" content="这样玩也行？">
                 <span style="color: red;" @click="showSexTip = !showSexTip">这样玩也行</span>
@@ -168,7 +168,7 @@ export default {
               <vxe-button type="text">删除</vxe-button>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="time" title="Time">
+          <vxe-table-column prop="time" label="Time">
             <template v-slot:header="{ column }">
               <vxe-input placeholder="这样也行" size="mini"></vxe-input>
             </template>
@@ -176,7 +176,7 @@ export default {
               <span>{{ formatDate(row.time) }}</span>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="address" title="Address" show-overflow>
+          <vxe-table-column prop="address" label="Address" show-overflow>
             <template v-slot="{ row, rowIndex }">
               <select v-if="rowIndex === 1">
                 <option value="1">还可以这样</option>
@@ -184,12 +184,12 @@ export default {
               <a href="https://github.com/xuliangzhan/vxe-table">{{ row.name }}</a>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="html1" title="Html片段" width="160" show-overflow>
+          <vxe-table-column prop="html1" label="Html片段" width="160" show-overflow>
             <template v-slot="{ row }">
               <span v-html="row.html1"></span>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="img1" title="图片路径" width="120">
+          <vxe-table-column prop="img1" label="图片路径" width="120">
             <template v-slot="{ row, rowIndex }">
               <img v-if="row.img1" :src="row.img1" style="width: 100px;">
               <span v-else>无</span>
@@ -197,7 +197,7 @@ export default {
           </vxe-table-column>
         </vxe-table>
 
-        <vxe-modal v-model="showDetails" title="查看详情" width="800" height="400" resize>
+        <vxe-modal v-model="showDetails" label="查看详情" width="800" height="400" resize>
           <template>{{ selectRow ? selectRow.text : '' }}</template>
         </vxe-modal>
         `,

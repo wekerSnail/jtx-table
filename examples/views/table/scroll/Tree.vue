@@ -38,10 +38,10 @@ export default {
       loading: false,
       tableData: [],
       tableColumn: [
-        { type: 'seq', title: '序号', width: 100 },
-        { type: 'radio', title: 'Name', treeNode: true },
-        { field: 'id', title: '邮政编码' },
-        { field: 'date', title: '更新时间' }
+        { type: 'seq', label: '序号', width: 100 },
+        { type: 'radio', label: 'Name', treeNode: true },
+        { prop: 'id', label: '邮政编码' },
+        { prop: 'date', label: '更新时间' }
       ],
       demoCodes: [
         `
@@ -70,10 +70,10 @@ export default {
               loading: false,
               tableData: [],
               tableColumn: [
-                { type: 'seq', title: '序号', width: 100 },
-                { type: 'radio', title: 'Name', treeNode: true },
-                { field: 'id', title: '邮政编码' },
-                { field: 'date', title: '更新时间' }
+                { type: 'seq', label: '序号', width: 100 },
+                { type: 'radio', label: 'Name', treeNode: true },
+                { prop: 'id', label: '邮政编码' },
+                { prop: 'date', label: '更新时间' }
               ]
             }
           },

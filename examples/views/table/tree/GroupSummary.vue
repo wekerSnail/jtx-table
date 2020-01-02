@@ -7,10 +7,10 @@
       :loading="loading"
       :tree-config="tableTreeConfig"
       :data="tableData">
-      <vxe-table-column field="name" title="名称" tree-node :formatter="formatName"></vxe-table-column>
-      <vxe-table-column field="level" title="级别"></vxe-table-column>
-      <vxe-table-column field="age" title="年龄"></vxe-table-column>
-      <vxe-table-column field="rate" title="分数"></vxe-table-column>
+      <vxe-table-column prop="name" label="名称" tree-node :formatter="formatName"></vxe-table-column>
+      <vxe-table-column prop="level" label="级别"></vxe-table-column>
+      <vxe-table-column prop="age" label="年龄"></vxe-table-column>
+      <vxe-table-column prop="rate" label="分数"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -41,10 +41,10 @@ export default {
           :loading="loading"
           :tree-config="tableTreeConfig"
           :data="tableData">
-          <vxe-table-column field="name" title="名称" tree-node :formatter="formatName"></vxe-table-column>
-          <vxe-table-column field="level" title="级别"></vxe-table-column>
-          <vxe-table-column field="age" title="年龄"></vxe-table-column>
-          <vxe-table-column field="rate" title="分数"></vxe-table-column>
+          <vxe-table-column prop="name" label="名称" tree-node :formatter="formatName"></vxe-table-column>
+          <vxe-table-column prop="level" label="级别"></vxe-table-column>
+          <vxe-table-column prop="age" label="年龄"></vxe-table-column>
+          <vxe-table-column prop="rate" label="分数"></vxe-table-column>
         </vxe-table>
         `,
         `

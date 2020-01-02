@@ -47,17 +47,17 @@ export default {
       tableData: [],
       tableColumn: [
         { type: 'seq', width: 50 },
-        { field: 'name', title: 'app.body.label.name', editRender: { name: 'input' } },
-        { field: 'sex', title: 'app.body.label.sex', editRender: { name: 'input' } },
-        { field: 'age', title: 'Age', editRender: { name: 'input' } },
-        { field: 'address', title: 'Address', editRender: { name: 'input' } }
+        { prop: 'name', label: 'app.body.label.name', editRender: { name: 'input' } },
+        { prop: 'sex', label: 'app.body.label.sex', editRender: { name: 'input' } },
+        { prop: 'age', label: 'Age', editRender: { name: 'input' } },
+        { prop: 'address', label: 'Address', editRender: { name: 'input' } }
       ],
       tableColumn2: [
         { type: 'seq', width: 50 },
-        { field: 'name', title: 'app.body.label.name', editRender: { name: 'input' } },
-        { field: 'sex', title: 'app.body.label.sex', editRender: { name: 'input' } },
-        { field: 'age', title: 'Age', editRender: { name: 'input' } },
-        { field: 'address', title: 'Address', editRender: { name: 'input' } }
+        { prop: 'name', label: 'app.body.label.name', editRender: { name: 'input' } },
+        { prop: 'sex', label: 'app.body.label.sex', editRender: { name: 'input' } },
+        { prop: 'age', label: 'Age', editRender: { name: 'input' } },
+        { prop: 'address', label: 'Address', editRender: { name: 'input' } }
       ],
       demoCodes: [
         `
@@ -77,10 +77,10 @@ export default {
               tableData: [],
               tableColumn: [
                 { type: 'seq', width: 50 },
-                { field: 'name', title: 'app.body.label.name', editRender: { name: 'input' } },
-                { field: 'sex', title: 'app.body.label.sex', editRender: { name: 'input' } },
-                { field: 'age', title: 'Age', editRender: { name: 'input' } },
-                { field: 'address', title: 'Address', editRender: { name: 'input' } }
+                { prop: 'name', label: 'app.body.label.name', editRender: { name: 'input' } },
+                { prop: 'sex', label: 'app.body.label.sex', editRender: { name: 'input' } },
+                { prop: 'age', label: 'Age', editRender: { name: 'input' } },
+                { prop: 'address', label: 'Address', editRender: { name: 'input' } }
               ]
             }
           },
@@ -117,10 +117,10 @@ export default {
               tableData: [],
               tableColumn: [
                 { type: 'seq', width: 50 },
-                { field: 'name', title: 'app.body.label.name', editRender: { name: 'input' } },
-                { field: 'sex', title: 'app.body.label.sex', editRender: { name: 'input' } },
-                { field: 'age', title: 'Age', editRender: { name: 'input' } },
-                { field: 'address', title: 'Address', editRender: { name: 'input' } }
+                { prop: 'name', label: 'app.body.label.name', editRender: { name: 'input' } },
+                { prop: 'sex', label: 'app.body.label.sex', editRender: { name: 'input' } },
+                { prop: 'age', label: 'Age', editRender: { name: 'input' } },
+                { prop: 'address', label: 'Address', editRender: { name: 'input' } }
               ]
             }
           },

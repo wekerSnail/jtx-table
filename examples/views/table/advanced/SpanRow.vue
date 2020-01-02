@@ -7,14 +7,14 @@
       height="600"
       :span-method="rowspanMethod"
       :data="tableData">
-      <vxe-table-column field="name_1" title="功能模块"></vxe-table-column>
-      <vxe-table-column field="name_2" title="详细功能"></vxe-table-column>
-      <vxe-table-column field="name_3" title="权限类型">
+      <vxe-table-column prop="name_1" label="功能模块"></vxe-table-column>
+      <vxe-table-column prop="name_2" label="详细功能"></vxe-table-column>
+      <vxe-table-column prop="name_3" label="权限类型">
         <template v-slot="{ row }">
           <vxe-checkbox v-model="row.check_3" @change="check3ChangeEvent(row)">{{ row.name_3 }}</vxe-checkbox>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="name_4" title="权限列表">
+      <vxe-table-column prop="name_4" label="权限列表">
         <template v-slot="{ row }">
           <vxe-checkbox v-model="row.check_4" @change="check4ChangeEvent(row)">{{ row.name_4 }}</vxe-checkbox>
         </template>
@@ -200,14 +200,14 @@ export default {
           height="600"
           :span-method="rowspanMethod"
           :data="tableData">
-          <vxe-table-column field="name_1" title="功能模块"></vxe-table-column>
-          <vxe-table-column field="name_2" title="详细功能"></vxe-table-column>
-          <vxe-table-column field="name_3" title="权限类型">
+          <vxe-table-column prop="name_1" label="功能模块"></vxe-table-column>
+          <vxe-table-column prop="name_2" label="详细功能"></vxe-table-column>
+          <vxe-table-column prop="name_3" label="权限类型">
             <template v-slot="{ row }">
               <vxe-checkbox v-model="row.check_3" @change="check3ChangeEvent(row)">{{ row.name_3 }}</vxe-checkbox>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="name_4" title="权限列表">
+          <vxe-table-column prop="name_4" label="权限列表">
             <template v-slot="{ row }">
               <vxe-checkbox v-model="row.check_4" @change="check4ChangeEvent(row)">{{ row.name_4 }}</vxe-checkbox>
             </template>

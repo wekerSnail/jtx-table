@@ -63,9 +63,9 @@ export default {
           border
           height="600"
           :data="tableData">
-          <vxe-table-column field="name" title="app.body.label.name"></vxe-table-column>
-          <vxe-table-column field="age" title="app.body.label.age"></vxe-table-column>
-          <vxe-table-column field="sex" title="app.body.label.sex"></vxe-table-column>
+          <vxe-table-column prop="name" label="app.body.label.name"></vxe-table-column>
+          <vxe-table-column prop="age" label="app.body.label.age"></vxe-table-column>
+          <vxe-table-column prop="sex" label="app.body.label.sex"></vxe-table-column>
         </vxe-table>
         `
       ]

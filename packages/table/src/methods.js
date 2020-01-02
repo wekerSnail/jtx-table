@@ -156,15 +156,15 @@ const Methods = {
    * 对于行数据需要局部更改的场景中可能会用到
    * @param {Row} row 行对象
    * @param {Object} record 新数据
-   * @param {String} field 字段名
+   * @param {String} prop 字段名
    */
-  reloadRow (row, record, field) {
+  reloadRow (row, record, prop) {
     let { tableSourceData, tableData } = this
     let rowIndex = this.getRowIndex(row)
     let oRow = tableSourceData[rowIndex]
     if (oRow && row) {
-      if (field) {
-        XEUtils.set(oRow, field, XEUtils.get(record || row, field))
+      if (prop) {
+        XEUtils.set(oRow, prop, XEUtils.get(record || row, prop))
       } else {
         if (record) {
           tableSourceData[rowIndex] = record
@@ -401,19 +401,19 @@ const Methods = {
    * 如果不创参数，则清空整个表格内容
    * 如果传 row 则清空一行内容
    * 如果传 rows 则清空多行内容
-   * 如果还额外传了 field 则清空指定单元格内容
+   * 如果还额外传了 prop 则清空指定单元格内容
    * @param {Array/Row} rows 行数据
-   * @param {String} field 字段名
+   * @param {String} prop 字段名
    */
-  clearData (rows, field) {
+  clearData (rows, prop) {
     let { tableFullData, visibleColumn } = this
     if (!arguments.length) {
       rows = tableFullData
     } else if (rows && !XEUtils.isArray(rows)) {
       rows = [rows]
     }
-    if (field) {
-      rows.forEach(row => XEUtils.set(row, field, null))
+    if (prop) {
+      rows.forEach(row => XEUtils.set(row, prop, null))
     } else {
       rows.forEach(row => {
         visibleColumn.forEach(column => {
@@ -433,16 +433,16 @@ const Methods = {
     return this.editStore.insertList.indexOf(row) > -1
   },
   // 在 v3.0 中废弃 hasRowChange
-  hasRowChange (row, field) {
+  hasRowChange (row, prop) {
     UtilTools.warn('vxe.error.delFunc', ['hasRowChange', 'isUpdateByRow'])
-    return this.isUpdateByRow(row, field)
+    return this.isUpdateByRow(row, prop)
   },
   /**
    * 检查行或列数据是否发生改变
    * @param {Row} row 行对象
-   * @param {String} field 字段名
+   * @param {String} prop 字段名
    */
-  isUpdateByRow (row, field) {
+  isUpdateByRow (row, prop) {
     let oRow, property
     let { visibleColumn, treeConfig, treeOpts, tableSourceData, fullDataRowIdData } = this
     let rowid = UtilTools.getRowid(this, row)
@@ -463,7 +463,7 @@ const Methods = {
     }
     if (oRow) {
       if (arguments.length > 1) {
-        return !XEUtils.isEqual(XEUtils.get(oRow, field), XEUtils.get(row, field))
+        return !XEUtils.isEqual(XEUtils.get(oRow, prop), XEUtils.get(row, prop))
       }
       for (let index = 0, len = visibleColumn.length; index < len; index++) {
         property = visibleColumn[index].property
@@ -492,10 +492,10 @@ const Methods = {
   },
   /**
    * 根据列的字段名获取列
-   * @param {String} field 字段名
+   * @param {String} prop 字段名
    */
-  getColumnByField (field) {
-    return XEUtils.find(this.tableFullColumn, column => column.property === field)
+  getColumnByField (prop) {
+    return XEUtils.find(this.tableFullColumn, column => column.property === prop)
   },
   /**
    * 获取当前表格的列
@@ -664,7 +664,7 @@ const Methods = {
     if (customColumns.length) {
       tableFullColumn.forEach(column => {
         // 在 v3.0 中废弃 prop
-        let item = XEUtils.find(customColumns, item => column.property && (item.field || item.prop) === column.property)
+        let item = XEUtils.find(customColumns, item => column.property && (item.prop || item.prop) === column.property)
         if (item) {
           if (XEUtils.isNumber(item.resizeWidth)) {
             column.resizeWidth = item.resizeWidth
@@ -1099,7 +1099,7 @@ const Methods = {
               let { showHeaderOverflow } = column
               let cellOverflow = XEUtils.isBoolean(showHeaderOverflow) ? showHeaderOverflow : allColumnHeaderOverflow
               let showEllipsis = cellOverflow === 'ellipsis'
-              let showTitle = cellOverflow === 'title'
+              let showTitle = cellOverflow === 'label'
               let showTooltip = cellOverflow === true || cellOverflow === 'tooltip'
               let hasEllipsis = showTitle || showTooltip || showEllipsis
               let childWidth = 0
@@ -1206,7 +1206,7 @@ const Methods = {
                 cellOverflow = XEUtils.isUndefined(showOverflow) || XEUtils.isNull(showOverflow) ? allColumnOverflow : showOverflow
               }
               let showEllipsis = cellOverflow === 'ellipsis'
-              let showTitle = cellOverflow === 'title'
+              let showTitle = cellOverflow === 'label'
               let showTooltip = cellOverflow === true || cellOverflow === 'tooltip'
               let hasEllipsis = showTitle || showTooltip || showEllipsis
               let listElem = elemStore[`${name}-${layout}-list`]
@@ -2226,11 +2226,11 @@ const Methods = {
   handleDefaultSort () {
     let defaultSort = this.sortOpts.defaultSort
     if (defaultSort) {
-      let { field, order } = defaultSort
-      if (field && order) {
-        let column = XEUtils.find(this.visibleColumn, item => item.property === field)
+      let { prop, order } = defaultSort
+      if (prop && order) {
+        let column = XEUtils.find(this.visibleColumn, item => item.property === prop)
         if (column && !column.order) {
-          this.sort(field, order)
+          this.sort(prop, order)
         }
       }
     }
@@ -2241,7 +2241,7 @@ const Methods = {
   triggerSortEvent (evnt, column, order) {
     let property = column.property
     if (column.sortable || column.remoteSort) {
-      let evntParams = { column, property, field: property, prop: property, order, $table: this }
+      let evntParams = { column, property, prop: property, order, $table: this }
       if (column.order === order) {
         evntParams.order = null
         this.clearSort(column.property)
@@ -2251,9 +2251,9 @@ const Methods = {
       UtilTools.emitEvent(this, 'sort-change', [evntParams, evnt])
     }
   },
-  sort (field, order) {
+  sort (prop, order) {
     let { visibleColumn, tableFullColumn, remoteSort, sortOpts } = this
-    let column = XEUtils.find(visibleColumn, item => item.property === field)
+    let column = XEUtils.find(visibleColumn, item => item.property === prop)
     if (column) {
       let isRemote = XEUtils.isBoolean(column.remoteSort) ? column.remoteSort : (sortOpts.remote || remoteSort)
       if (column.sortable || column.remoteSort) {
@@ -2302,11 +2302,11 @@ const Methods = {
   },
   /**
    * 判断指定列是否为筛选状态，如果为空则判断所有列
-   * @param {String} field 字段名
+   * @param {String} prop 字段名
    */
-  isFilter (field) {
-    if (field) {
-      const column = this.getColumnByField(field)
+  isFilter (prop) {
+    if (prop) {
+      const column = this.getColumnByField(prop)
       return column.filters && column.filters.some(option => option.checked)
     }
     return this.visibleColumn.some(column => column.filters && column.filters.some(option => option.checked))

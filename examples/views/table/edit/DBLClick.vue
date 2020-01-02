@@ -10,11 +10,11 @@
       @edit-actived="editActivedEvent"
       @edit-closed="editClosedEvent">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="role" title="Role" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'select', options: sexList}"></vxe-table-column>
-      <vxe-table-column field="num6" title="Number" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
-      <vxe-table-column field="date12" title="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'select', options: sexList}"></vxe-table-column>
+      <vxe-table-column prop="num6" label="Number" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
+      <vxe-table-column prop="date12" label="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -33,12 +33,12 @@
       :data="tableData"
       :edit-config="{trigger: 'dblclick', mode: 'row'}">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="role" title="Role" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="sex4" title="Sex" :edit-render="{name: 'select', options: sexList, optionProps: {value: 'value2', label: 'spell'}}"></vxe-table-column>
-      <vxe-table-column field="num6" title="Number" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
-      <vxe-table-column field="date13" title="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
-      <vxe-table-column field="address" title="Address" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="sex4" label="Sex" :edit-render="{name: 'select', options: sexList, optionProps: {value: 'value2', label: 'spell'}}"></vxe-table-column>
+      <vxe-table-column prop="num6" label="Number" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
+      <vxe-table-column prop="date13" label="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" :edit-render="{name: 'input'}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -66,11 +66,11 @@ export default {
           :data="tableData"
           :edit-config="{trigger: 'dblclick', mode: 'cell'}">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="role" title="Role" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'select', options: sexList}"></vxe-table-column>
-          <vxe-table-column field="num6" title="Number" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
-          <vxe-table-column field="date12" title="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'select', options: sexList}"></vxe-table-column>
+          <vxe-table-column prop="num6" label="Number" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
+          <vxe-table-column prop="date12" label="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -92,10 +92,10 @@ export default {
               })
             },
             editActivedEvent ({ row, column }, event) {
-              console.log(\`打开 \${column.title} 列编辑\`)
+              console.log(\`打开 \${column.label} 列编辑\`)
             },
             editClosedEvent ({ row, column }, event) {
-              console.log(\`关闭 \${column.title} 列编辑\`)
+              console.log(\`关闭 \${column.label} 列编辑\`)
             }
           }
         }
@@ -108,12 +108,12 @@ export default {
           :data="tableData"
           :edit-config="{trigger: 'dblclick', mode: 'row'}">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="role" title="Role" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="sex4" title="Sex" :edit-render="{name: 'select', options: sexList, optionProps: {value: 'value2', label: 'spell'}}"></vxe-table-column>
-          <vxe-table-column field="num6" title="Number" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
-          <vxe-table-column field="date13" title="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
-          <vxe-table-column field="address" title="Address" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="sex4" label="Sex" :edit-render="{name: 'select', options: sexList, optionProps: {value: 'value2', label: 'spell'}}"></vxe-table-column>
+          <vxe-table-column prop="num6" label="Number" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
+          <vxe-table-column prop="date13" label="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" :edit-render="{name: 'input'}"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -156,10 +156,10 @@ export default {
       })
     },
     editActivedEvent ({ row, column }, event) {
-      console.log(`打开 ${column.title} 列编辑`)
+      console.log(`打开 ${column.label} 列编辑`)
     },
     editClosedEvent ({ row, column }, event) {
-      console.log(`关闭 ${column.title} 列编辑`)
+      console.log(`关闭 ${column.label} 列编辑`)
     }
   }
 }

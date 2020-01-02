@@ -133,9 +133,9 @@ export default {
      * 如果不传任何参数，则还原整个表格
      * 如果传 row 则还原一行
      * 如果传 rows 则还原多行
-     * 如果还额外传了 field 则还原指定的单元格数据
+     * 如果还额外传了 prop 则还原指定的单元格数据
      */
-    _revertData (rows, field) {
+    _revertData (rows, prop) {
       let { tableSourceData, getRowIndex } = this
       if (arguments.length) {
         if (rows && !XEUtils.isArray(rows)) {
@@ -145,8 +145,8 @@ export default {
           let rowIndex = getRowIndex(row)
           let oRow = tableSourceData[rowIndex]
           if (oRow && row) {
-            if (field) {
-              XEUtils.set(row, field, XEUtils.clone(XEUtils.get(oRow, field), true))
+            if (prop) {
+              XEUtils.set(row, prop, XEUtils.clone(XEUtils.get(oRow, prop), true))
             } else {
               XEUtils.destructuring(row, XEUtils.clone(oRow, true))
             }
@@ -355,10 +355,10 @@ export default {
     /**
      * 激活单元格编辑
      */
-    _setActiveCell (row, field) {
+    _setActiveCell (row, prop) {
       return this.scrollToRow(row, true).then(() => {
-        if (row && field) {
-          let column = XEUtils.find(this.visibleColumn, column => column.property === field)
+        if (row && prop) {
+          let column = XEUtils.find(this.visibleColumn, column => column.property === prop)
           if (column && column.editRender) {
             let cell = DomTools.getCell(this, { row, column })
             if (cell) {
@@ -373,10 +373,10 @@ export default {
     /**
      * 只对 trigger=dblclick 有效，选中单元格
      */
-    _setSelectCell (row, field) {
+    _setSelectCell (row, prop) {
       let { tableData, editConfig, visibleColumn } = this
-      if (row && field && editConfig.trigger !== 'manual') {
-        let column = XEUtils.find(visibleColumn, column => column.property === field)
+      if (row && prop && editConfig.trigger !== 'manual') {
+        let column = XEUtils.find(visibleColumn, column => column.property === prop)
         let rowIndex = tableData.indexOf(row)
         if (rowIndex > -1 && column) {
           let cell = DomTools.getCell(this, { row, rowIndex, column })

@@ -9,10 +9,10 @@
       border
       :data="tableData">
       <vxe-table-column type="seq"></vxe-table-column>
-      <vxe-table-column field="name" title="Name"></vxe-table-column>
-      <vxe-table-column field="role" title="Role"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -28,10 +28,10 @@
       border
       :data="tableData">
       <vxe-table-column type="seq" width="80"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" width="200"></vxe-table-column>
-      <vxe-table-column field="role" title="Role"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" width="140"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" width="200"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" width="140"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -47,10 +47,10 @@
       border
       :data="tableData">
       <vxe-table-column type="seq" width="80"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" min-width="200"></vxe-table-column>
-      <vxe-table-column field="role" title="Role" min-width="140"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" min-width="120"></vxe-table-column>
-      <vxe-table-column field="age" title="Age" min-width="120"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" min-width="200"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role" min-width="140"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" min-width="120"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age" min-width="120"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -66,10 +66,10 @@
       border
       :data="tableData">
       <vxe-table-column type="seq" width="10%"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" width="30%"></vxe-table-column>
-      <vxe-table-column field="role" title="Role" width="20%"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" width="20%"></vxe-table-column>
-      <vxe-table-column field="age" title="Age" width="20%"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" width="30%"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role" width="20%"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" width="20%"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age" width="20%"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -94,10 +94,10 @@ export default {
           border
           :data="tableData">
           <vxe-table-column type="seq"></vxe-table-column>
-          <vxe-table-column field="name" title="Name"></vxe-table-column>
-          <vxe-table-column field="role" title="Role"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -117,10 +117,10 @@ export default {
           border
           :data="tableData">
           <vxe-table-column type="seq" width="80"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" width="200"></vxe-table-column>
-          <vxe-table-column field="role" title="Role"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" width="140"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" width="200"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" width="140"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -140,10 +140,10 @@ export default {
           border
           :data="tableData">
           <vxe-table-column type="seq" width="80"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" min-width="200"></vxe-table-column>
-          <vxe-table-column field="role" title="Role" min-width="140"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" min-width="120"></vxe-table-column>
-          <vxe-table-column field="age" title="Age" min-width="120"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" min-width="200"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role" min-width="140"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" min-width="120"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age" min-width="120"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -163,10 +163,10 @@ export default {
           border
           :data="tableData">
           <vxe-table-column type="seq" width="10%"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" width="30%"></vxe-table-column>
-          <vxe-table-column field="role" title="Role" width="20%"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" width="20%"></vxe-table-column>
-          <vxe-table-column field="age" title="Age" width="20%"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" width="30%"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role" width="20%"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" width="20%"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age" width="20%"></vxe-table-column>
         </vxe-table>
         `,
         `

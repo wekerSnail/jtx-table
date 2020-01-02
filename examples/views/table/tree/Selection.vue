@@ -8,11 +8,11 @@
       :data="tableData"
       :checkbox-config="{labelField: 'id', highlight: true}"
       @select-change="selectChangeEvent">
-      <vxe-table-column type="checkbox" title="ID" width="280" tree-node></vxe-table-column>
-      <vxe-table-column field="name" title="Name"></vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column type="checkbox" label="ID" width="280" tree-node></vxe-table-column>
+      <vxe-table-column prop="name" label="Name"></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -31,10 +31,10 @@
       :tree-config="{children: 'children'}"
       :checkbox-config="{labelField: 'name', checkRowKeys: ['122000', '20000']}"
       @select-change="selectChangeEvent">
-      <vxe-table-column type="checkbox" title="Sex" width="400" tree-node></vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column type="checkbox" label="Sex" width="400" tree-node></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -51,10 +51,10 @@
       :data="tableData"
       :tree-config="{children: 'children'}"
       :checkbox-config="{labelField: 'name', checkStrictly: true}">
-      <vxe-table-column type="checkbox" title="Name" width="280" tree-node></vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column type="checkbox" label="Name" width="280" tree-node></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -72,10 +72,10 @@
       :tree-config="{children: 'children'}"
       :checkbox-config="{labelField: 'name', checkMethod}"
       @select-change="selectChangeEvent">
-      <vxe-table-column type="checkbox" width="180" title="Sex" tree-node></vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column type="checkbox" width="180" label="Sex" tree-node></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table> -->
   </div>
 </template>
@@ -96,11 +96,11 @@ export default {
           :data="tableData"
           :checkbox-config="{labelField: 'id', highlight: true}"
           @select-change="selectChangeEvent">
-          <vxe-table-column type="checkbox" title="ID" width="280" tree-node></vxe-table-column>
-          <vxe-table-column field="name" title="Name"></vxe-table-column>
-          <vxe-table-column field="size" title="Size"></vxe-table-column>
-          <vxe-table-column field="type" title="Type"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
+          <vxe-table-column type="checkbox" label="ID" width="280" tree-node></vxe-table-column>
+          <vxe-table-column prop="name" label="Name"></vxe-table-column>
+          <vxe-table-column prop="size" label="Size"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -128,10 +128,10 @@ export default {
           :tree-config="{children: 'children'}"
           :checkbox-config="{labelField: 'name', checkRowKeys: ['122000', '20000']}"
           @select-change="selectChangeEvent">
-          <vxe-table-column type="checkbox" title="Sex" width="400" tree-node></vxe-table-column>
-          <vxe-table-column field="size" title="Size"></vxe-table-column>
-          <vxe-table-column field="type" title="Type"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
+          <vxe-table-column type="checkbox" label="Sex" width="400" tree-node></vxe-table-column>
+          <vxe-table-column prop="size" label="Size"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -157,10 +157,10 @@ export default {
           :data="tableData"
           :tree-config="{children: 'children'}"
           :checkbox-config="{labelField: 'name', checkStrictly: true}">
-          <vxe-table-column type="checkbox" title="Name" width="280" tree-node></vxe-table-column>
-          <vxe-table-column field="size" title="Size"></vxe-table-column>
-          <vxe-table-column field="type" title="Type"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
+          <vxe-table-column type="checkbox" label="Name" width="280" tree-node></vxe-table-column>
+          <vxe-table-column prop="size" label="Size"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
         </vxe-table>
         `,
         `

@@ -39,11 +39,11 @@ export default {
       tableColumn: [
         { type: 'seq', width: 60 },
         { type: 'checkbox', width: 50 },
-        { field: 'name', title: 'Name', editRender: { name: 'input' } },
-        { field: 'nickname', title: 'Nickname', editRender: { name: 'input' } },
-        { field: 'sex', title: 'Sex', editRender: { name: 'select', options: [] } },
-        { field: 'role', title: 'Role', editRender: { name: 'input' } },
-        { field: 'describe', title: 'Describe', showOverflow: true, editRender: { name: 'input' } }
+        { prop: 'name', label: 'Name', editRender: { name: 'input' } },
+        { prop: 'nickname', label: 'Nickname', editRender: { name: 'input' } },
+        { prop: 'sex', label: 'Sex', editRender: { name: 'select', options: [] } },
+        { prop: 'role', label: 'Role', editRender: { name: 'input' } },
+        { prop: 'describe', label: 'Describe', showOverflow: true, editRender: { name: 'input' } }
       ],
       tableData: [],
       demoCodes: [
@@ -73,11 +73,11 @@ export default {
               tableColumn: [
                 { type: 'seq', width: 60 },
                 { type: 'checkbox', width: 50 },
-                { field: 'name', title: 'Name', editRender: { name: 'input' } },
-                { field: 'nickname', title: 'Nickname', editRender: { name: 'input' } },
-                { field: 'sex', title: 'Sex', editRender: { name: 'select', options: [] } },
-                { field: 'role', title: 'Role', editRender: { name: 'input' } },
-                { field: 'describe', title: 'Describe', showOverflow: true, editRender: { name: 'input' } }
+                { prop: 'name', label: 'Name', editRender: { name: 'input' } },
+                { prop: 'nickname', label: 'Nickname', editRender: { name: 'input' } },
+                { prop: 'sex', label: 'Sex', editRender: { name: 'select', options: [] } },
+                { prop: 'role', label: 'Role', editRender: { name: 'input' } },
+                { prop: 'describe', label: 'Describe', showOverflow: true, editRender: { name: 'input' } }
               ],
               tableData: []
             }

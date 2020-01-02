@@ -8,14 +8,14 @@
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'cell'}">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :edit-render="{name: 'input', events: {keydown: keydownEvent}}"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input', events: {keydown: keydownEvent}}"></vxe-table-column>
       <vxe-table-column
-        field="role"
-        title="Role"
+        prop="role"
+        label="Role"
         :filters="[{ data: '' }]"
         :filter-render="{name: 'input', attrs: {placeholder: '按回车确认筛选'}, events: {keyup: enterFilterEvent}}"
         :edit-render="{name: 'input', events: {focus: focusEvent}}"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'select', options: sexList, events: {change: changeEvent}}"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'select', options: sexList, events: {change: changeEvent}}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -43,14 +43,14 @@ export default {
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'cell'}">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :edit-render="{name: 'input', events: {keydown: keydownEvent}}"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input', events: {keydown: keydownEvent}}"></vxe-table-column>
           <vxe-table-column
-            field="role"
-            title="Role"
+            prop="role"
+            label="Role"
             :filters="[{ data: '' }]"
             :filter-render="{name: 'input', attrs: {placeholder: '按回车确认筛选'}, events: {keyup: enterFilterEvent}}"
             :edit-render="{name: 'input', events: {focus: focusEvent}}"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'select', options: sexList, events: {change: changeEvent}}"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'select', options: sexList, events: {change: changeEvent}}"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -77,13 +77,13 @@ export default {
               }
             },
             keydownEvent ({ column }, event) {
-              console.log(\`\${column.title} 触发 keydown 事件\`)
+              console.log(\`\${column.label} 触发 keydown 事件\`)
             },
             focusEvent ({ column }, event) {
-              console.log(\`\${column.title} 触发 focus 事件\`)
+              console.log(\`\${column.label} 触发 focus 事件\`)
             },
             changeEvent ({ column }, event) {
-              console.log(\`\${column.title} 触发 change 事件\`)
+              console.log(\`\${column.label} 触发 change 事件\`)
             }
           }
         }
@@ -112,13 +112,13 @@ export default {
       }
     },
     keydownEvent ({ column }, event) {
-      console.log(`${column.title} 触发 keydown 事件`)
+      console.log(`${column.label} 触发 keydown 事件`)
     },
     focusEvent ({ column }, event) {
-      console.log(`${column.title} 触发 focus 事件`)
+      console.log(`${column.label} 触发 focus 事件`)
     },
     changeEvent ({ column }, event) {
-      console.log(`${column.title} 触发 change 事件`)
+      console.log(`${column.label} 触发 change 事件`)
     }
   }
 }

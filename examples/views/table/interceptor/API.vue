@@ -9,12 +9,12 @@
       highlight-current-column
       class="api-table"
       :data="tableData">
-      <vxe-table-column field="name" title="app.api.title.prop" min-width="280" tree-node></vxe-table-column>
-      <vxe-table-column field="desc" title="app.api.title.desc" min-width="200"></vxe-table-column>
-      <vxe-table-column field="type" title="app.api.title.type" min-width="140"></vxe-table-column>
-      <vxe-table-column field="enum" title="app.api.title.enum" min-width="150"></vxe-table-column>
-      <vxe-table-column field="defVal" title="app.api.title.defVal" min-width="160"></vxe-table-column>
-      <vxe-table-column field="version" :title="$t('app.api.title.version')" width="120">
+      <vxe-table-column prop="name" label="app.api.label.prop" min-width="280" tree-node></vxe-table-column>
+      <vxe-table-column prop="desc" label="app.api.label.desc" min-width="200"></vxe-table-column>
+      <vxe-table-column prop="type" label="app.api.label.type" min-width="140"></vxe-table-column>
+      <vxe-table-column prop="enum" label="app.api.label.enum" min-width="150"></vxe-table-column>
+      <vxe-table-column prop="defVal" label="app.api.label.defVal" min-width="160"></vxe-table-column>
+      <vxe-table-column prop="version" :label="$t('app.api.label.version')" width="120">
         <template v-slot="{ row }">
           <span v-show="row.version" class="compatibility">v{{  row.version }}</span>
         </template>
@@ -26,12 +26,12 @@
       highlight-hover-row
       class="api-table"
       :data="typeList">
-      <vxe-table-column field="name" title="app.api.title.prop" min-width="280" tree-node></vxe-table-column>
-      <vxe-table-column field="desc" title="app.api.title.desc" min-width="200"></vxe-table-column>
-      <vxe-table-column field="type" title="app.api.title.type" min-width="140"></vxe-table-column>
-      <vxe-table-column field="enum" title="app.api.title.enum" min-width="150"></vxe-table-column>
-      <vxe-table-column field="defVal" title="app.api.title.defVal" min-width="160"></vxe-table-column>
-      <vxe-table-column field="version" :title="$t('app.api.title.version')" width="120">
+      <vxe-table-column prop="name" label="app.api.label.prop" min-width="280" tree-node></vxe-table-column>
+      <vxe-table-column prop="desc" label="app.api.label.desc" min-width="200"></vxe-table-column>
+      <vxe-table-column prop="type" label="app.api.label.type" min-width="140"></vxe-table-column>
+      <vxe-table-column prop="enum" label="app.api.label.enum" min-width="150"></vxe-table-column>
+      <vxe-table-column prop="defVal" label="app.api.label.defVal" min-width="160"></vxe-table-column>
+      <vxe-table-column prop="version" :label="$t('app.api.label.version')" width="120">
         <template v-slot="{ row }">
           <span v-show="row.version" class="compatibility">v{{  row.version }}</span>
         </template>

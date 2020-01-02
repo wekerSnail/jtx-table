@@ -57,15 +57,15 @@ export default {
     return {
       tableData: [],
       tableColumn1: [
-        { field: 'name', title: 'Name', width: 400, treeNode: true },
-        { field: 'size', title: 'Size' },
-        { field: 'type', title: 'Type' },
-        { field: 'date', title: 'Date' }
+        { prop: 'name', label: 'Name', width: 400, treeNode: true },
+        { prop: 'size', label: 'Size' },
+        { prop: 'type', label: 'Type' },
+        { prop: 'date', label: 'Date' }
       ],
       tableColumn2: [
         {
-          field: 'name',
-          title: 'Name',
+          prop: 'name',
+          label: 'Name',
           width: 400,
           treeNode: true,
           slots: {
@@ -83,9 +83,9 @@ export default {
             }
           }
         },
-        { field: 'size', title: 'Size' },
-        { field: 'type', title: 'Type' },
-        { field: 'date', title: 'Date' }
+        { prop: 'size', label: 'Size' },
+        { prop: 'type', label: 'Type' },
+        { prop: 'date', label: 'Date' }
       ],
       demoCodes: [
         `
@@ -112,10 +112,10 @@ export default {
             return {
               tableData: [],
               tableColumn1: [
-                { field: 'name', title: 'Name', width: 400, treeNode: true },
-                { field: 'size', title: 'Size' },
-                { field: 'type', title: 'Type' },
-                { field: 'date', title: 'Date' }
+                { prop: 'name', label: 'Name', width: 400, treeNode: true },
+                { prop: 'size', label: 'Size' },
+                { prop: 'type', label: 'Type' },
+                { prop: 'date', label: 'Date' }
               ]
             }
           },
@@ -149,8 +149,8 @@ export default {
               tableData: [],
               tableColumn: [
                 {
-                  field: 'name',
-                  title: 'Name',
+                  prop: 'name',
+                  label: 'Name',
                   width: 400,
                   treeNode: true,
                   slots: {
@@ -168,9 +168,9 @@ export default {
                     }
                   }
                 },
-                { field: 'size', title: 'Size' },
-                { field: 'type', title: 'Type' },
-                { field: 'date', title: 'Date' }
+                { prop: 'size', label: 'Size' },
+                { prop: 'type', label: 'Type' },
+                { prop: 'date', label: 'Date' }
               ]
             }
           },

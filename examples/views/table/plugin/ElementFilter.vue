@@ -10,15 +10,15 @@
       height="400"
       :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="ElInput" width="100" :filters="[{data: ''}]" :filter-render="{name: 'ElInput', props: {placeholder: '请输入名称'}}"></vxe-table-column>
-      <vxe-table-column field="age" title="ElInputNumber" sortable width="180" :filters="[{data: 0}]" :filter-render="{name: 'ElInputNumber', props: {min: 0, max: 100}}"></vxe-table-column>
-      <vxe-table-column field="role" title="ElAutocomplete" width="160" :filters="[{data: ''}]" :filter-render="{name: 'ElAutocomplete', props: {fetchSuggestions: roleFetchSuggestions, placeholder: '请输入角色名称'}}"></vxe-table-column>
-      <vxe-table-column field="sex" title="ElSelect" width="100" :formatter="formatterSex" :filters="[{data: null}]" :filter-render="{name: 'ElSelect', options: sexList, props: {placeholder: '请选择'}}"></vxe-table-column>
-      <vxe-table-column field="sex1" title="ElSelect" width="100" :formatter="formatterSexs" :filters="[{data: []}]" :filter-render="{name: 'ElSelect', options: sexList, props: {multiple: true, placeholder: '请选择'}}"></vxe-table-column>
-      <vxe-table-column field="date3" title="ElDatePicker" width="140" :filters="[{data: []}]" :filter-render="{name: 'ElDatePicker', props: {type: 'daterange', rangeSeparator: '至', startPlaceholder: '开始日期', endPlaceholder: '结束日期'}}"></vxe-table-column>
-      <vxe-table-column field="flag" title="ElSwitch" width="100" :filters="[{data: false}]" :filter-render="{name: 'ElSwitch'}" :cell-render="{name: 'ElSwitch', props: {disabled: true}}"></vxe-table-column>
-      <vxe-table-column field="rate" title="ElRate" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'ElRate'}" :cell-render="{name: 'ElRate', props: {disabled: true}}"></vxe-table-column>
-      <vxe-table-column field="slider" title="ElSlider" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'ElSlider'}" :cell-render="{name: 'ElSlider', props: {disabled: true}}"></vxe-table-column>
+      <vxe-table-column prop="name" label="ElInput" width="100" :filters="[{data: ''}]" :filter-render="{name: 'ElInput', props: {placeholder: '请输入名称'}}"></vxe-table-column>
+      <vxe-table-column prop="age" label="ElInputNumber" sortable width="180" :filters="[{data: 0}]" :filter-render="{name: 'ElInputNumber', props: {min: 0, max: 100}}"></vxe-table-column>
+      <vxe-table-column prop="role" label="ElAutocomplete" width="160" :filters="[{data: ''}]" :filter-render="{name: 'ElAutocomplete', props: {fetchSuggestions: roleFetchSuggestions, placeholder: '请输入角色名称'}}"></vxe-table-column>
+      <vxe-table-column prop="sex" label="ElSelect" width="100" :formatter="formatterSex" :filters="[{data: null}]" :filter-render="{name: 'ElSelect', options: sexList, props: {placeholder: '请选择'}}"></vxe-table-column>
+      <vxe-table-column prop="sex1" label="ElSelect" width="100" :formatter="formatterSexs" :filters="[{data: []}]" :filter-render="{name: 'ElSelect', options: sexList, props: {multiple: true, placeholder: '请选择'}}"></vxe-table-column>
+      <vxe-table-column prop="date3" label="ElDatePicker" width="140" :filters="[{data: []}]" :filter-render="{name: 'ElDatePicker', props: {type: 'daterange', rangeSeparator: '至', startPlaceholder: '开始日期', endPlaceholder: '结束日期'}}"></vxe-table-column>
+      <vxe-table-column prop="flag" label="ElSwitch" width="100" :filters="[{data: false}]" :filter-render="{name: 'ElSwitch'}" :cell-render="{name: 'ElSwitch', props: {disabled: true}}"></vxe-table-column>
+      <vxe-table-column prop="rate" label="ElRate" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'ElRate'}" :cell-render="{name: 'ElRate', props: {disabled: true}}"></vxe-table-column>
+      <vxe-table-column prop="slider" label="ElSlider" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'ElSlider'}" :cell-render="{name: 'ElSlider', props: {disabled: true}}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -54,15 +54,15 @@ export default {
           height="400"
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="ElInput" width="100" :filters="[{data: ''}]" :filter-render="{name: 'ElInput', props: {placeholder: '请输入名称'}}"></vxe-table-column>
-          <vxe-table-column field="age" title="ElInputNumber" sortable width="180" :filters="[{data: 0}]" :filter-render="{name: 'ElInputNumber', props: {min: 0, max: 100}}"></vxe-table-column>
-          <vxe-table-column field="role" title="ElAutocomplete" width="160" :filters="[{data: ''}]" :filter-render="{name: 'ElAutocomplete', props: {fetchSuggestions: roleFetchSuggestions, placeholder: '请输入角色名称'}}"></vxe-table-column>
-          <vxe-table-column field="sex" title="ElSelect" width="100" :formatter="formatterSex" :filters="[{data: null}]" :filter-render="{name: 'ElSelect', options: sexList, props: {placeholder: '请选择'}}"></vxe-table-column>
-          <vxe-table-column field="sex1" title="ElSelect" width="100" :formatter="formatterSexs" :filters="[{data: []}]" :filter-render="{name: 'ElSelect', options: sexList, props: {multiple: true, placeholder: '请选择'}}"></vxe-table-column>
-          <vxe-table-column field="date3" title="ElDatePicker" width="140" :filters="[{data: []}]" :filter-render="{name: 'ElDatePicker', props: {type: 'daterange', rangeSeparator: '至', startPlaceholder: '开始日期', endPlaceholder: '结束日期'}}"></vxe-table-column>
-          <vxe-table-column field="flag" title="ElSwitch" width="100" :filters="[{data: false}]" :filter-render="{name: 'ElSwitch'}" :cell-render="{name: 'ElSwitch', props: {disabled: true}}"></vxe-table-column>
-          <vxe-table-column field="rate" title="ElRate" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'ElRate'}" :cell-render="{name: 'ElRate', props: {disabled: true}}"></vxe-table-column>
-          <vxe-table-column field="slider" title="ElSlider" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'ElSlider'}" :cell-render="{name: 'ElSlider', props: {disabled: true}}"></vxe-table-column>
+          <vxe-table-column prop="name" label="ElInput" width="100" :filters="[{data: ''}]" :filter-render="{name: 'ElInput', props: {placeholder: '请输入名称'}}"></vxe-table-column>
+          <vxe-table-column prop="age" label="ElInputNumber" sortable width="180" :filters="[{data: 0}]" :filter-render="{name: 'ElInputNumber', props: {min: 0, max: 100}}"></vxe-table-column>
+          <vxe-table-column prop="role" label="ElAutocomplete" width="160" :filters="[{data: ''}]" :filter-render="{name: 'ElAutocomplete', props: {fetchSuggestions: roleFetchSuggestions, placeholder: '请输入角色名称'}}"></vxe-table-column>
+          <vxe-table-column prop="sex" label="ElSelect" width="100" :formatter="formatterSex" :filters="[{data: null}]" :filter-render="{name: 'ElSelect', options: sexList, props: {placeholder: '请选择'}}"></vxe-table-column>
+          <vxe-table-column prop="sex1" label="ElSelect" width="100" :formatter="formatterSexs" :filters="[{data: []}]" :filter-render="{name: 'ElSelect', options: sexList, props: {multiple: true, placeholder: '请选择'}}"></vxe-table-column>
+          <vxe-table-column prop="date3" label="ElDatePicker" width="140" :filters="[{data: []}]" :filter-render="{name: 'ElDatePicker', props: {type: 'daterange', rangeSeparator: '至', startPlaceholder: '开始日期', endPlaceholder: '结束日期'}}"></vxe-table-column>
+          <vxe-table-column prop="flag" label="ElSwitch" width="100" :filters="[{data: false}]" :filter-render="{name: 'ElSwitch'}" :cell-render="{name: 'ElSwitch', props: {disabled: true}}"></vxe-table-column>
+          <vxe-table-column prop="rate" label="ElRate" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'ElRate'}" :cell-render="{name: 'ElRate', props: {disabled: true}}"></vxe-table-column>
+          <vxe-table-column prop="slider" label="ElSlider" width="180" sortable :filters="[{data: 0}]" :filter-render="{name: 'ElSlider'}" :cell-render="{name: 'ElSlider', props: {disabled: true}}"></vxe-table-column>
         </vxe-table>
         `,
         `

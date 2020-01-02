@@ -14,28 +14,28 @@
     <vxe-table border :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
       <vxe-table-column
-        field="nickname"
-        title="Nickname"
+        prop="nickname"
+        label="Nickname"
         :filters="[{data: null}]"
         :filter-render="{name: 'input', attrs: {placeholder: '请输入名字'}}"></vxe-table-column>
       <vxe-table-column
-        field="sex"
-        title="sex"
+        prop="sex"
+        label="sex"
         :filters="[{data: null}]"
         :filter-render="{name: 'select', options: sexList}"></vxe-table-column>
       <vxe-table-column
-        field="age"
-        title="Age"
+        prop="age"
+        label="Age"
         :filters="[{data: null}]"
         :filter-render="{name: 'MyFilter'}"></vxe-table-column>
       <vxe-table-column
-        field="name"
-        title="实现复杂的筛选"
+        prop="name"
+        label="实现复杂的筛选"
         :filters="[{data: {type: 'has', isCase: true, name: ''}}]"
         :filter-render="{name: 'MyComplexFilter'}"></vxe-table-column>
       <vxe-table-column
-        field="role"
-        title="实现Excel复杂的筛选"
+        prop="role"
+        label="实现Excel复杂的筛选"
         sortable
         :filters="[{data: {vals: [], sVal: '', fMenu: '', f1Type:'', f1Val: '', fMode: 'and', f2Type: '', f2Val: ''}}]"
         :filter-render="{name: 'MyExcelFilter'}"></vxe-table-column>
@@ -161,23 +161,23 @@ export default {
         <vxe-table border :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
           <vxe-table-column
-            field="nickname"
-            title="Nickname"
+            prop="nickname"
+            label="Nickname"
             :filters="[{data: null}]"
             :filter-render="{name: 'input', attrs: {placeholder: '请输入名字'}}"></vxe-table-column>
           <vxe-table-column
-            field="sex"
-            title="sex"
+            prop="sex"
+            label="sex"
             :filters="[{data: null}]"
             :filter-render="{name: 'select', options: sexList}"></vxe-table-column>
           <vxe-table-column
-            field="age"
-            title="Age"
+            prop="age"
+            label="Age"
             :filters="[{data: null}]"
             :filter-render="{name: 'MyFilter'}"></vxe-table-column>
           <vxe-table-column
-            field="name"
-            title="高级筛选（实现复杂的筛选）"
+            prop="name"
+            label="高级筛选（实现复杂的筛选）"
             :filters="[{data: {type: 'has', isCase: true, name: ''}}]"
             :filter-render="{name: 'MyComplexFilter'}"></vxe-table-column>
         </vxe-table>
@@ -336,13 +336,13 @@ export default {
                                     }
                                     $table.closeFilter()
                                     $table.$XModal({
-                                      title: '自定义自动筛选方式',
+                                      label: '自定义自动筛选方式',
                                       width: 600,
                                       slots: {
                                         default: ({ $modal }, h) => {
                                           return [
                                             <div class="me-popup">
-                                              <div class="me-popup-title">显示行</div>
+                                              <div class="me-popup-label">显示行</div>
                                               <div class="me-popup-filter me-popup-f1">
                                                 <select v-model={ data.f1Type }>
                                                   {

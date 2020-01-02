@@ -7,8 +7,8 @@
       resizable
       :tree-config="{children: 'children'}"
       :data="tableData">
-      <vxe-table-column field="name" title="Name" tree-node></vxe-table-column>
-      <vxe-table-column type="expand" title="Details" width="80">
+      <vxe-table-column prop="name" label="Name" tree-node></vxe-table-column>
+      <vxe-table-column type="expand" label="Details" width="80">
         <template v-slot:content="{ row, rowIndex }">
           <ul>
             <li>
@@ -26,9 +26,9 @@
           </ul>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type"></vxe-table-column>
-      <vxe-table-column field="date" title="Date"></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -54,7 +54,7 @@ export default {
           resizable
           :tree-config="{children: 'children'}"
           :data="tableData">
-          <vxe-table-column field="name" title="Name" tree-node></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" tree-node></vxe-table-column>
           <vxe-table-column type="expand" width="60">
             <template v-slot:content="{ row, rowIndex }">
               <ul>
@@ -73,9 +73,9 @@ export default {
               </ul>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="size" title="Size"></vxe-table-column>
-          <vxe-table-column field="type" title="Type"></vxe-table-column>
-          <vxe-table-column field="date" title="Date"></vxe-table-column>
+          <vxe-table-column prop="size" label="Size"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date"></vxe-table-column>
         </vxe-table>
         `,
         `

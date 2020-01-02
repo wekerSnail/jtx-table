@@ -14,26 +14,26 @@
       :sort-config="{showIcon: false}"
       @header-cell-click="headerCellClickEvent">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" sortable :filters="[{label: 'id大于10', value: 10}, {label: 'id大于40', value: 40}]" :filter-method="filterNameMethod">
+      <vxe-table-column prop="name" label="Name" sortable :filters="[{label: 'id大于10', value: 10}, {label: 'id大于40', value: 40}]" :filter-method="filterNameMethod">
         <template v-slot:header="{ column }">
-          <span>{{ column.title }}</span>
+          <span>{{ column.label }}</span>
           <span class="custom-sort" :class="{'is-order': column.order}">
             <i class="fa" :class="[column.order ? `fa-sort-alpha-${column.order}` : 'fa-long-arrow-down']"></i>
           </span>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="role" title="Role"></vxe-table-column>
-      <vxe-table-column field="age" title="Age" sortable>
+      <vxe-table-column prop="role" label="Role"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age" sortable>
         <template v-slot:header="{ column }">
-          <span>{{ column.title }}</span>
+          <span>{{ column.label }}</span>
           <span class="custom-sort" :class="{'is-order': column.order}">
             <i class="fa" :class="[column.order ? `fa-sort-numeric-${column.order}` : 'fa-long-arrow-down']"></i>
           </span>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="amount" title="Amount" formatter="commafy" sortable>
+      <vxe-table-column prop="amount" label="Amount" formatter="commafy" sortable>
         <template v-slot:header="{ column }">
-          <span>{{ column.title }}</span>
+          <span>{{ column.label }}</span>
           <span class="custom-sort" :class="{'is-order': column.order}">
             <i class="fa" :class="[column.order ? `fa-sort-amount-${column.order}` : 'fa-long-arrow-down']"></i>
           </span>
@@ -72,26 +72,26 @@ export default {
           :sort-config="{showIcon: false}"
           @header-cell-click="headerCellClickEvent">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" sortable :filters="[{label: 'id大于10', value: 10}, {label: 'id大于40', value: 40}]" :filter-method="filterNameMethod">
+          <vxe-table-column prop="name" label="Name" sortable :filters="[{label: 'id大于10', value: 10}, {label: 'id大于40', value: 40}]" :filter-method="filterNameMethod">
             <template v-slot:header="{ column }">
-              <span>{{ column.title }}</span>
+              <span>{{ column.label }}</span>
               <span class="custom-sort" :class="{'is-order': column.order}">
                 <i class="fa" :class="[column.order ? \`fa-sort-alpha-\${column.order}\` : 'fa-long-arrow-down']"></i>
               </span>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="role" title="Role"></vxe-table-column>
-          <vxe-table-column field="age" title="Age" sortable>
+          <vxe-table-column prop="role" label="Role"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age" sortable>
             <template v-slot:header="{ column }">
-              <span>{{ column.title }}</span>
+              <span>{{ column.label }}</span>
               <span class="custom-sort" :class="{'is-order': column.order}">
                 <i class="fa" :class="[column.order ? \`fa-sort-numeric-\${column.order}\` : 'fa-long-arrow-down']"></i>
               </span>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="amount" title="Amount" formatter="commafy" sortable>
+          <vxe-table-column prop="amount" label="Amount" formatter="commafy" sortable>
             <template v-slot:header="{ column }">
-              <span>{{ column.title }}</span>
+              <span>{{ column.label }}</span>
               <span class="custom-sort" :class="{'is-order': column.order}">
                 <i class="fa" :class="[column.order ? \`fa-sort-amount-\${column.order}\` : 'fa-long-arrow-down']"></i>
               </span>

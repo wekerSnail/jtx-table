@@ -3,7 +3,7 @@
     <header class="page-header">
       <div class="left">
         <a href="https://github.com/xuliangzhan/vxe-table">
-          <span class="title">🐬jtx-table</span>
+          <span class="label">🐬jtx-table</span>
         </a>
         <a href='https://gitee.com/xuliangzhan_admin/vxe-table/stargazers'>
           <img src='https://gitee.com/xuliangzhan_admin/vxe-table/badge/star.svg?theme=dark' alt='star'>
@@ -42,11 +42,11 @@
       <div class="aside">
         <ul class="nav-menu">
           <li v-for="(item, index) in tableList" :key="index" :class="{expand: item.expand}">
-            <a class="nav-link" @click="linkEvent(item)" :title="$t(item.disabled ? 'app.body.other.newFunc' : item.label)" :class="{disabled: item.disabled, active: pageKey === item.value}"><i class="vxe-icon--arrow-right nav-link-icon"></i>{{ $t(item.label) }}</a>
+            <a class="nav-link" @click="linkEvent(item)" :label="$t(item.disabled ? 'app.body.other.newFunc' : item.label)" :class="{disabled: item.disabled, active: pageKey === item.value}"><i class="vxe-icon--arrow-right nav-link-icon"></i>{{ $t(item.label) }}</a>
             <ul v-if="item.children" v-show="item.expand" class="nav-child-menu">
               <li v-for="(child, cIndex) in item.children" :key="cIndex">
-                <a class="nav-link disabled" v-if="child.disabled" :title="$t('app.body.other.newFunc')">{{ $t(child.label) }}</a>
-                <router-link v-else class="nav-link" :to="child.locat" :title="$t(child.label)">{{ $t(child.label) }}</router-link>
+                <a class="nav-link disabled" v-if="child.disabled" :label="$t('app.body.other.newFunc')">{{ $t(child.label) }}</a>
+                <router-link v-else class="nav-link" :to="child.locat" :label="$t(child.label)">{{ $t(child.label) }}</router-link>
               </li>
             </ul>
           </li>

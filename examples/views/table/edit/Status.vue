@@ -24,10 +24,10 @@
       :edit-config="{trigger: 'click', mode: 'cell', showStatus: true, icon: 'fa fa-edit'}">
       <vxe-table-column type="checkbox" width="60"></vxe-table-column>
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="date3" title="Date" formatter="toDateString"></vxe-table-column>
-      <vxe-table-column title="操作" width="200">
+      <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="date3" label="Date" formatter="toDateString"></vxe-table-column>
+      <vxe-table-column label="操作" width="200">
         <template v-slot="{ row, rowIndex }">
           <template v-if="!row.date3">
             <vxe-button @click="saveEvent2(row)" :loading="row.loading">更新并替换新数据</vxe-button>
@@ -80,10 +80,10 @@ export default {
           :edit-config="{trigger: 'click', mode: 'cell', showStatus: true, icon: 'fa fa-edit'}">
           <vxe-table-column type="checkbox" width="60"></vxe-table-column>
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="date3" title="Date" formatter="toDateString"></vxe-table-column>
-          <vxe-table-column title="操作" width="200">
+          <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="date3" label="Date" formatter="toDateString"></vxe-table-column>
+          <vxe-table-column label="操作" width="200">
             <template v-slot="{ row, rowIndex }">
               <template v-if="!row.date3">
                 <vxe-button @click="saveEvent2(row)" :loading="row.loading">更新并替换新数据</vxe-button>
@@ -113,13 +113,13 @@ export default {
               this.$refs.xTable.insert()
                 .then(({ row }) => this.$refs.xTable.setActiveCell(row, 'name'))
             },
-            saveEvent (row, field) {
+            saveEvent (row, prop) {
               let xTable = this.$refs.xTable
               if (xTable.isUpdateByRow(row)) {
                 row.loading = true
                 this.submitSave(row).then(data => {
                   // 局部保存，并将行数据恢复到初始状态（如果 record 为空则不改动行数据，只恢复状态）
-                  xTable.reloadRow(row, null, field)
+                  xTable.reloadRow(row, null, prop)
                   this.$XModal.message({ message: '保存成功！', status: 'success' })
                   row.loading = false
                 })
@@ -127,13 +127,13 @@ export default {
                 this.$XModal.message({ message: '数据未改动！', status: 'info' })
               }
             },
-            saveEvent2 (row, field) {
+            saveEvent2 (row, prop) {
               let xTable = this.$refs.xTable
               if (xTable.isUpdateByRow(row)) {
                 row.loading = true
                 this.submitSave(row).then(data => {
                   // 局部保存，并更新本地数据
-                  xTable.reloadRow(row, data, field)
+                  xTable.reloadRow(row, data, prop)
                   this.$XModal.message({ message: '保存成功！', status: 'success' })
                   row.loading = false
                 })
@@ -191,13 +191,13 @@ export default {
       this.$refs.xTable.insert()
         .then(({ row }) => this.$refs.xTable.setActiveCell(row, 'name'))
     },
-    saveEvent (row, field) {
+    saveEvent (row, prop) {
       let xTable = this.$refs.xTable
       if (xTable.isUpdateByRow(row)) {
         row.loading = true
         this.submitSave(row).then(data => {
           // 局部保存，并将行数据恢复到初始状态（如果 record 为空则不改动行数据，只恢复状态）
-          xTable.reloadRow(row, null, field)
+          xTable.reloadRow(row, null, prop)
           this.$XModal.message({ message: '保存成功！', status: 'success' })
           row.loading = false
         })
@@ -205,13 +205,13 @@ export default {
         this.$XModal.message({ message: '数据未改动！', status: 'info' })
       }
     },
-    saveEvent2 (row, field) {
+    saveEvent2 (row, prop) {
       let xTable = this.$refs.xTable
       if (xTable.isUpdateByRow(row)) {
         row.loading = true
         this.submitSave(row).then(data => {
           // 局部保存，并更新本地数据
-          xTable.reloadRow(row, data, field)
+          xTable.reloadRow(row, data, prop)
           this.$XModal.message({ message: '保存成功！', status: 'success' })
           row.loading = false
         })

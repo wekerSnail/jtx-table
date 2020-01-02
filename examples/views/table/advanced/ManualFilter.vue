@@ -28,14 +28,14 @@
       :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
       <vxe-table-column
-        field="name"
-        title="Name"
+        prop="name"
+        label="Name"
         sortable
         :filters="[{ label: 'id大于25', value: 25 }]"
         :filter-method="filterNameMethod"></vxe-table-column>
       <vxe-table-column
-        field="role"
-        title="Role"
+        prop="role"
+        label="Role"
         sortable
         :filters="[{ data: '' }]"
         :filter-method="filterRoleMethod">
@@ -46,22 +46,22 @@
         </template>
       </vxe-table-column>
       <vxe-table-column
-        field="sex"
-        title="Sex"
+        prop="sex"
+        label="Sex"
         sortable
         :filter-multiple="false"
         :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]"></vxe-table-column>
-      <vxe-table-column field="age" title="Age" :filters="[{ data: '' }]" :filter-method="filterAgeMethod">
+      <vxe-table-column prop="age" label="Age" :filters="[{ data: '' }]" :filter-method="filterAgeMethod">
         <template v-slot:filter="{ column, context }">
           <template v-for="(option, index) in column.filters">
             <input class="my-input" type="type" :key="index" v-model="option.data" @input="context.changeOption($event, !!option.data, option)" @keyup.enter="context.confirmFilter()" placeholder="按回车确认筛选">
           </template>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="time" title="Time" sortable></vxe-table-column>
+      <vxe-table-column prop="time" label="Time" sortable></vxe-table-column>
       <vxe-table-column
-        field="nickname"
-        title="渲染器（实现复杂的筛选）"
+        prop="nickname"
+        label="渲染器（实现复杂的筛选）"
         width="240"
         :filters="[{data: {type: 'has', isCase: true, name: ''}}]"
         :filter-render="{name: 'MyComplexFilter'}"></vxe-table-column>
@@ -107,14 +107,14 @@ export default {
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
           <vxe-table-column
-            field="name"
-            title="Name"
+            prop="name"
+            label="Name"
             sortable
             :filters="[{ label: 'id大于25', value: 25 }]"
             :filter-method="filterNameMethod"></vxe-table-column>
           <vxe-table-column
-            field="role"
-            title="Role"
+            prop="role"
+            label="Role"
             sortable
             :filters="[{ data: '' }]"
             :filter-method="filterRoleMethod">
@@ -125,22 +125,22 @@ export default {
             </template>
           </vxe-table-column>
           <vxe-table-column
-            field="sex"
-            title="Sex"
+            prop="sex"
+            label="Sex"
             sortable
             :filter-multiple="false"
             :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]"></vxe-table-column>
-          <vxe-table-column field="age" title="Age" :filters="[{ data: '' }]" :filter-method="filterAgeMethod">
+          <vxe-table-column prop="age" label="Age" :filters="[{ data: '' }]" :filter-method="filterAgeMethod">
             <template v-slot:filter="{ column, context }">
               <template v-for="(option, index) in column.filters">
                 <input class="my-input" type="type" :key="index" v-model="option.data" @input="context.changeOption($event, !!option.data, option)" @keyup.enter="context.confirmFilter()" placeholder="按回车确认筛选">
               </template>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="time" title="Time" sortable></vxe-table-column>
+          <vxe-table-column prop="time" label="Time" sortable></vxe-table-column>
           <vxe-table-column
-            field="nickname"
-            title="渲染器（实现复杂的筛选）"
+            prop="nickname"
+            label="渲染器（实现复杂的筛选）"
             width="240"
             :filters="[{data: {type: 'has', isCase: true, name: ''}}]"
             :filter-render="{name: 'MyComplexFilter'}"></vxe-table-column>

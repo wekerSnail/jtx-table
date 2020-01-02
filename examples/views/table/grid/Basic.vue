@@ -41,9 +41,9 @@ export default {
       loading: false,
       tableColumn: [
         { type: 'seq', width: 50 },
-        { field: 'name', title: 'app.body.label.name' },
-        { field: 'sex', title: 'app.body.label.sex', showHeaderOverflow: true },
-        { field: 'address', title: 'Address', showOverflow: true }
+        { prop: 'name', label: 'app.body.label.name' },
+        { prop: 'sex', label: 'app.body.label.sex', showHeaderOverflow: true },
+        { prop: 'address', label: 'Address', showOverflow: true }
       ],
       tableData: [],
       demoCodes: [
@@ -64,9 +64,9 @@ export default {
               loading: false,
               tableColumn: [
                 { type: 'seq', width: 50 },
-                { field: 'name', title: 'app.body.label.name' },
-                { field: 'sex', title: 'app.body.label.sex', showHeaderOverflow: true },
-                { field: 'address', title: 'Address', showOverflow: true }
+                { prop: 'name', label: 'app.body.label.name' },
+                { prop: 'sex', label: 'app.body.label.sex', showHeaderOverflow: true },
+                { prop: 'address', label: 'Address', showOverflow: true }
               ],
               tableData: []
             }

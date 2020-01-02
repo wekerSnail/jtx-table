@@ -6,9 +6,9 @@
       border
       :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" sortable></vxe-table-column>
-      <vxe-table-column field="html1" type="html" title="HTML 标签"></vxe-table-column>
-      <vxe-table-column field="role" type="html" title="HTML 标签与格式化" :formatter="formatRole"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" sortable></vxe-table-column>
+      <vxe-table-column prop="html1" type="html" label="HTML 标签"></vxe-table-column>
+      <vxe-table-column prop="role" type="html" label="HTML 标签与格式化" :formatter="formatRole"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -38,9 +38,9 @@ export default {
           height="500"
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" sortable></vxe-table-column>
-          <vxe-table-column field="html1" type="html" title="HTML 标签"></vxe-table-column>
-          <vxe-table-column field="html2" type="html" title="HTML 标签与格式化" :formatter="formatRole"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" sortable></vxe-table-column>
+          <vxe-table-column prop="html1" type="html" label="HTML 标签"></vxe-table-column>
+          <vxe-table-column prop="html2" type="html" label="HTML 标签与格式化" :formatter="formatRole"></vxe-table-column>
         </vxe-table>
         `,
         `

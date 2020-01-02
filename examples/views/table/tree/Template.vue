@@ -18,19 +18,19 @@
       resizable
       :tree-config="{children: 'children'}"
       :data="tableData">
-      <vxe-table-column field="name" title="app.body.label.name"></vxe-table-column>
-      <vxe-table-column field="size" title="Size"></vxe-table-column>
-      <vxe-table-column field="type" title="Type">
+      <vxe-table-column prop="name" label="app.body.label.name"></vxe-table-column>
+      <vxe-table-column prop="size" label="Size"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type">
         <template v-slot="{ row }">
           <span>{{ `类型：${row.type || '无'}` }}</span>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="type" title="Image" tree-node>
+      <vxe-table-column prop="type" label="Image" tree-node>
         <template>
           <img src="static/other/img1.gif" height="50">
         </template>
       </vxe-table-column>
-      <vxe-table-column field="date" title="Date">
+      <vxe-table-column prop="date" label="Date">
         <template v-slot="{ row }">
           <span>{{ $utils.toDateString(row.date, 'yyyy-MM-dd HH:mm:ss.S') }}</span>
         </template>
@@ -71,19 +71,19 @@ export default {
           resizable
           :tree-config="{children: 'children'}"
           :data="tableData">
-          <vxe-table-column field="name" title="app.body.label.name"></vxe-table-column>
-          <vxe-table-column field="size" title="Size"></vxe-table-column>
-          <vxe-table-column field="type" title="Type">
+          <vxe-table-column prop="name" label="app.body.label.name"></vxe-table-column>
+          <vxe-table-column prop="size" label="Size"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type">
             <template v-slot="{ row }">
               <span>{{ \`类型：\${row.type || '无'}\` }}</span>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="type" title="Image" tree-node>
+          <vxe-table-column prop="type" label="Image" tree-node>
             <template>
               <img src="static/other/img1.gif" height="50">
             </template>
           </vxe-table-column>
-          <vxe-table-column field="date" title="Date">
+          <vxe-table-column prop="date" label="Date">
             <template v-slot="{ row }">
               <span>{{ $utils.toDateString(row.date, 'yyyy-MM-dd HH:mm:ss.S') }}</span>
             </template>

@@ -45,23 +45,23 @@ export default {
   data () {
     return {
       tableColumn: [
-        { field: 'name', title: 'Name' },
-        { field: 'role', title: 'Role' },
-        { field: 'sex', title: 'Sex' },
-        { field: 'age', title: 'Age' },
-        { field: 'date3', title: 'Date' }
+        { prop: 'name', label: 'Name' },
+        { prop: 'role', label: 'Role' },
+        { prop: 'sex', label: 'Sex' },
+        { prop: 'age', label: 'Age' },
+        { prop: 'date3', label: 'Date' }
       ],
       tableColumn2: [
-        { field: 'name', title: 'Name' },
-        { field: 'role', title: 'Role' },
-        { field: 'sex', title: 'Sex' },
-        { field: 'age', title: 'Age' },
-        { field: 'date2', title: 'Datetime' },
-        { field: 'rate', title: 'Rate' },
-        { field: 'address2', title: 'Address' },
-        { field: 'date3', title: 'Date' },
-        { field: 'updateTime', title: 'UpdateTime' },
-        { field: 'createTime', title: 'CreateTime' }
+        { prop: 'name', label: 'Name' },
+        { prop: 'role', label: 'Role' },
+        { prop: 'sex', label: 'Sex' },
+        { prop: 'age', label: 'Age' },
+        { prop: 'date2', label: 'Datetime' },
+        { prop: 'rate', label: 'Rate' },
+        { prop: 'address2', label: 'Address' },
+        { prop: 'date3', label: 'Date' },
+        { prop: 'updateTime', label: 'UpdateTime' },
+        { prop: 'createTime', label: 'CreateTime' }
       ],
       tableData: [],
       tableData2: [],
@@ -80,12 +80,12 @@ export default {
           data () {
             return {
               tableColumn: [
-                { field: 'name', title: 'Name' },
-                { field: 'role', title: 'Role' },
-                { field: 'sex', title: 'Sex' },
-                { field: 'age', title: 'Age' },
-                { field: 'address2', title: 'Address' },
-                { field: 'date3', title: 'Date' }
+                { prop: 'name', label: 'Name' },
+                { prop: 'role', label: 'Role' },
+                { prop: 'sex', label: 'Sex' },
+                { prop: 'age', label: 'Age' },
+                { prop: 'address2', label: 'Address' },
+                { prop: 'date3', label: 'Date' }
               ]
             }
           },
@@ -98,19 +98,19 @@ export default {
             reverseTable () {
               let tableData = this.tableData
               this.tableData = this.tableColumn.map(column => {
-                let item = { 0: column.title }
+                let item = { 0: column.label }
                 tableData.forEach((row, rowIndex) => {
-                  item[rowIndex + 1] = row[column.field]
+                  item[rowIndex + 1] = row[column.prop]
                 })
                 return item
               })
               this.tableColumn = [{
-                field: '0',
+                prop: '0',
                 fixed: 'left',
                 width: 80
               }].concat(tableData.map((item, index) => {
                 return {
-                  field: \`\${index + 1}\`,
+                  prop: \`\${index + 1}\`,
                   width: 120
                 }
               }))
@@ -139,16 +139,16 @@ export default {
           data () {
             return {
               tableColumn: [
-                { field: 'name', title: 'Name' },
-                { field: 'role', title: 'Role' },
-                { field: 'sex', title: 'Sex' },
-                { field: 'age', title: 'Age' },
-                { field: 'date2', title: 'Datetime' },
-                { field: 'rate', title: 'Rate' },
-                { field: 'address2', title: 'Address' },
-                { field: 'date3', title: 'Date' },
-                { field: 'updateTime', title: 'UpdateTime' },
-                { field: 'createTime', title: 'CreateTime' }
+                { prop: 'name', label: 'Name' },
+                { prop: 'role', label: 'Role' },
+                { prop: 'sex', label: 'Sex' },
+                { prop: 'age', label: 'Age' },
+                { prop: 'date2', label: 'Datetime' },
+                { prop: 'rate', label: 'Rate' },
+                { prop: 'address2', label: 'Address' },
+                { prop: 'date3', label: 'Date' },
+                { prop: 'updateTime', label: 'UpdateTime' },
+                { prop: 'createTime', label: 'CreateTime' }
               ]
             }
           },
@@ -161,19 +161,19 @@ export default {
             reverseTable () {
               let tableData = this.tableData
               this.tableData = this.tableColumn.map(column => {
-                let item = { 0: column.title }
+                let item = { 0: column.label }
                 tableData.forEach((row, rowIndex) => {
-                  item[rowIndex + 1] = row[column.field]
+                  item[rowIndex + 1] = row[column.prop]
                 })
                 return item
               })
               this.tableColumn = [{
-                field: '0',
+                prop: '0',
                 fixed: 'left',
                 width: 80
               }].concat(tableData.map((item, index) => {
                 return {
-                  field: \`\${index + 1}\`,
+                  prop: \`\${index + 1}\`,
                   width: 120
                 }
               }))
@@ -205,19 +205,19 @@ export default {
     reverseTable () {
       let tableData = this.tableData
       this.tableData = this.tableColumn.map(column => {
-        let item = { 0: column.title }
+        let item = { 0: column.label }
         tableData.forEach((row, rowIndex) => {
-          item[rowIndex + 1] = row[column.field]
+          item[rowIndex + 1] = row[column.prop]
         })
         return item
       })
       this.tableColumn = [{
-        field: '0',
+        prop: '0',
         fixed: 'left',
         width: 80
       }].concat(tableData.map((item, index) => {
         return {
-          field: `${index + 1}`,
+          prop: `${index + 1}`,
           minWidth: 120
         }
       }))
@@ -225,19 +225,19 @@ export default {
     reverseTable2 () {
       let tableData = this.tableData2
       this.tableData2 = this.tableColumn2.map(column => {
-        let item = { 0: column.title }
+        let item = { 0: column.label }
         tableData.forEach((row, rowIndex) => {
-          item[rowIndex + 1] = row[column.field]
+          item[rowIndex + 1] = row[column.prop]
         })
         return item
       })
       this.tableColumn2 = [{
-        field: '0',
+        prop: '0',
         fixed: 'left',
         width: 80
       }].concat(tableData.map((item, index) => {
         return {
-          field: `${index + 1}`,
+          prop: `${index + 1}`,
           minWidth: 120
         }
       }))

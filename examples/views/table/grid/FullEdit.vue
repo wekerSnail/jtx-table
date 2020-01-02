@@ -110,13 +110,13 @@ export default {
         }
       },
       tableColumn: [
-        { type: 'checkbox', title: 'ID', width: 120 },
-        { field: 'name', title: 'Name', remoteSort: true, editRender: { name: 'input' } },
-        { field: 'nickname', title: 'Nickname', editRender: { name: 'input' } },
-        { field: 'sex', title: 'Sex', editRender: { name: 'select', options: [] } },
+        { type: 'checkbox', label: 'ID', width: 120 },
+        { prop: 'name', label: 'Name', remoteSort: true, editRender: { name: 'input' } },
+        { prop: 'nickname', label: 'Nickname', editRender: { name: 'input' } },
+        { prop: 'sex', label: 'Sex', editRender: { name: 'select', options: [] } },
         {
-          field: 'role',
-          title: 'Role',
+          prop: 'role',
+          label: 'Role',
           remoteSort: true,
           width: 200,
           filters: [
@@ -128,7 +128,7 @@ export default {
           filterMultiple: false,
           editRender: { name: 'input' }
         },
-        { field: 'describe', title: 'Describe', showOverflow: true, editRender: { name: 'input' } }
+        { prop: 'describe', label: 'Describe', showOverflow: true, editRender: { name: 'input' } }
       ],
       demoCodes: [
         `
@@ -224,13 +224,13 @@ export default {
                 }
               },
               tableColumn: [
-                { type: 'checkbox', title: 'ID', width: 120 },
-                { field: 'name', title: 'Name', remoteSort: true, editRender: { name: 'input' } },
-                { field: 'nickname', title: 'Nickname', editRender: { name: 'input' } },
-                { field: 'sex', title: 'Sex', editRender: { name: 'select', options: [] } },
+                { type: 'checkbox', label: 'ID', width: 120 },
+                { prop: 'name', label: 'Name', remoteSort: true, editRender: { name: 'input' } },
+                { prop: 'nickname', label: 'Nickname', editRender: { name: 'input' } },
+                { prop: 'sex', label: 'Sex', editRender: { name: 'select', options: [] } },
                 {
-                  field: 'role',
-                  title: 'Role',
+                  prop: 'role',
+                  label: 'Role',
                   remoteSort: true,
                   width: 200,
                   filters: [
@@ -242,7 +242,7 @@ export default {
                   filterMultiple: false,
                   editRender: { name: 'input' }
                 },
-                { field: 'describe', title: 'Describe', showOverflow: true, editRender: { name: 'input' } }
+                { prop: 'describe', label: 'Describe', showOverflow: true, editRender: { name: 'input' } }
               ]
             }
           },

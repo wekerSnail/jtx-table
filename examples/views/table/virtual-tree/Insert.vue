@@ -38,10 +38,10 @@ export default {
       tableData: [],
       tableColumn: [
         { type: 'checkbox', width: 120, treeNode: true },
-        { field: 'name', title: 'Name', editRender: { name: 'input' } },
-        { field: 'size', title: 'Size', editRender: { name: 'input' } },
-        { field: 'type', title: 'Type', editRender: { name: 'input' } },
-        { field: 'date', title: 'Date', editRender: { name: 'input' } }
+        { prop: 'name', label: 'Name', editRender: { name: 'input' } },
+        { prop: 'size', label: 'Size', editRender: { name: 'input' } },
+        { prop: 'type', label: 'Type', editRender: { name: 'input' } },
+        { prop: 'date', label: 'Date', editRender: { name: 'input' } }
       ],
       demoCodes: [
         `
@@ -70,10 +70,10 @@ export default {
               tableData: [],
               tableColumn: [
                 { type: 'checkbox', width: 120, treeNode: true },
-                { field: 'name', title: 'Name', editRender: { name: 'input' } },
-                { field: 'size', title: 'Size', editRender: { name: 'input' } },
-                { field: 'type', title: 'Type', editRender: { name: 'input' } },
-                { field: 'date', title: 'Date', editRender: { name: 'input' } }
+                { prop: 'name', label: 'Name', editRender: { name: 'input' } },
+                { prop: 'size', label: 'Size', editRender: { name: 'input' } },
+                { prop: 'type', label: 'Type', editRender: { name: 'input' } },
+                { prop: 'date', label: 'Date', editRender: { name: 'input' } }
               ]
             }
           },

@@ -13,8 +13,8 @@
             <vxe-table
               border
               :data="childData">
-              <vxe-table-column field="role" title="Role"></vxe-table-column>
-              <vxe-table-column field="age" title="Age"></vxe-table-column>
+              <vxe-table-column prop="role" label="Role"></vxe-table-column>
+              <vxe-table-column prop="age" label="Age"></vxe-table-column>
             </vxe-table>
           </template>
           <template v-else>
@@ -39,9 +39,9 @@
           </template>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="name" title="Name"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -74,8 +74,8 @@ export default {
                 <vxe-table
                   border
                   :data="tableData">
-                  <vxe-table-column field="role" title="Role"></vxe-table-column>
-                  <vxe-table-column field="age" title="Age"></vxe-table-column>
+                  <vxe-table-column prop="role" label="Role"></vxe-table-column>
+                  <vxe-table-column prop="age" label="Age"></vxe-table-column>
                 </vxe-table>
               </template>
               <template v-else>
@@ -100,9 +100,9 @@ export default {
               </template>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="name" title="Name"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
         </vxe-table>
         `,
         `

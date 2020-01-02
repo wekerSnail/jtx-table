@@ -21,11 +21,11 @@
       height="300"
       :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" sortable></vxe-table-column>
-      <vxe-table-column field="nickname" title="Nickname" sortable></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" sortable></vxe-table-column>
-      <vxe-table-column field="age" title="Age" sortable></vxe-table-column>
-      <vxe-table-column field="time" title="Time" sortable></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" sortable></vxe-table-column>
+      <vxe-table-column prop="nickname" label="Nickname" sortable></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" sortable></vxe-table-column>
+      <vxe-table-column prop="age" label="Age" sortable></vxe-table-column>
+      <vxe-table-column prop="time" label="Time" sortable></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -43,11 +43,11 @@
       height="300"
       :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" sortable></vxe-table-column>
-      <vxe-table-column field="nickname" title="Nickname" sortable></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" sortable></vxe-table-column>
-      <vxe-table-column field="age" title="Age" sortable></vxe-table-column>
-      <vxe-table-column field="time" title="Time" sortable :sort-by="['time', 'name']"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" sortable></vxe-table-column>
+      <vxe-table-column prop="nickname" label="Nickname" sortable></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" sortable></vxe-table-column>
+      <vxe-table-column prop="age" label="Age" sortable></vxe-table-column>
+      <vxe-table-column prop="time" label="Time" sortable :sort-by="['time', 'name']"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -66,11 +66,11 @@
       :data="tableData"
       @sort-change="sortChangeEvent">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" sortable :sort-method="sortNameMethod"></vxe-table-column>
-      <vxe-table-column field="nickname" title="Nickname" sortable></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" sortable></vxe-table-column>
-      <vxe-table-column field="age" title="Age" sortable></vxe-table-column>
-      <vxe-table-column field="time" title="Time" sortable></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" sortable :sort-method="sortNameMethod"></vxe-table-column>
+      <vxe-table-column prop="nickname" label="Nickname" sortable></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" sortable></vxe-table-column>
+      <vxe-table-column prop="age" label="Age" sortable></vxe-table-column>
+      <vxe-table-column prop="time" label="Time" sortable></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -88,14 +88,14 @@
       highlight-hover-column
       height="300"
       :data="tableData"
-      :sort-config="{trigger: 'cell', defaultSort: {field: 'age', order: 'desc'}}"
+      :sort-config="{trigger: 'cell', defaultSort: {prop: 'age', order: 'desc'}}"
       @sort-change="sortChangeEvent">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name"></vxe-table-column>
-      <vxe-table-column field="nickname" title="Nickname" sortable></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" sortable></vxe-table-column>
-      <vxe-table-column field="age" title="Age" sortable></vxe-table-column>
-      <vxe-table-column field="time" title="Time" sortable></vxe-table-column>
+      <vxe-table-column prop="name" label="Name"></vxe-table-column>
+      <vxe-table-column prop="nickname" label="Nickname" sortable></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" sortable></vxe-table-column>
+      <vxe-table-column prop="age" label="Age" sortable></vxe-table-column>
+      <vxe-table-column prop="time" label="Time" sortable></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -131,11 +131,11 @@ export default {
           height="300"
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" sortable></vxe-table-column>
-          <vxe-table-column field="nickname" title="Nickname" sortable></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" sortable></vxe-table-column>
-          <vxe-table-column field="age" title="Age" sortable></vxe-table-column>
-          <vxe-table-column field="time" title="Time" sortable></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" sortable></vxe-table-column>
+          <vxe-table-column prop="nickname" label="Nickname" sortable></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" sortable></vxe-table-column>
+          <vxe-table-column prop="age" label="Age" sortable></vxe-table-column>
+          <vxe-table-column prop="time" label="Time" sortable></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -157,11 +157,11 @@ export default {
           height="300"
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" sortable></vxe-table-column>
-          <vxe-table-column field="nickname" title="Nickname" sortable></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" sortable></vxe-table-column>
-          <vxe-table-column field="age" title="Age" sortable></vxe-table-column>
-          <vxe-table-column field="time" title="Time" sortable :sort-by="['time', 'name']"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" sortable></vxe-table-column>
+          <vxe-table-column prop="nickname" label="Nickname" sortable></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" sortable></vxe-table-column>
+          <vxe-table-column prop="age" label="Age" sortable></vxe-table-column>
+          <vxe-table-column prop="time" label="Time" sortable :sort-by="['time', 'name']"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -184,11 +184,11 @@ export default {
           :data="tableData"
           @sort-change="sortChangeEvent">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" sortable :sort-method="sortNameMethod"></vxe-table-column>
-          <vxe-table-column field="nickname" title="Nickname" sortable></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" sortable></vxe-table-column>
-          <vxe-table-column field="age" title="Age" sortable></vxe-table-column>
-          <vxe-table-column field="time" title="Time" sortable></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" sortable :sort-method="sortNameMethod"></vxe-table-column>
+          <vxe-table-column prop="nickname" label="Nickname" sortable></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" sortable></vxe-table-column>
+          <vxe-table-column prop="age" label="Age" sortable></vxe-table-column>
+          <vxe-table-column prop="time" label="Time" sortable></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -221,14 +221,14 @@ export default {
           highlight-hover-column
           height="300"
           :data="tableData"
-          :sort-config="{trigger: 'cell', defaultSort: {field: 'age', order: 'desc'}}"
+          :sort-config="{trigger: 'cell', defaultSort: {prop: 'age', order: 'desc'}}"
           @sort-change="sortChangeEvent">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name"></vxe-table-column>
-          <vxe-table-column field="nickname" title="Nickname" sortable></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" sortable></vxe-table-column>
-          <vxe-table-column field="age" title="Age" sortable></vxe-table-column>
-          <vxe-table-column field="time" title="Time" sortable></vxe-table-column>
+          <vxe-table-column prop="name" label="Name"></vxe-table-column>
+          <vxe-table-column prop="nickname" label="Nickname" sortable></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" sortable></vxe-table-column>
+          <vxe-table-column prop="age" label="Age" sortable></vxe-table-column>
+          <vxe-table-column prop="time" label="Time" sortable></vxe-table-column>
         </vxe-table>
         `,
         `

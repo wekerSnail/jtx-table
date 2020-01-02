@@ -16,12 +16,12 @@
       @cell-mouseenter="cellMouseenterEvent"
       @cell-mouseleave="cellMouseleaveEvent"
       @body-scroll="bodyScrollEvent">
-      <vxe-table-column type="seq" title="序号" width="60" fixed="left"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" width="300"></vxe-table-column>
-      <vxe-table-column field="role" title="Role" width="300"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" width="300"></vxe-table-column>
-      <vxe-table-column field="date" title="Date" width="300"></vxe-table-column>
-      <vxe-table-column field="address" title="Address" fixed="right" width="300"></vxe-table-column>
+      <vxe-table-column type="seq" label="序号" width="60" fixed="left"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" width="300"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role" width="300"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" width="300"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date" width="300"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" fixed="right" width="300"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -56,12 +56,12 @@ export default {
           @cell-mouseenter="cellMouseenterEvent"
           @cell-mouseleave="cellMouseleaveEvent"
           @body-scroll="bodyScrollEvent">
-          <vxe-table-column type="seq" title="序号" width="60" fixed="left"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" width="300"></vxe-table-column>
-          <vxe-table-column field="role" title="Role" width="300"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" width="300"></vxe-table-column>
-          <vxe-table-column field="date" title="Date" width="300"></vxe-table-column>
-          <vxe-table-column field="address" title="Address" fixed="right" width="300"></vxe-table-column>
+          <vxe-table-column type="seq" label="序号" width="60" fixed="left"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" width="300"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role" width="300"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" width="300"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date" width="300"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" fixed="right" width="300"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -76,22 +76,22 @@ export default {
           },
           methods: {
             headerCellClickEvent ({ row, rowIndex, column, columnIndex }, event) {
-              console.log(\`表头单元格点击\${column.title}\`)
+              console.log(\`表头单元格点击\${column.label}\`)
             },
             headerCellDBLClickEvent ({ row, rowIndex, column, columnIndex }, event) {
-              console.log(\`表头单元格双击\${column.title}\`)
+              console.log(\`表头单元格双击\${column.label}\`)
             },
             cellClickEvent ({ row, rowIndex, column, columnIndex }, event) {
-              console.log(\`单元格点击\${column.title}\`)
+              console.log(\`单元格点击\${column.label}\`)
             },
             cellDBLClickEvent ({ row, rowIndex, column, columnIndex }, event) {
-              console.log(\`单元格双击\${column.title}\`)
+              console.log(\`单元格双击\${column.label}\`)
             },
             cellMouseenterEvent ({ row, rowIndex, column, columnIndex }, event) {
-              console.log(\`鼠标进入单元格\${column.title}\`)
+              console.log(\`鼠标进入单元格\${column.label}\`)
             },
             cellMouseleaveEvent ({ row, rowIndex, column, columnIndex }, event) {
-              console.log(\`鼠标离开单元格\${column.title}\`)
+              console.log(\`鼠标离开单元格\${column.label}\`)
             }
           }
         }
@@ -110,22 +110,22 @@ export default {
   },
   methods: {
     headerCellClickEvent ({ row, rowIndex, column, columnIndex }, event) {
-      console.log(`表头单元格点击${column.title}`)
+      console.log(`表头单元格点击${column.label}`)
     },
     headerCellDBLClickEvent ({ row, rowIndex, column, columnIndex }, event) {
-      console.log(`表头单元格双击${column.title}`)
+      console.log(`表头单元格双击${column.label}`)
     },
     cellClickEvent ({ row, rowIndex, column, columnIndex }, event) {
-      console.log(`单元格点击${column.title}`)
+      console.log(`单元格点击${column.label}`)
     },
     cellDBLClickEvent ({ row, rowIndex, column, columnIndex }, event) {
-      console.log(`单元格双击${column.title}`)
+      console.log(`单元格双击${column.label}`)
     },
     cellMouseenterEvent ({ row, rowIndex, column, columnIndex }, event) {
-      console.log(`鼠标进入单元格${column.title}`)
+      console.log(`鼠标进入单元格${column.label}`)
     },
     cellMouseleaveEvent ({ row, rowIndex, column, columnIndex }, event) {
-      console.log(`鼠标离开单元格${column.title}`)
+      console.log(`鼠标离开单元格${column.label}`)
     },
     bodyScrollEvent ({ scrollTop, scrollLeft }, event) {
       console.log(`滚动事件scrollTop=${scrollTop} scrollLeft=${scrollLeft}`)

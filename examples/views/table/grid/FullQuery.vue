@@ -51,12 +51,12 @@ export default {
           query: ({ page, sort, filters }) => {
             // 处理排序条件
             let formData = {
-              sort: sort.field,
+              sort: sort.prop,
               order: sort.order
             }
             // 处理筛选条件
-            filters.forEach(({ column, field, values }) => {
-              formData[field] = values.join(',')
+            filters.forEach(({ column, prop, values }) => {
+              formData[prop] = values.join(',')
             })
             return this.$ajax.get(`/api/user/page/list/${page.pageSize}/${page.currentPage}`, formData)
           }
@@ -87,13 +87,13 @@ export default {
       },
       tableColumn: [
         { type: 'seq', width: 60, fixed: 'left' },
-        { type: 'checkbox', title: 'ID', width: 120, fixed: 'left' },
-        { field: 'name', title: 'Name', width: 300, remoteSort: true },
-        { field: 'nickname', title: 'Nickname', remoteSort: true, width: 300 },
-        { field: 'age', title: 'Age', remoteSort: true, width: 100 },
+        { type: 'checkbox', label: 'ID', width: 120, fixed: 'left' },
+        { prop: 'name', label: 'Name', width: 300, remoteSort: true },
+        { prop: 'nickname', label: 'Nickname', remoteSort: true, width: 300 },
+        { prop: 'age', label: 'Age', remoteSort: true, width: 100 },
         {
-          field: 'role',
-          title: 'Role',
+          prop: 'role',
+          label: 'Role',
           remoteSort: true,
           width: 200,
           filters: [
@@ -104,7 +104,7 @@ export default {
           ],
           filterMultiple: false
         },
-        { field: 'describe', title: 'Describe', width: 300, showOverflow: true }
+        { prop: 'describe', label: 'Describe', width: 300, showOverflow: true }
       ],
       demoCodes: [
         `
@@ -182,13 +182,13 @@ export default {
               },
               tableColumn: [
                 { type: 'seq', width: 60, fixed: 'left' },
-                { type: 'checkbox', title: 'ID', width: 120, fixed: 'left' },
-                { field: 'name', title: 'Name', width: 300, remoteSort: true },
-                { field: 'nickname', title: 'Nickname', remoteSort: true, width: 300 },
-                { field: 'age', title: 'Age', remoteSort: true, width: 100 },
+                { type: 'checkbox', label: 'ID', width: 120, fixed: 'left' },
+                { prop: 'name', label: 'Name', width: 300, remoteSort: true },
+                { prop: 'nickname', label: 'Nickname', remoteSort: true, width: 300 },
+                { prop: 'age', label: 'Age', remoteSort: true, width: 100 },
                 {
-                  field: 'role',
-                  title: 'Role',
+                  prop: 'role',
+                  label: 'Role',
                   remoteSort: true,
                   width: 200,
                   filters: [
@@ -199,7 +199,7 @@ export default {
                   ],
                   filterMultiple: false
                 },
-                { field: 'describe', title: 'Describe', width: 300, showOverflow: true }
+                { prop: 'describe', label: 'Describe', width: 300, showOverflow: true }
               ]
             }
           }

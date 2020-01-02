@@ -37,12 +37,12 @@ export default {
     return {
       tableData: [],
       tableColumn: [
-        { type: 'seq', title: '序号', width: 80 },
-        { field: 'name', title: 'app.body.label.name' },
-        { field: 'size', title: 'Size' },
+        { type: 'seq', label: '序号', width: 80 },
+        { prop: 'name', label: 'app.body.label.name' },
+        { prop: 'size', label: 'Size' },
         {
-          field: 'type',
-          title: 'Type',
+          prop: 'type',
+          label: 'Type',
           slots: {
             default: ({ row }) => {
               return [
@@ -52,7 +52,7 @@ export default {
           }
         },
         {
-          title: 'Image',
+          label: 'Image',
           treeNode: true,
           slots: {
             default: ({ row }) => {
@@ -63,8 +63,8 @@ export default {
           }
         },
         {
-          field: 'date',
-          title: 'Date',
+          prop: 'date',
+          label: 'Date',
           slots: {
             default: ({ row }) => {
               return [
@@ -100,12 +100,12 @@ export default {
             return {
               tableData: [],
               tableColumn: [
-                { type: 'seq', title: '序号', width: 80 },
-                { field: 'name', title: 'app.body.label.name' },
-                { field: 'size', title: 'Size' },
+                { type: 'seq', label: '序号', width: 80 },
+                { prop: 'name', label: 'app.body.label.name' },
+                { prop: 'size', label: 'Size' },
                 {
-                  field: 'type',
-                  title: 'Type',
+                  prop: 'type',
+                  label: 'Type',
                   slots: {
                     default: ({ row }) => {
                       return [
@@ -115,7 +115,7 @@ export default {
                   }
                 },
                 {
-                  title: 'Image',
+                  label: 'Image',
                   treeNode: true,
                   slots: {
                     default: ({ row }) => {
@@ -126,8 +126,8 @@ export default {
                   }
                 },
                 {
-                  field: 'date',
-                  title: 'Date',
+                  prop: 'date',
+                  label: 'Date',
                   slots: {
                     default: ({ row }) => {
                       return [

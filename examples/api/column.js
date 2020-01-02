@@ -83,8 +83,8 @@ const apis = [
         ]
       },
       {
-        name: 'field',
-        descKey: 'app.api.tableColumn.desc.field',
+        name: 'prop',
+        descKey: 'app.api.tableColumn.desc.prop',
         version: '',
         type: 'String',
         enum: '',
@@ -92,8 +92,8 @@ const apis = [
         list: []
       },
       {
-        name: 'title',
-        descKey: 'app.api.tableColumn.desc.title',
+        name: 'label',
+        descKey: 'app.api.tableColumn.desc.label',
         version: '',
         type: 'String',
         enum: '',

@@ -15,9 +15,9 @@
       :align="allAlign"
       :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="app.body.label.name"></vxe-table-column>
-      <vxe-table-column field="sex" title="app.body.label.sex"></vxe-table-column>
-      <vxe-table-column field="age" title="app.body.label.age"></vxe-table-column>
+      <vxe-table-column prop="name" label="app.body.label.name"></vxe-table-column>
+      <vxe-table-column prop="sex" label="app.body.label.sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="app.body.label.age"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -33,11 +33,11 @@
       border
       highlight-hover-row
       :data="tableData">
-      <vxe-table-column type="seq" title="序号" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
-      <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+      <vxe-table-column type="seq" label="序号" width="60"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
+      <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -72,9 +72,9 @@ export default {
           :align="allAlign"
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="app.body.label.name"></vxe-table-column>
-          <vxe-table-column field="sex" title="app.body.label.sex"></vxe-table-column>
-          <vxe-table-column field="age" title="app.body.label.age"></vxe-table-column>
+          <vxe-table-column prop="name" label="app.body.label.name"></vxe-table-column>
+          <vxe-table-column prop="sex" label="app.body.label.sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="app.body.label.age"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -95,11 +95,11 @@ export default {
           border
           highlight-hover-row
           :data="tableData">
-          <vxe-table-column type="seq" title="序号" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
-          <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+          <vxe-table-column type="seq" label="序号" width="60"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
+          <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
         </vxe-table>
         `,
         `

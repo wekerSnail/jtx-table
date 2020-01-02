@@ -57,11 +57,11 @@ export default {
     return {
       tableColumn: [
         { type: 'checkbox', width: 60 },
-        { field: 'name', title: 'Name' },
-        { field: 'role', title: 'Role' },
-        { field: 'sex', title: 'Sex' },
-        { field: 'date3', title: 'Date' },
-        { field: 'address', title: 'Address', showOverflow: true }
+        { prop: 'name', label: 'Name' },
+        { prop: 'role', label: 'Role' },
+        { prop: 'sex', label: 'Sex' },
+        { prop: 'date3', label: 'Date' },
+        { prop: 'address', label: 'Address', showOverflow: true }
       ],
       tableData1: [],
       tableData2: [],
@@ -86,11 +86,11 @@ export default {
             return {
               tableColumn: [
                 { type: 'checkbox', width: 60 },
-                { field: 'name', title: 'Name' },
-                { field: 'role', title: 'Role' },
-                { field: 'sex', title: 'Sex' },
-                { field: 'date3', title: 'Date' },
-                { field: 'address', title: 'Address', showOverflow: true }
+                { prop: 'name', label: 'Name' },
+                { prop: 'role', label: 'Role' },
+                { prop: 'sex', label: 'Sex' },
+                { prop: 'date3', label: 'Date' },
+                { prop: 'address', label: 'Address', showOverflow: true }
               ],
               tableData1: []
             }
@@ -111,8 +111,8 @@ export default {
                     let item = {}
                     vCols.forEach((val, cIndex) => {
                       let column = this.tableColumn[cIndex]
-                      if (column.field) {
-                        item[column.field] = val
+                      if (column.prop) {
+                        item[column.prop] = val
                       }
                     })
                     tableData.push(item)
@@ -146,11 +146,11 @@ export default {
             return {
               tableColumn: [
                 { type: 'checkbox', width: 60 },
-                { field: 'name', title: 'Name' },
-                { field: 'role', title: 'Role' },
-                { field: 'sex', title: 'Sex' },
-                { field: 'date3', title: 'Date' },
-                { field: 'address', title: 'Address', showOverflow: true }
+                { prop: 'name', label: 'Name' },
+                { prop: 'role', label: 'Role' },
+                { prop: 'sex', label: 'Sex' },
+                { prop: 'date3', label: 'Date' },
+                { prop: 'address', label: 'Address', showOverflow: true }
               ],
               tableData2: []
             }
@@ -226,8 +226,8 @@ export default {
             let item = {}
             vCols.forEach((val, cIndex) => {
               let column = this.tableColumn[cIndex]
-              if (column.field) {
-                item[column.field] = val
+              if (column.prop) {
+                item[column.prop] = val
               }
             })
             tableData.push(item)

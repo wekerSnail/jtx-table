@@ -20,11 +20,11 @@
       :edit-config="{trigger: 'click', mode: 'row', showStatus: true}"
       :checkbox-config="{labelField: 'id'}"
       :data="tableData">
-      <vxe-table-column type="checkbox" title="ID" tree-node></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="size" title="Size" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="type" title="Type" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="date" title="Date" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column type="checkbox" label="ID" tree-node></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="size" label="Size" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="type" label="Type" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date" :edit-render="{name: 'input'}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -72,11 +72,11 @@ export default {
           :edit-config="{trigger: 'click', mode: 'row', showStatus: true}"
           :checkbox-config="{labelField: 'id'}"
           :data="tableData">
-          <vxe-table-column type="checkbox" title="ID" tree-node></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="size" title="Size" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="type" title="Type" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="date" title="Date" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column type="checkbox" label="ID" tree-node></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="size" label="Size" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="type" label="Type" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date" :edit-render="{name: 'input'}"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -120,7 +120,7 @@ export default {
                       let matchObj = this.$utils.findTree(this.tableData, item => item === row, this.treeConfig)
                       let seq = matchObj.path.filter(item => item !== this.treeConfig.children).map(item => Number(item) + 1).join('.')
                       rules.forEach(rule => {
-                        msgList.push(\`第 \${seq} 行 \${column.title} 校验错误：\${rule.message}\`)
+                        msgList.push(\`第 \${seq} 行 \${column.label} 校验错误：\${rule.message}\`)
                       })
                     })
                   })
@@ -199,7 +199,7 @@ export default {
               let matchObj = this.$utils.findTree(this.tableData, item => item === row, this.treeConfig)
               let seq = matchObj.path.filter(item => item !== this.treeConfig.children).map(item => Number(item) + 1).join('.')
               rules.forEach(rule => {
-                msgList.push(`第 ${seq} 行 ${column.title} 校验错误：${rule.message}`)
+                msgList.push(`第 ${seq} 行 ${column.label} 校验错误：${rule.message}`)
               })
             })
           })

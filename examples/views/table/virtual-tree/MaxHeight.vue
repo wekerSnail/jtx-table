@@ -35,10 +35,10 @@ export default {
     return {
       tableData: [],
       tableColumn: [
-        { field: 'name', title: 'app.body.label.name', treeNode: true },
-        { field: 'size', title: 'Size' },
-        { field: 'type', title: 'Type' },
-        { field: 'date', title: 'Date' }
+        { prop: 'name', label: 'app.body.label.name', treeNode: true },
+        { prop: 'size', label: 'Size' },
+        { prop: 'type', label: 'Type' },
+        { prop: 'date', label: 'Date' }
       ],
       demoCodes: [
         `
@@ -64,10 +64,10 @@ export default {
             return {
               tableData: [],
               tableColumn: [
-                { field: 'name', title: 'app.body.label.name', treeNode: true },
-                { field: 'size', title: 'Size' },
-                { field: 'type', title: 'Type' },
-                { field: 'date', title: 'Date' }
+                { prop: 'name', label: 'app.body.label.name', treeNode: true },
+                { prop: 'size', label: 'Size' },
+                { prop: 'type', label: 'Type' },
+                { prop: 'date', label: 'Date' }
               ]
             }
           },

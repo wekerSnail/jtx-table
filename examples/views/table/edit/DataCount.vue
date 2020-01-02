@@ -10,10 +10,10 @@
       :footer-method="footerMethod"
       :edit-config="{trigger: 'click', mode: 'cell'}">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="书名" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="amount" title="单价" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
-      <vxe-table-column field="number" title="数量" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
-      <vxe-table-column title="总价">
+      <vxe-table-column prop="name" label="书名" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="amount" label="单价" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
+      <vxe-table-column prop="number" label="数量" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
+      <vxe-table-column label="总价">
         <template v-slot="{ row }">
           <span>{{ countAmount(row) }} 元</span>
         </template>
@@ -51,10 +51,10 @@ export default {
           :footer-method="footerMethod"
           :edit-config="{trigger: 'click', mode: 'cell'}">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="书名" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="amount" title="单价" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
-          <vxe-table-column field="number" title="数量" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
-          <vxe-table-column title="总价">
+          <vxe-table-column prop="name" label="书名" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="amount" label="单价" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
+          <vxe-table-column prop="number" label="数量" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
+          <vxe-table-column label="总价">
             <template v-slot="{ row }">
               <span>{{ countAmount(row) }} 元</span>
             </template>

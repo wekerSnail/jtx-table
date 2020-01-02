@@ -28,9 +28,9 @@
           </ul>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="name" title="Name"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -52,9 +52,9 @@
           <vxe-grid :columns="row.childCols" :data="row.childData"></vxe-grid>
         </template>
       </vxe-table-column>
-      <vxe-table-column field="name" title="Name"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-      <vxe-table-column field="age" title="Age"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -112,9 +112,9 @@ export default {
               </ul>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="name" title="Name"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -160,9 +160,9 @@ export default {
               <vxe-grid :columns="row.childCols" :data="row.childData"></vxe-grid>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="name" title="Name"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-          <vxe-table-column field="age" title="Age"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -182,11 +182,11 @@ export default {
               return new Promise(resolve => {
                 setTimeout(() => {
                   let childCols = this.$utils.sample([
-                    { type: 'seq', title: 'Sequence' },
-                    { field: 'name', title: 'Name' },
-                    { field: 'role', title: 'Role' },
-                    { field: 'age', title: 'Age' },
-                    { field: 'sex', title: 'Sex' }
+                    { type: 'seq', label: 'Sequence' },
+                    { prop: 'name', label: 'Name' },
+                    { prop: 'role', label: 'Role' },
+                    { prop: 'age', label: 'Age' },
+                    { prop: 'sex', label: 'Sex' }
                   ], this.$utils.random(3, 5))
                   let childData = this.$utils.sample([
                     { name: 'TEST1', role: 'Develop', age: 20, sex: '女' },
@@ -234,11 +234,11 @@ export default {
       return new Promise(resolve => {
         setTimeout(() => {
           let childCols = this.$utils.sample([
-            { type: 'seq', title: 'Sequence' },
-            { field: 'name', title: 'Name' },
-            { field: 'role', title: 'Role' },
-            { field: 'age', title: 'Age' },
-            { field: 'sex', title: 'Sex' }
+            { type: 'seq', label: 'Sequence' },
+            { prop: 'name', label: 'Name' },
+            { prop: 'role', label: 'Role' },
+            { prop: 'age', label: 'Age' },
+            { prop: 'sex', label: 'Sex' }
           ], this.$utils.random(3, 5))
           let childData = this.$utils.sample([
             { name: 'TEST1', role: 'Develop', age: 20, sex: '女' },

@@ -38,11 +38,11 @@ export default {
     return {
       tableData: [],
       tableColumn: [
-        { type: 'checkbox', title: 'ID', fixed: 'left', width: 280, treeNode: true },
-        { field: 'name', title: 'Name', width: 300 },
-        { field: 'size', title: 'Size', width: 300 },
-        { field: 'type', title: 'Type', width: 300 },
-        { field: 'date', title: 'Date', width: 300 }
+        { type: 'checkbox', label: 'ID', fixed: 'left', width: 280, treeNode: true },
+        { prop: 'name', label: 'Name', width: 300 },
+        { prop: 'size', label: 'Size', width: 300 },
+        { prop: 'type', label: 'Type', width: 300 },
+        { prop: 'date', label: 'Date', width: 300 }
       ],
       demoCodes: [
         `
@@ -71,11 +71,11 @@ export default {
             return {
               tableData: [],
               tableColumn: [
-                { type: 'checkbox', title: 'ID', fixed: 'left', width: 280, treeNode: true },
-                { field: 'name', title: 'Name', width: 300 },
-                { field: 'size', title: 'Size', width: 300 },
-                { field: 'type', title: 'Type', width: 300 },
-                { field: 'date', title: 'Date', width: 300 }
+                { type: 'checkbox', label: 'ID', fixed: 'left', width: 280, treeNode: true },
+                { prop: 'name', label: 'Name', width: 300 },
+                { prop: 'size', label: 'Size', width: 300 },
+                { prop: 'type', label: 'Type', width: 300 },
+                { prop: 'date', label: 'Date', width: 300 }
               ]
             }
           },

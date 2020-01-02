@@ -57,22 +57,22 @@ export default {
     return {
       tableData: [],
       tableColumn1: [
-        { field: 'name', title: 'Name' },
-        { field: 'size', title: 'Size' },
-        { field: 'type', title: 'Type' },
-        { field: 'date', title: 'Date', treeNode: true }
+        { prop: 'name', label: 'Name' },
+        { prop: 'size', label: 'Size' },
+        { prop: 'type', label: 'Type' },
+        { prop: 'date', label: 'Date', treeNode: true }
       ],
       tableColumn2: [
-        { type: 'seq', title: '序号', width: 280, treeNode: true },
-        { field: 'name', title: 'Name' },
+        { type: 'seq', label: '序号', width: 280, treeNode: true },
+        { prop: 'name', label: 'Name' },
         {
-          title: '基本信息',
+          label: '基本信息',
           children: [
-            { field: 'size', title: 'Size' },
-            { field: 'type', title: 'Type' }
+            { prop: 'size', label: 'Size' },
+            { prop: 'type', label: 'Type' }
           ]
         },
-        { field: 'date', title: 'Date' }
+        { prop: 'date', label: 'Date' }
       ],
       demoCodes: [
         `
@@ -98,10 +98,10 @@ export default {
             return {
               tableData: [],
               tableColumn1: [
-                { field: 'name', title: 'Name' },
-                { field: 'size', title: 'Size' },
-                { field: 'type', title: 'Type' },
-                { field: 'date', title: 'Date', treeNode: true }
+                { prop: 'name', label: 'Name' },
+                { prop: 'size', label: 'Size' },
+                { prop: 'type', label: 'Type' },
+                { prop: 'date', label: 'Date', treeNode: true }
               ]
             }
           },
@@ -132,16 +132,16 @@ export default {
             return {
               tableData: [],
               tableColumn: [
-                { type: 'seq', title: '序号', width: 280, treeNode: true },
-                { field: 'name', title: 'Name' },
+                { type: 'seq', label: '序号', width: 280, treeNode: true },
+                { prop: 'name', label: 'Name' },
                 {
-                  title: '基本信息',
+                  label: '基本信息',
                   children: [
-                    { field: 'size', title: 'Size' },
-                    { field: 'type', title: 'Type' }
+                    { prop: 'size', label: 'Size' },
+                    { prop: 'type', label: 'Type' }
                   ]
                 },
-                { field: 'date', title: 'Date' }
+                { prop: 'date', label: 'Date' }
               ]
             }
           },

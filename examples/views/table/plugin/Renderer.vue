@@ -30,32 +30,32 @@ export default {
       tableData: [],
       tableColumn: [
         { type: 'checkbox', width: 60 },
-        { type: 'seq', title: 'Number', width: 80 },
+        { type: 'seq', label: 'Number', width: 80 },
         {
-          field: 'name',
-          title: 'Name',
+          prop: 'name',
+          label: 'Name',
           editRender: {
             name: 'XTextarea'
           }
         },
         {
-          field: 'role',
-          title: 'Role',
+          prop: 'role',
+          label: 'Role',
           showOverflow: true,
           editRender: {
             name: 'XTextarea'
           }
         },
         {
-          field: 'nickname',
-          title: 'Nickname',
+          prop: 'nickname',
+          label: 'Nickname',
           editRender: {
             name: 'XInput'
           }
         },
         {
-          field: 'sex',
-          title: 'Sex',
+          prop: 'sex',
+          label: 'Sex',
           editRender: {
             name: 'XInput',
             props: {
@@ -83,32 +83,32 @@ export default {
               tableData: [],
               tableColumn: [
                 { type: 'checkbox', width: 60 },
-                { type: 'seq', title: 'Number', width: 80 },
+                { type: 'seq', label: 'Number', width: 80 },
                 {
-                  field: 'name',
-                  title: 'Name',
+                  prop: 'name',
+                  label: 'Name',
                   editRender: {
                     name: 'XTextarea'
                   }
                 },
                 {
-                  field: 'role',
-                  title: 'Role',
+                  prop: 'role',
+                  label: 'Role',
                   showOverflow: true,
                   editRender: {
                     name: 'XTextarea'
                   }
                 },
                 {
-                  field: 'nickname',
-                  title: 'Nickname',
+                  prop: 'nickname',
+                  label: 'Nickname',
                   editRender: {
                     name: 'XInput'
                   }
                 },
                 {
-                  field: 'sex',
-                  title: 'Sex',
+                  prop: 'sex',
+                  label: 'Sex',
                   editRender: {
                     name: 'XInput',
                     props: {

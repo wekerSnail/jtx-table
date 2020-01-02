@@ -10,11 +10,11 @@
       :edit-config="{trigger: 'click', mode: 'cell', showStatus: true}"
       @edit-closed="editClosedEvent">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="role" title="Role" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'select', options: sexList}"></vxe-table-column>
-      <vxe-table-column field="num6" title="Number" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
-      <vxe-table-column field="date12" title="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'select', options: sexList}"></vxe-table-column>
+      <vxe-table-column prop="num6" label="Number" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
+      <vxe-table-column prop="date12" label="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -44,11 +44,11 @@ export default {
           :edit-config="{trigger: 'click', mode: 'cell', showStatus: true}"
           @edit-closed="editClosedEvent">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="role" title="Role" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'select', options: sexList}"></vxe-table-column>
-          <vxe-table-column field="num6" title="Number" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
-          <vxe-table-column field="date12" title="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'select', options: sexList}"></vxe-table-column>
+          <vxe-table-column prop="num6" label="Number" :edit-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
+          <vxe-table-column prop="date12" label="Date" :edit-render="{name: 'input', attrs: {type: 'date'}}"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -71,17 +71,17 @@ export default {
             },
             editClosedEvent ({ row, column }) {
               let xTable = this.$refs.xTable
-              let field = column.property
-              let cellValue = row[field]
+              let prop = column.property
+              let cellValue = row[prop]
               // 判断单元格值是否被修改
-              if (xTable.isUpdateByRow(row, field)) {
+              if (xTable.isUpdateByRow(row, prop)) {
                 setTimeout(() => {
                   this.$XModal.message({
-                    message: \`局部保存成功！ \${field}=\${cellValue}\`,
+                    message: \`局部保存成功！ \${prop}=\${cellValue}\`,
                     status: 'success'
                   })
                   // 局部更新单元格为已保存状态
-                  this.$refs.xTable.reloadRow(row, null, field)
+                  this.$refs.xTable.reloadRow(row, null, prop)
                 }, 300)
               }
             }
@@ -108,17 +108,17 @@ export default {
     },
     editClosedEvent ({ row, column }) {
       let xTable = this.$refs.xTable
-      let field = column.property
-      let cellValue = row[field]
+      let prop = column.property
+      let cellValue = row[prop]
       // 判断单元格值是否被修改
-      if (xTable.isUpdateByRow(row, field)) {
+      if (xTable.isUpdateByRow(row, prop)) {
         setTimeout(() => {
           this.$XModal.message({
-            message: `局部保存成功！ ${field}=${cellValue}`,
+            message: `局部保存成功！ ${prop}=${cellValue}`,
             status: 'success'
           })
           // 局部更新单元格为已保存状态
-          this.$refs.xTable.reloadRow(row, null, field)
+          this.$refs.xTable.reloadRow(row, null, prop)
         }, 300)
       }
     }

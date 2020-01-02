@@ -132,8 +132,8 @@ export default {
                   for (var index = 0; index < size; index++) {
                     let key = this.colIndex++
                     let config = {
-                      field: key ? \`col_\${key}\` : 'id',
-                      title: key ? \`标题_\${key}\` : 'ID',
+                      prop: key ? \`col_\${key}\` : 'id',
+                      label: key ? \`标题_\${key}\` : 'ID',
                       width: 140
                     }
                     if (!key) {
@@ -222,8 +222,8 @@ export default {
           for (var index = 0; index < size; index++) {
             let key = this.colIndex++
             let config = {
-              field: key ? `col_${key}` : 'id',
-              title: key ? `标题_${key}` : 'ID',
+              prop: key ? `col_${key}` : 'id',
+              label: key ? `标题_${key}` : 'ID',
               width: 140
             }
             if (!key) {

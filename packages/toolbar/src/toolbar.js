@@ -368,19 +368,19 @@ export default {
         if (resizableOpts.storage) {
           let columnWidthStorage = this.getStorageMap(resizableOpts.storageKey)[id]
           if (columnWidthStorage) {
-            XEUtils.each(columnWidthStorage, (resizeWidth, field) => {
-              customMap[field] = { field, resizeWidth }
+            XEUtils.each(columnWidthStorage, (resizeWidth, prop) => {
+              customMap[prop] = { prop, resizeWidth }
             })
           }
         }
         if (customOpts.storage) {
           let columnHideStorage = this.getStorageMap(customOpts.storageKey)[id]
           if (columnHideStorage) {
-            columnHideStorage.split(',').forEach(field => {
-              if (customMap[field]) {
-                customMap[field].visible = false
+            columnHideStorage.split(',').forEach(prop => {
+              if (customMap[prop]) {
+                customMap[prop].visible = false
               } else {
-                customMap[field] = { field, visible: false }
+                customMap[prop] = { prop, visible: false }
               }
             })
           }

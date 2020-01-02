@@ -11,15 +11,15 @@
       show-overflow
       :data="tableData">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :cell-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" :cell-render="{name: 'select', options: sexList}"></vxe-table-column>
-      <vxe-table-column field="age" title="Age" :cell-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
-      <vxe-table-column field="role" title="Role">
+      <vxe-table-column prop="name" label="Name" :cell-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" :cell-render="{name: 'select', options: sexList}"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age" :cell-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role">
         <template v-slot="{ row }">
           <input type="text" v-model="row.role">
         </template>
       </vxe-table-column>
-      <vxe-table-column field="date3" title="Date">
+      <vxe-table-column prop="date3" label="Date">
         <template v-slot="{ row }">
           <input type="date" v-model="row.date3">
         </template>
@@ -45,11 +45,11 @@
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'row'}">
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :edit-render="{name: 'input', type: 'visible'}"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'select', type: 'visible', options: sexList}"></vxe-table-column>
-      <vxe-table-column field="age" title="Age" :edit-render="{name: 'input', type: 'visible', attrs: {type: 'number'}}"></vxe-table-column>
-      <vxe-table-column field="role" title="Role" :edit-render="{name: 'input', type: 'visible'}"></vxe-table-column>
-      <vxe-table-column field="date3" title="Date" :edit-render="{name: 'input', type: 'visible', attrs: {type: 'date'}}"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input', type: 'visible'}"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'select', type: 'visible', options: sexList}"></vxe-table-column>
+      <vxe-table-column prop="age" label="Age" :edit-render="{name: 'input', type: 'visible', attrs: {type: 'number'}}"></vxe-table-column>
+      <vxe-table-column prop="role" label="Role" :edit-render="{name: 'input', type: 'visible'}"></vxe-table-column>
+      <vxe-table-column prop="date3" label="Date" :edit-render="{name: 'input', type: 'visible', attrs: {type: 'date'}}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -90,15 +90,15 @@ export default {
           show-overflow
           :data="tableData">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :cell-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" :cell-render="{name: 'select', options: sexList}"></vxe-table-column>
-          <vxe-table-column field="age" title="Age" :cell-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
-          <vxe-table-column field="role" title="Role">
+          <vxe-table-column prop="name" label="Name" :cell-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" :cell-render="{name: 'select', options: sexList}"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age" :cell-render="{name: 'input', attrs: {type: 'number'}}"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role">
             <template v-slot="{ row }">
               <input type="text" v-model="row.role">
             </template>
           </vxe-table-column>
-          <vxe-table-column field="date3" title="Date">
+          <vxe-table-column prop="date3" label="Date">
             <template v-slot="{ row }">
               <input type="date" v-model="row.date3">
             </template>
@@ -125,11 +125,11 @@ export default {
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'row'}">
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :edit-render="{name: 'input', type: 'visible'}"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'select', type: 'visible', options: sexList}"></vxe-table-column>
-          <vxe-table-column field="age" title="Age" :edit-render="{name: 'input', type: 'visible', attrs: {type: 'number'}}"></vxe-table-column>
-          <vxe-table-column field="role" title="Role" :edit-render="{name: 'input', type: 'visible'}"></vxe-table-column>
-          <vxe-table-column field="date3" title="Date" :edit-render="{name: 'input', type: 'visible', attrs: {type: 'date'}}"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input', type: 'visible'}"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'select', type: 'visible', options: sexList}"></vxe-table-column>
+          <vxe-table-column prop="age" label="Age" :edit-render="{name: 'input', type: 'visible', attrs: {type: 'number'}}"></vxe-table-column>
+          <vxe-table-column prop="role" label="Role" :edit-render="{name: 'input', type: 'visible'}"></vxe-table-column>
+          <vxe-table-column prop="date3" label="Date" :edit-render="{name: 'input', type: 'visible', attrs: {type: 'date'}}"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -157,10 +157,10 @@ export default {
   },
   methods: {
     editActivedEvent ({ row, column }, event) {
-      console.log(`打开 ${column.title} 列编辑`)
+      console.log(`打开 ${column.label} 列编辑`)
     },
     editClosedEvent ({ row, column }, event) {
-      console.log(`关闭 ${column.title} 列编辑`)
+      console.log(`关闭 ${column.label} 列编辑`)
     }
   }
 }

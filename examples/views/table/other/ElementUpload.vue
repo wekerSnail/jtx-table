@@ -30,9 +30,9 @@
       height="400"
       :data="tableData">
       <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="File Name"></vxe-table-column>
-      <vxe-table-column field="size" title="File Size" :formatter="formatterSize"></vxe-table-column>
-      <vxe-table-column field="createDate" title="Create Date"></vxe-table-column>
+      <vxe-table-column prop="name" label="File Name"></vxe-table-column>
+      <vxe-table-column prop="size" label="File Size" :formatter="formatterSize"></vxe-table-column>
+      <vxe-table-column prop="createDate" label="Create Date"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -84,9 +84,9 @@ export default {
           height="400"
           :data="tableData">
           <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="File Name"></vxe-table-column>
-          <vxe-table-column field="size" title="File Size" :formatter="formatterSize"></vxe-table-column>
-          <vxe-table-column field="createDate" title="Create Date"></vxe-table-column>
+          <vxe-table-column prop="name" label="File Name"></vxe-table-column>
+          <vxe-table-column prop="size" label="File Size" :formatter="formatterSize"></vxe-table-column>
+          <vxe-table-column prop="createDate" label="Create Date"></vxe-table-column>
         </vxe-table>
         `,
         `

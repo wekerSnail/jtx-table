@@ -16,9 +16,9 @@
         :sync-resize="selectTab"
         :data="tableData">
         <vxe-table-column type="seq" width="60"></vxe-table-column>
-        <vxe-table-column field="name" title="Name"></vxe-table-column>
-        <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-        <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+        <vxe-table-column prop="name" label="Name"></vxe-table-column>
+        <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+        <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
       </vxe-table>
     </div>
 
@@ -30,10 +30,10 @@
         :sync-resize="selectTab"
         :data="tableData">
         <vxe-table-column type="radio" width="60"></vxe-table-column>
-        <vxe-table-column field="role" title="Rolw"></vxe-table-column>
-        <vxe-table-column field="age" title="Age"></vxe-table-column>
-        <vxe-table-column field="num" title="Num"></vxe-table-column>
-        <vxe-table-column field="date12" title="Date"></vxe-table-column>
+        <vxe-table-column prop="role" label="Rolw"></vxe-table-column>
+        <vxe-table-column prop="age" label="Age"></vxe-table-column>
+        <vxe-table-column prop="num" label="Num"></vxe-table-column>
+        <vxe-table-column prop="date12" label="Date"></vxe-table-column>
       </vxe-table>
     </div>
 
@@ -45,12 +45,12 @@
         :sync-resize="selectTab"
         :data="tableData">
         <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-        <vxe-table-column field="nickname" title="nickname"></vxe-table-column>
-        <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-        <vxe-table-column field="age" title="Age"></vxe-table-column>
-        <vxe-table-column field="date12" title="Date"></vxe-table-column>
-        <vxe-table-column field="region" title="Region"></vxe-table-column>
-        <vxe-table-column field="rate" title="Rate"></vxe-table-column>
+        <vxe-table-column prop="nickname" label="nickname"></vxe-table-column>
+        <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+        <vxe-table-column prop="age" label="Age"></vxe-table-column>
+        <vxe-table-column prop="date12" label="Date"></vxe-table-column>
+        <vxe-table-column prop="region" label="Region"></vxe-table-column>
+        <vxe-table-column prop="rate" label="Rate"></vxe-table-column>
       </vxe-table>
     </div>
 
@@ -87,9 +87,9 @@ export default {
             :sync-resize="selectTab"
             :data="tableData">
             <vxe-table-column type="seq" width="60"></vxe-table-column>
-            <vxe-table-column field="name" title="Name"></vxe-table-column>
-            <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-            <vxe-table-column field="address" title="Address" show-overflow></vxe-table-column>
+            <vxe-table-column prop="name" label="Name"></vxe-table-column>
+            <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+            <vxe-table-column prop="address" label="Address" show-overflow></vxe-table-column>
           </vxe-table>
         </div>
 
@@ -101,10 +101,10 @@ export default {
             :sync-resize="selectTab"
             :data="tableData">
             <vxe-table-column type="radio" width="60"></vxe-table-column>
-            <vxe-table-column field="role" title="Rolw"></vxe-table-column>
-            <vxe-table-column field="age" title="Age"></vxe-table-column>
-            <vxe-table-column field="num" title="Num"></vxe-table-column>
-            <vxe-table-column field="date12" title="Date"></vxe-table-column>
+            <vxe-table-column prop="role" label="Rolw"></vxe-table-column>
+            <vxe-table-column prop="age" label="Age"></vxe-table-column>
+            <vxe-table-column prop="num" label="Num"></vxe-table-column>
+            <vxe-table-column prop="date12" label="Date"></vxe-table-column>
           </vxe-table>
         </div>
 
@@ -116,12 +116,12 @@ export default {
             :sync-resize="selectTab"
             :data="tableData">
             <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-            <vxe-table-column field="nickname" title="nickname"></vxe-table-column>
-            <vxe-table-column field="sex" title="Sex"></vxe-table-column>
-            <vxe-table-column field="age" title="Age"></vxe-table-column>
-            <vxe-table-column field="date12" title="Date"></vxe-table-column>
-            <vxe-table-column field="region" title="Region"></vxe-table-column>
-            <vxe-table-column field="rate" title="Rate"></vxe-table-column>
+            <vxe-table-column prop="nickname" label="nickname"></vxe-table-column>
+            <vxe-table-column prop="sex" label="Sex"></vxe-table-column>
+            <vxe-table-column prop="age" label="Age"></vxe-table-column>
+            <vxe-table-column prop="date12" label="Date"></vxe-table-column>
+            <vxe-table-column prop="region" label="Region"></vxe-table-column>
+            <vxe-table-column prop="rate" label="Rate"></vxe-table-column>
           </vxe-table>
         </div>
         `,

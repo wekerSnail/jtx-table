@@ -58,10 +58,10 @@ export default {
             }
           }
         },
-        { field: 'name', title: 'app.body.label.name' },
-        { field: 'sex', title: 'app.body.label.sex' },
+        { prop: 'name', label: 'app.body.label.name' },
+        { prop: 'sex', label: 'app.body.label.sex' },
         {
-          title: '操作',
+          label: '操作',
           width: 160,
           showOverflow: true,
           slots: {
@@ -124,10 +124,10 @@ export default {
                     }
                   }
                 },
-                { field: 'name', title: 'app.body.label.name' },
-                { field: 'sex', title: 'app.body.label.sex' },
+                { prop: 'name', label: 'app.body.label.name' },
+                { prop: 'sex', label: 'app.body.label.sex' },
                 {
-                  title: '操作',
+                  label: '操作',
                   width: 160,
                   showOverflow: true,
                   slots: {

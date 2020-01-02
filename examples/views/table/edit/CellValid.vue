@@ -26,9 +26,9 @@
       :edit-config="{trigger: 'click', mode: 'cell', showStatus: true}">
       <vxe-table-column type="checkbox" width="60"></vxe-table-column>
       <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="date" title="Date" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column prop="date" label="Date" :edit-render="{name: 'input'}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -81,9 +81,9 @@ export default {
           :edit-config="{trigger: 'click', mode: 'cell', showStatus: true}">
           <vxe-table-column type="checkbox" width="60"></vxe-table-column>
           <vxe-table-column type="seq" width="60"></vxe-table-column>
-          <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
-          <vxe-table-column field="date" title="Date" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
+          <vxe-table-column prop="date" label="Date" :edit-render="{name: 'input'}"></vxe-table-column>
         </vxe-table>
         `,
         `
@@ -124,7 +124,7 @@ export default {
                   errList.forEach(params => {
                     let { rowIndex, column, rules } = params
                     rules.forEach(rule => {
-                      msgList.push(\`第 \${rowIndex} 行 \${column.title} 校验错误：\${rule.message}\`)
+                      msgList.push(\`第 \${rowIndex} 行 \${column.label} 校验错误：\${rule.message}\`)
                     })
                   })
                 })
@@ -212,7 +212,7 @@ export default {
           errList.forEach(params => {
             let { rowIndex, column, rules } = params
             rules.forEach(rule => {
-              msgList.push(`第 ${rowIndex} 行 ${column.title} 校验错误：${rule.message}`)
+              msgList.push(`第 ${rowIndex} 行 ${column.label} 校验错误：${rule.message}`)
             })
           })
         })
