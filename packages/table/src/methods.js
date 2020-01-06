@@ -1473,6 +1473,7 @@ const Methods = {
             }
           }
         }
+        this.$emit('keydown', { keyCode, isCtrlKey, isShiftKey })
       })
     }
   },

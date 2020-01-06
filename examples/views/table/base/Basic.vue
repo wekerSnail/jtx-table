@@ -13,7 +13,8 @@
     <vxe-table
       border="none"
       :align="allAlign"
-      :data="tableData">
+      :data="tableData"
+      @keydown='keydown'>
       <vxe-table-column type="seq" width="60"></vxe-table-column>
       <vxe-table-column prop="name" label="app.body.label.name"></vxe-table-column>
       <vxe-table-column prop="sex" label="app.body.label.sex"></vxe-table-column>
@@ -125,6 +126,11 @@ export default {
     Array.from(this.$el.querySelectorAll('pre code')).forEach((block) => {
       hljs.highlightBlock(block)
     })
+  },
+  methods: {
+    keydown (row) {
+      console.log(row)
+    }
   }
 }
 </script>
