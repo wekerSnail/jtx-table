@@ -1049,7 +1049,7 @@ const Methods = {
     if (height) {
       customHeight = height === 'auto' ? parentHeight : ((DomTools.isScale(height) ? Math.floor(parseInt(height) / 100 * parentHeight) : XEUtils.toNumber(height)) - this.getExcludeHeight())
       if (showFooter) {
-        customHeight += scrollbarHeight + 1
+        customHeight += scrollbarHeight
       }
     }
     let emptyPlaceholderElem = $refs.emptyPlaceholder
@@ -1134,7 +1134,7 @@ const Methods = {
           if (fixedWrapperElem) {
             let isRightFixed = fixedType === 'right'
             let fixedColumn = columnStore[`${fixedType}List`]
-            wrapperElem.style.top = `${footerHeight + headerHeight - 1}px`
+            wrapperElem.style.top = `${footerHeight + headerHeight - (showFooter ? 1 : 0)}px`
             fixedWrapperElem.style.height = `${(customHeight > 0 ? customHeight - headerHeight - footerHeight : tableHeight) + headerHeight + footerHeight - scrollbarHeight}px`
             fixedWrapperElem.style.width = `${fixedColumn.reduce((previous, column) => previous + column.renderWidth, isRightFixed ? scrollbarWidth : 0) - (border === true ? 1 : 0)}px`
           }
