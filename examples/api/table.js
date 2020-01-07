@@ -2133,6 +2133,15 @@ const apis = [
         list: []
       },
       {
+        name: 'keydown',
+        descKey: '键盘按下监听事件',
+        version: '',
+        type: '',
+        enum: '',
+        defVal: '{ keyCode, isCtrlKey, isShiftKey }',
+        list: []
+      },
+      {
         name: 'valid-error',
         descKey: 'app.api.table.desc.validError',
         version: '',

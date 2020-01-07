@@ -988,13 +988,13 @@ const Methods = {
     }
     if (footerElem) {
       let footerHeight = footerElem.offsetHeight
-      this.scrollbarHeight = Math.max(footerHeight - footerElem.clientHeight, 0)
+      // this.scrollbarHeight = Math.max(footerHeight - footerElem.clientHeight, 0)
       this.overflowX = tableWidth > footerElem.clientWidth
       this.footerHeight = footerHeight
     } else {
-      this.scrollbarHeight = Math.max(tableHeight - bodyElem.clientHeight, 0)
       this.overflowX = tableWidth > bodyWidth
     }
+    this.scrollbarHeight = Math.max(tableHeight - bodyElem.clientHeight, 0)
     if (this.overflowX) {
       this.checkScrolling()
     }
@@ -1135,7 +1135,7 @@ const Methods = {
             let isRightFixed = fixedType === 'right'
             let fixedColumn = columnStore[`${fixedType}List`]
             wrapperElem.style.top = `${footerHeight + headerHeight - 1}px`
-            fixedWrapperElem.style.height = `${(customHeight > 0 ? customHeight - headerHeight - footerHeight : tableHeight) + headerHeight + footerHeight - scrollbarWidth}px`
+            fixedWrapperElem.style.height = `${(customHeight > 0 ? customHeight - headerHeight - footerHeight : tableHeight) + headerHeight + footerHeight - scrollbarHeight}px`
             fixedWrapperElem.style.width = `${fixedColumn.reduce((previous, column) => previous + column.renderWidth, isRightFixed ? scrollbarWidth : 0) - (border === true ? 1 : 0)}px`
           }
 
