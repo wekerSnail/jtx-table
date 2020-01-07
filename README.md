@@ -1,4 +1,5 @@
-# jtx-table(基于vxe-table)
+# jtx-table(vxe-table修改版本)
+修改自vxe-table，调整了小部分适用于自己场景的功能
 
 [![gitee star](https://gitee.com/xuliangzhan_admin/vxe-table/badge/star.svg?theme=dark)](https://gitee.com/xuliangzhan_admin/vxe-table/stargazers)
 [![npm version](https://img.shields.io/npm/v/vxe-table.svg?style=flat-square)](https://www.npmjs.org/package/vxe-table)
@@ -116,7 +117,7 @@
 [To view the user guide 使用指南](https://github.com/xuliangzhan/vxe-table-demo)
 
 [To view the example](https://xuliangzhan.github.io/vxe-table/#/table/base/basic) [查看演示](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/base/basic)  
-[To view the document](https://xuliangzhan.github.io/vxe-table/#/table/api) [查看文档](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/api)  
+[To view the document](http://weker.gitee.io/jtx-table/#/table/start/install) [查看文档](http://weker.gitee.io/jtx-table/#/table/start/install)  
 
 ## Installing
 
