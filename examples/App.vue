@@ -2,20 +2,8 @@
   <div id="app" @click="clickEvent">
     <header class="page-header">
       <div class="left">
-        <a href="https://github.com/xuliangzhan/vxe-table">
+        <a href="https://github.com/wekerSnail/jtx-table">
           <span class="label">🐬jtx-table</span>
-        </a>
-        <a href='https://gitee.com/xuliangzhan_admin/vxe-table/stargazers'>
-          <img src='https://gitee.com/xuliangzhan_admin/vxe-table/badge/star.svg?theme=dark' alt='star'>
-        </a>
-        <a href="https://github.com/xuliangzhan/vxe-table/stargazers">
-          <img src="https://img.shields.io/github/stars/xuliangzhan/vxe-table.svg">
-        </a>
-        <a href="http://npm-stat.com/charts.html?package=vxe-table">
-          <img src="https://img.shields.io/npm/dm/vxe-table.svg">
-        </a>
-        <a href="https://github.com/xuliangzhan/vxe-table/blob/master/LICENSE">
-          <img src="https://img.shields.io/github/license/mashape/apistatus.svg">
         </a>
       </div>
       <div class="right">
@@ -32,9 +20,6 @@
             <option value="2">V2</option>
             <option value="3">V3</option>
           </select>
-          <vxe-tooltip :content="$t('app.footer.donationDesc')" enterable>
-            <a class="donation" href="https://github.com/xuliangzhan/vxe-table#donation" target="_blank">{{ $t('app.footer.donation') }}☕</a>
-          </vxe-tooltip>
         </div>
       </div>
     </header>
