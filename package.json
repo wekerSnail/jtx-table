@@ -1,7 +1,7 @@
 {
-  "name": "vxe-table",
+  "name": "jtx-table",
   "version": "2.7.11",
-  "description": "vxe-table 表格解决方案",
+  "description": "vxe-table(修改) 表格解决方案",
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",

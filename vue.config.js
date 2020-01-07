@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @version: 1.0.0
+ * @Author: weikang
+ * @Date: 2019-12-30 16:18:09
+ * @LastEditors  : weikang
+ * @LastEditTime : 2020-01-07 15:51:20
+ */
 const path = require('path')
 
 function resolve (dir) {
@@ -5,7 +13,7 @@ function resolve (dir) {
 }
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/vxe-table/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/jtx-table/' : '/',
   outputDir: 'docs',
   assetsDir: 'static',
   productionSourceMap: false,
@@ -19,7 +27,7 @@ module.exports = {
       entry: 'examples/main.js',
       template: 'public/index.html',
       filename: 'index.html',
-      title: 'vxe-table 表格'
+      title: 'vxe-table(修改) 表格'
     }
   },
   chainWebpack (config) {
