@@ -1,3 +1,11 @@
+<!--
+ * @Description:
+ * @version: 1.0.0
+ * @Author: weikang
+ * @Date: 2019-12-30 16:18:10
+ * @LastEditors  : weikang
+ * @LastEditTime : 2020-01-10 13:48:55
+ -->
 <template>
   <div>
     <p class="tip">
@@ -41,9 +49,9 @@ export default {
       loading: false,
       tableColumn: [
         { type: 'seq', width: 50 },
-        { prop: 'name', label: 'app.body.label.name' },
-        { prop: 'sex', label: 'app.body.label.sex', showHeaderOverflow: true },
-        { prop: 'address', label: 'Address', showOverflow: true }
+        { prop: 'name', label: 'app.body.label.name', width: 250 },
+        { prop: 'sex', label: 'app.body.label.sex', showHeaderOverflow: true, width: 550 },
+        { prop: 'address', label: 'Address', showOverflow: true, width: 250, fixed: 'right' }
       ],
       tableData: [],
       demoCodes: [

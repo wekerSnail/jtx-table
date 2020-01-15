@@ -31,10 +31,21 @@ export default {
     return {
       tableColumn: [
         { type: 'seq', width: 60 },
-        { prop: 'name', label: 'app.body.label.name' },
-        { prop: 'sex', label: 'app.body.label.sex' },
-        { prop: 'age', label: 'Age' },
-        { prop: 'rate', label: 'Rate' }
+        { prop: 'name', label: 'app.body.label.name', width: 300 },
+        { prop: 'sex', label: 'app.body.label.sex', width: 300 },
+        { prop: 'age', label: 'Age', width: 300 },
+        { prop: 'rate', label: 'Rate', width: 300 },
+        { prop: 'rate',
+          label: 'Rate',
+          width: 300,
+          fixed: 'right',
+          slots: {
+            default: ({ row, column }) => {
+              return [
+                <el-button>弹框</el-button>, <el-button>弹框</el-button>
+              ]
+            }
+          } }
       ],
       tableToolbar: {
         export: true,

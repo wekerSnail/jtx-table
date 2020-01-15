@@ -37,10 +37,10 @@
       :footer-span-method="footerRowspanMethod"
       :footer-method="footerMethod"
       :data="tableData">
-      <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column prop="key" label="Key"></vxe-table-column>
-      <vxe-table-column prop="content" label="Translate"></vxe-table-column>
-      <vxe-table-column prop="language" label="Language" :filters="[{label: '中文', value: 'zh_CN'}, {label: 'English', value: 'en_US'}]"></vxe-table-column>
+      <vxe-table-column type="seq" width="860"></vxe-table-column>
+      <vxe-table-column prop="key" width="860" label="Key"></vxe-table-column>
+      <vxe-table-column fixed='right' prop="content" width="860" label="Translate"></vxe-table-column>
+      <vxe-table-column width="460" prop="language" label="Language" :filters="[{label: '中文', value: 'zh_CN'}, {label: 'English', value: 'en_US'}]"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>

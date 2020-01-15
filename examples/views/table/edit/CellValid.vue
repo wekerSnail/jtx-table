@@ -24,11 +24,14 @@
       :data="tableData"
       :edit-rules="validRules"
       :edit-config="{trigger: 'click', mode: 'cell', showStatus: true}">
-      <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-      <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column prop="sex" label="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column prop="date" label="Date" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column width='300' type="checkbox" ></vxe-table-column>
+      <vxe-table-column width='300' type="seq"></vxe-table-column>
+      <vxe-table-column width='300' prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column width='300' prop="sex" label="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column width='300' prop="date" label="Date" :edit-render="{name: 'input'}"></vxe-table-column>
+       <vxe-table-column width='300' prop="date" label="Date" :edit-render="{name: 'input'}"></vxe-table-column>
+        <vxe-table-column width='300' prop="date" label="Date" :edit-render="{name: 'input'}"></vxe-table-column>
+         <vxe-table-column width='300' prop="date" label="Date" :edit-render="{name: 'input'}"></vxe-table-column>
     </vxe-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>

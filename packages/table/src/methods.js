@@ -1136,7 +1136,7 @@ const Methods = {
             let fixedColumn = columnStore[`${fixedType}List`]
             wrapperElem.style.top = `${footerHeight + headerHeight - (showFooter ? 1 : 0)}px`
             fixedWrapperElem.style.height = `${(customHeight > 0 ? customHeight - headerHeight - footerHeight : tableHeight) + headerHeight + footerHeight - scrollbarHeight}px`
-            fixedWrapperElem.style.width = `${fixedColumn.reduce((previous, column) => previous + column.renderWidth, isRightFixed ? scrollbarWidth : 0) - (border === true ? 1 : 0)}px`
+            fixedWrapperElem.style.width = `${fixedColumn.reduce((previous, column) => previous + column.renderWidth, isRightFixed ? scrollbarWidth : 0)}px`
           }
 
           let tWidth = tableWidth
@@ -1176,7 +1176,6 @@ const Methods = {
             if (fixedWrapperElem) {
               wrapperElem.style.top = `${headerHeight}px`
             }
-            // wrapperElem.style.marginTop = `${-scrollbarHeight - 1}px`
           }
           if (tableElem) {
             tableElem.style.width = tWidth ? `${tWidth + scrollbarWidth}px` : ''
@@ -2987,6 +2986,7 @@ const Methods = {
       if (this.treeConfig) {
         rest.push(this.scrollToTreeRow(row))
       } else if (this.fullAllDataRowMap.has(row)) {
+        console.log(1112)
         rest.push(DomTools.rowToVisible(this, row))
       }
     }
