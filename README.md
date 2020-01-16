@@ -2,7 +2,7 @@
 修改自vxe-table，调整了小部分适用于自己场景的功能
 
 
-一个基于 [vue](https://www.npmjs.com/package/vue) 的表格组件，提供一套 CRUD 表格解决方案
+### 一个基于 [vue](https://www.npmjs.com/package/vue) 的表格组件，提供一套 CRUD 表格解决方案
 
 * 设计理念
   * 面向现代浏览器（简洁、高效的 API 设计）
