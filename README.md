@@ -1,5 +1,5 @@
 # jtx-table(vxe-table修改版本)
-修改自vxe-table，调整了小部分适用于自己场景的功能
+### 修改自vxe-table，调整了小部分适用于自己场景的功能
 
 
 一个基于 [vue](https://www.npmjs.com/package/vue) 的表格组件，提供一套 CRUD 表格解决方案
