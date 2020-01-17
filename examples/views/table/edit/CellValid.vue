@@ -26,7 +26,7 @@
       :edit-config="{trigger: 'click', mode: 'cell', showStatus: true}">
       <vxe-table-column width='300' type="checkbox" ></vxe-table-column>
       <vxe-table-column width='300' type="seq"></vxe-table-column>
-      <vxe-table-column width='300' prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
+      <vxe-table-column width='300' align='right' prop="name" label="Name" :edit-render="{name: 'input'}"></vxe-table-column>
       <vxe-table-column width='300' prop="sex" label="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
       <vxe-table-column width='300' prop="date" label="Date" :edit-render="{name: 'input'}"></vxe-table-column>
        <vxe-table-column width='300' prop="date" label="Date" :edit-render="{name: 'input'}"></vxe-table-column>
