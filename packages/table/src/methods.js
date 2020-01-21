@@ -675,7 +675,6 @@ const Methods = {
         }
       })
     }
-    this.$emit('update:customs', tableFullColumn)
   },
   /**
    * 手动重置列的所有操作，还原到初始状态

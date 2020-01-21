@@ -65,8 +65,6 @@ export default {
     /** 基本属性 */
     // 数据
     data: Array,
-    // 初始化绑定动态列
-    customs: Array,
     // 表格的高度
     height: [Number, String],
     // 表格的最大高度
@@ -452,19 +450,10 @@ export default {
         }
       })
     },
-    customs (value) {
-      if (!this.isUpdateCustoms) {
-        this.mergeCustomColumn(value)
-      }
-      this.isUpdateCustoms = false
-    },
     collectColumn (value) {
       let tableFullColumn = UtilTools.getColumnList(value)
       this.tableFullColumn = tableFullColumn
       this.cacheColumnMap()
-      if (this.customs) {
-        this.mergeCustomColumn(this.customs)
-      }
       this.refreshColumn().then(() => {
         if (this.scrollXLoad) {
           this.updateVirtualScrollX(true)

@@ -95,7 +95,7 @@ export default {
       return rest
     },
     tableProps () {
-      const { maximize, seqConfig, pagerConfig, loading, toolbar, toolbarOpts, editConfig, proxyConfig, proxyOpts, tableExtendProps, tableLoading, tablePage, tableData, tableCustoms, optimization } = this
+      const { maximize, seqConfig, pagerConfig, loading, editConfig, proxyConfig, proxyOpts, tableExtendProps, tableLoading, tablePage, tableData, optimization } = this
       let props = Object.assign({}, tableExtendProps, {
         optimization: Object.assign({}, GlobalConfig.optimization, optimization)
       })
@@ -116,18 +116,13 @@ export default {
           props.seqConfig = Object.assign({}, seqConfig, { startIndex: (tablePage.currentPage - 1) * tablePage.pageSize })
         }
       }
-      if (toolbar) {
-        if (!(toolbarOpts.setting && toolbarOpts.setting.storage)) {
-          props.customs = tableCustoms
-        }
-      }
       if (editConfig) {
         props.editConfig = Object.assign({}, editConfig, { activeMethod: this.handleActiveMethod })
       }
       return props
     },
     tableOns () {
-      let { $listeners, toolbar, proxyConfig, proxyOpts } = this
+      let { $listeners, proxyConfig, proxyOpts } = this
       let ons = Object.assign({}, $listeners)
       if (proxyConfig) {
         if (proxyOpts.sort) {
@@ -136,9 +131,6 @@ export default {
         if (proxyOpts.filter) {
           ons['filter-change'] = this.filterChangeEvent
         }
-      }
-      if (toolbar) {
-        ons['update:customs'] = this.updateCustomsEent
       }
       return ons
     },
@@ -166,11 +158,8 @@ export default {
     }
   },
   created () {
-    let { customs, data, proxyConfig, proxyOpts, pagerConfig } = this
+    let { data, proxyConfig, proxyOpts, pagerConfig } = this
     let { props } = proxyOpts
-    if (customs) {
-      this.tableCustoms = customs
-    }
     if (pagerConfig && pagerConfig.pageSize) {
       this.tablePage.pageSize = pagerConfig.pageSize
     }

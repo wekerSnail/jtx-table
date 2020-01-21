@@ -271,15 +271,6 @@ const apis = [
         list: []
       },
       {
-        name: 'customs',
-        descKey: 'app.api.table.desc.customs',
-        version: '',
-        type: 'Array<{prop, visible}>',
-        enum: '',
-        defVal: '',
-        list: []
-      },
-      {
         name: 'height',
         descKey: 'app.api.table.desc.height',
         version: '',
