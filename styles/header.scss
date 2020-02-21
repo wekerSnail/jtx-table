@@ -20,8 +20,27 @@
 .vxe-header--column {
   position: relative;
   user-select: none;
+<<<<<<< HEAD
   &.col--title-checked {
     background-color: $vxe-table-column-header-checked-background-color;
+=======
+  .vxe-edit-icon {
+    &.vxe-icon--edit-outline {
+      &:before {
+        background-color: $vxe-table-header-background-color;
+      }
+    }
+  }
+  &.col--title-checked {
+    background-color: $vxe-table-column-header-checked-background-color;
+    .vxe-edit-icon {
+      &.vxe-icon--edit-outline {
+        &:before {
+          background-color: $vxe-table-column-header-checked-background-color;
+        }
+      }
+    }
+>>>>>>> 4e2a9715d3bf44382c21658618f6e1857014e6ce
   }
   .vxe-required-icon {
     display: inline-block;
@@ -39,7 +58,12 @@
     }
   }
   .vxe-edit-icon {
+<<<<<<< HEAD
     margin-right: 0.2em;
+=======
+    margin-right: 0.15em;
+    vertical-align: middle;
+>>>>>>> 4e2a9715d3bf44382c21658618f6e1857014e6ce
   }
   .vxe-resizable {
     position: absolute;

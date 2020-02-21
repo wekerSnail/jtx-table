@@ -979,11 +979,16 @@ const Methods = {
     this.isCoverBody = tableWidth >= bodyWidth - 2
     this.parentHeight = this.getParentHeight()
     if (headerElem) {
+<<<<<<< HEAD
       this.headerHeight = headerElem.clientHeight
+=======
+      this.headerHeight = headerElem.clientHeight + 1
+>>>>>>> 4e2a9715d3bf44382c21658618f6e1857014e6ce
       // 检测是否同步滚动
       if (headerElem.scrollLeft !== bodyElem.scrollLeft) {
         headerElem.scrollLeft = bodyElem.scrollLeft
       }
+<<<<<<< HEAD
     } else {
       this.headerHeight = 0
     }
@@ -993,6 +998,15 @@ const Methods = {
       this.footerHeight = footerHeight
     } else {
       this.footerHeight = 0
+=======
+    }
+    if (footerElem) {
+      let footerHeight = footerElem.offsetHeight
+      // this.scrollbarHeight = Math.max(footerHeight - footerElem.clientHeight, 0)
+      this.overflowX = tableWidth > footerElem.clientWidth
+      this.footerHeight = footerHeight
+    } else {
+>>>>>>> 4e2a9715d3bf44382c21658618f6e1857014e6ce
       this.overflowX = tableWidth > bodyWidth
     }
     this.scrollbarHeight = Math.max(tableHeight - bodyElem.clientHeight, 0)
@@ -1135,7 +1149,11 @@ const Methods = {
           if (fixedWrapperElem) {
             let isRightFixed = fixedType === 'right'
             let fixedColumn = columnStore[`${fixedType}List`]
+<<<<<<< HEAD
             wrapperElem.style.top = `${footerHeight + headerHeight}px`
+=======
+            wrapperElem.style.top = `${footerHeight + headerHeight - (showFooter ? 1 : 0)}px`
+>>>>>>> 4e2a9715d3bf44382c21658618f6e1857014e6ce
             fixedWrapperElem.style.height = `${(customHeight > 0 ? customHeight - headerHeight - footerHeight : tableHeight) + headerHeight + footerHeight - scrollbarHeight}px`
             fixedWrapperElem.style.width = `${fixedColumn.reduce((previous, column) => previous + column.renderWidth, isRightFixed ? scrollbarWidth : 0)}px`
           }

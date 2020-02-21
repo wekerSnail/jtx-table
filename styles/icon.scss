@@ -256,9 +256,15 @@
 }
 
 .vxe-icon--edit-outline {
+<<<<<<< HEAD
   height: 0.84em;
   width: 0.84em;
   margin: 0 0.08em 0.16em 0.08em;
+=======
+  height: 0.88em;
+  width: 0.88em;
+  margin: 0 0.06em 0.12em 0.06em;
+>>>>>>> 4e2a9715d3bf44382c21658618f6e1857014e6ce
   border-radius: 0.2em;
   border-width: 0.1em;
   border-style: solid;
@@ -266,14 +272,24 @@
   &:before {
     @extend %PseudoClass;
     top: -0.1em;
+<<<<<<< HEAD
     right: -0.2em;
     width: 0.35em;
     height: 0.35em;
+=======
+    right: -0.1em;
+    width: 0.4em;
+    height: 0.4em;
+>>>>>>> 4e2a9715d3bf44382c21658618f6e1857014e6ce
     background-color: #fff;
   }
   &:after {
     @extend %PseudoClass;
+<<<<<<< HEAD
     left: 0.12em;
+=======
+    left: 0.15em;
+>>>>>>> 4e2a9715d3bf44382c21658618f6e1857014e6ce
     top: 0.12em;
     width: 0.8em;
     height: 0;
@@ -285,7 +301,10 @@
   }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4e2a9715d3bf44382c21658618f6e1857014e6ce
 .vxe-icon--more {
   @extend %DefaultWidthHeight;
   &:before {
