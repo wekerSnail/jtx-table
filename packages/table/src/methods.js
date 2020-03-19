@@ -180,6 +180,49 @@ const Methods = {
     return this.$nextTick()
   },
   /**
+ * 局部加载行数据并恢复到初始状态
+ * 对于行数据需要局部更改的场景中可能会用到,触发联动事件
+ * @param {Row} row 行对象
+ * @param {Object} record 新数据
+ * @param {String} prop 字段名
+ */
+  reloadRowEvent (oRow, row, prop) {
+    let { tableData } = this
+    if (oRow && row) {
+      if (prop) {
+        this.setColToEvent(oRow, row, [prop])
+      } else {
+        const keys = Object.keys(row).filter(key => XEUtils.has(oRow, key))
+        this.setColToEvent(oRow, row, keys)
+      }
+    }
+    this.tableData = tableData.slice(0)
+    return this.$nextTick()
+  },
+  /**
+ * 修改单元格数据并触发编辑组件事件
+ * 对于行数据需要局部更改的场景中可能会用到,触发联动事件
+ * @param {Row} row 行对象
+ * @param {Object} record 新数据
+ * @param {String} prop 字段名
+ */
+  setColToEvent (oRow, row, keys) {
+    const columns = this.visibleColumn.filter(item => {
+      return keys.indexOf(item.property) > -1
+    })
+    columns.forEach(column => {
+      let { editRender, property } = column
+      let value = XEUtils.get(row, column.property)
+      oRow[property] = value
+      if (XEUtils.has(editRender, 'events')) {
+        editRender.events.change && editRender.events.change({ row: oRow, cellValue: value, column })
+        editRender.events.focus && editRender.events.focus({ row: oRow, cellValue: value, column })
+        editRender.events.blur && editRender.events.blur({ row: oRow, cellValue: value, column })
+      }
+    })
+    return oRow
+  },
+  /**
    * 加载列配置
    * 对于表格列需要重载、局部递增场景下可能会用到
    * @param {ColumnConfig} columns 列配置
@@ -356,9 +399,10 @@ const Methods = {
    * 定义行数据中的列属性，如果不存在则定义
    * @param {Row} row 行数据
    */
-  defineField (row) {
+  defineField (row, isEvent = false) {
     let { treeConfig, treeOpts } = this
     let rowkey = UtilTools.getRowkey(this)
+    console.log(this.visibleColumn)
     this.visibleColumn.forEach(({ property, editRender }) => {
       if (property && !XEUtils.has(row, property)) {
         XEUtils.set(row, property, editRender && !XEUtils.isUndefined(editRender.defaultValue) ? editRender.defaultValue : null)
@@ -3107,7 +3151,7 @@ const Methods = {
 }
 
 // Module methods
-const funcs = 'filter,clearFilter,closeMenu,getMouseSelecteds,getMouseCheckeds,clearCopyed,clearChecked,clearHeaderChecked,clearIndexChecked,clearSelected,insert,insertAt,remove,removeSelecteds,revert,revertData,getRecordset,getInsertRecords,getRemoveRecords,getUpdateRecords,clearActived,getActiveRecord,getActiveRow,hasActiveRow,isActiveByRow,setActiveRow,setActiveCell,setSelectCell,clearValidate,fullValidate,validate,exportCsv,openExport,exportData,openImport,importData,readFile,importByFile,print'.split(',')
+const funcs = 'filter,clearFilter,closeMenu,getMouseSelecteds,getMouseCheckeds,clearCopyed,clearChecked,clearHeaderChecked,clearIndexChecked,clearSelected,insert,insertAt,insertAtEvent,remove,removeSelecteds,revert,revertData,getRecordset,getInsertRecords,getRemoveRecords,getUpdateRecords,clearActived,getActiveRecord,getActiveRow,hasActiveRow,isActiveByRow,setActiveRow,setActiveCell,setSelectCell,clearValidate,fullValidate,validate,exportCsv,openExport,exportData,openImport,importData,readFile,importByFile,print'.split(',')
 
 funcs.forEach(name => {
   Methods[name] = function () {

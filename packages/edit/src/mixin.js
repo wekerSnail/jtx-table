@@ -64,6 +64,59 @@ export default {
       })
     },
     /**
+ * 往表格指定行中插入临时数据，联动交互
+ * 如果 row 为空则从插入到顶部
+ * 如果 row 为 -1 则从插入到底部
+ * 如果 row 为有效行则插入到该行的位置
+ * @param {Object/Array} records 新的数据
+ * @param {Row} row 指定行
+ */
+    _insertAtEvent (records, row) {
+      let { afterFullData, editStore, scrollYLoad, tableFullData, treeConfig } = this
+      if (treeConfig) {
+        throw new Error(UtilTools.getLog('vxe.error.noTree', ['insert']))
+      }
+      if (!XEUtils.isArray(records)) {
+        records = [records]
+      }
+      let nowData = afterFullData
+      let newRecords = records.map(record => {
+        const keys = Object.keys(record)
+        let oRow = this.defineField(Object.assign({}, record))
+        return this.setColToEvent(oRow, record, keys)
+      })
+      if (!row) {
+        nowData.unshift.apply(nowData, newRecords)
+        tableFullData.unshift.apply(tableFullData, newRecords)
+      } else {
+        if (row === -1) {
+          nowData.push.apply(nowData, newRecords)
+          tableFullData.push.apply(tableFullData, newRecords)
+        } else {
+          let targetIndex = nowData.indexOf(row)
+          if (targetIndex === -1) {
+            throw new Error(UtilTools.error('vxe.error.unableInsert'))
+          }
+          nowData.splice.apply(nowData, [targetIndex, 0].concat(newRecords))
+          tableFullData.splice.apply(tableFullData, [tableFullData.indexOf(row), 0].concat(newRecords))
+        }
+      }
+      [].unshift.apply(editStore.insertList, newRecords)
+      this.handleTableData()
+      this.updateCache()
+      this.checkSelectionStatus()
+      if (scrollYLoad) {
+        this.updateScrollYSpace()
+      }
+      return this.$nextTick().then(() => {
+        this.recalculate()
+        return {
+          row: newRecords.length ? newRecords[newRecords.length - 1] : null,
+          rows: newRecords
+        }
+      })
+    },
+    /**
      * 删除指定行数据
      * 如果传 row 则删除一行
      * 如果传 rows 则删除多行

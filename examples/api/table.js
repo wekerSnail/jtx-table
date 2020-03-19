@@ -2206,6 +2206,15 @@ const apis = [
         list: []
       },
       {
+        name: 'reloadRowEvent(row, record, prop)',
+        desc: '修改行数据并触发编辑组件事件',
+        version: '2.5.18',
+        type: 'Promise',
+        enum: '',
+        defVal: 'rows: Row, record: object, prop?: string',
+        list: []
+      },
+      {
         name: 'reloadExpandContent(row)',
         desc: '用于懒加载展开行，重新加载展开行的内容',
         version: '2.7',
@@ -2289,6 +2298,15 @@ const apis = [
       {
         name: 'insertAt(records, row)',
         desc: '往表格插入临时数据，从指定位置插入一行或多行；第二个参数：row 指定位置（不支持树表格）、null从第一行插入、-1 从最后插入',
+        version: '',
+        type: 'Promise<{row, rows}>',
+        enum: '',
+        defVal: 'records: Array<object>, row?: Row',
+        list: []
+      },
+      {
+        name: 'insertAtEvent(records, row)',
+        desc: '往表格插入临时数据，从指定位置插入一行或多行；第二个参数：row 指定位置（不支持树表格）、null从第一行插入、-1 从最后插入并触发编辑组件事件',
         version: '',
         type: 'Promise<{row, rows}>',
         enum: '',
