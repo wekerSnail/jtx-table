@@ -10,12 +10,6 @@
   * 强大的功能的同时兼具性能（支持横向、纵向虚拟滚动、灵活的配置项、不污染全局样式及变量）
   * 为单行编辑表格而设计，支持增删改查及更多扩展项
 
-* 计划
-  * [x] v1 100% 实现表格的一切实用的功能
-  * [x] v2 &nbsp;95% 性能优化，同时兼具功能与性能
-  * [ ] v3 &nbsp;&nbsp;0% 实现重构，渲染性能提升，基于 Vue3 并使用 typescript 开发
-
-🐬 如果有更好的建议、优化点或 Bug 都欢迎提 [Issues](https://github.com/xuliangzhan/vxe-table/issues)
 
 ## Browser Support
 
@@ -113,18 +107,10 @@
 依赖库：[vue](https://www.npmjs.com/package/vue) 2.6+, [xe-utils](https://www.npmjs.com/package/xe-utils) 2.2+
 
 ```shell
-npm install xe-utils vxe-table
+npm install xe-utils jtx-table
 ```
 
-Get on [unpkg](https://unpkg.com/vxe-table/) and [cdnjs](https://cdn.jsdelivr.net/npm/vxe-table/)
 
-```HTML
-<!-- 引入样式 -->
-<link rel="stylesheet" href="https://unpkg.com/vxe-table/lib/index.css">
-<!-- 引入脚本 -->
-<script src="https://unpkg.com/xe-utils"></script>
-<script src="https://unpkg.com/vxe-table"></script>
-```
 
 ```javascript
 import Vue from 'vue'

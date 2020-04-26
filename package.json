@@ -88,7 +88,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xuliangzhan/vxe-table.git"
+    "url": "git+https://github.com/wekerSnail/jtx-table.git"
   },
   "keywords": [
     "vxe-table",
@@ -98,14 +98,14 @@
     "vue excel"
   ],
   "author": {
-    "name": "Xu Liangzhan",
-    "email": "xu_liangzhan@163.com"
+    "name": "weker",
+    "email": "weker.m@qq.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xuliangzhan/vxe-table/issues"
+    "url": "https://github.com/wekerSnail/jtx-table/issues"
   },
-  "homepage": "https://github.com/xuliangzhan/vxe-table#readme",
+  "homepage": "https://github.com/wekerSnail/jtx-table/blob/master/README.md",
   "browserslist": [
     "> 1%",
     "last 2 versions"
