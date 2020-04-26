@@ -115,8 +115,8 @@ npm install xe-utils jtx-table
 ```javascript
 import Vue from 'vue'
 import 'xe-utils'
-import VXETable from 'vxe-table'
-import 'vxe-table/lib/index.css'
+import JTXTable from 'jtx-table'
+import 'jtx-table/lib/index.css'
 
 Vue.use(VXETable)
 ```
