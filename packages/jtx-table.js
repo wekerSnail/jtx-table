@@ -1,5 +1,13 @@
+/*
+ * @Author: your name
+ * @Date: 2020-04-26 10:36:17
+ * @LastEditTime : 2020-04-26 11:12:00
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \jtx-table\packages\vxe-table.js
+ */
 import XEUtils from 'xe-utils/methods/xe-utils'
-import VXETable from './v-x-e-table'
+import JTXTable from './v-x-e-table'
 import Table from './table'
 import Column from './column'
 import Header from './header'
@@ -56,13 +64,13 @@ export const components = [
 // 默认安装
 function install (Vue, options) {
   if (XEUtils.isPlainObject(options)) {
-    VXETable.setup(options)
+    JTXTable.setup(options)
   }
   components.map(component => Vue.use(component))
 }
 
 // 默认中文
-VXETable.setup({
+JTXTable.setup({
   i18n: (key, value) => XEUtils.get(zhCNLocat, key)
 })
 
@@ -70,7 +78,7 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-VXETable.install = install
+JTXTable.install = install
 
 export * from './v-x-e-table'
 export * from './column'
@@ -95,4 +103,4 @@ export * from './keyboard'
 export * from './validator'
 export * from './resize'
 export * from './table'
-export default VXETable
+export default JTXTable
