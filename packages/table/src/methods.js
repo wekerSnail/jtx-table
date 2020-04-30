@@ -1600,7 +1600,12 @@ const Methods = {
     let cell = evnt.currentTarget
     let tooltip = this.$refs.tooltip
     let wrapperElem = cell.children[0]
-    let content = cell.innerText
+    let content = null
+    if (this.tooltipOpts.toHtml) {
+      content = cell.firstChild.firstChild ? UtilTools.toHtml(cell.firstChild.firstChild) : cell.innerText
+    } else {
+      content = cell.innerHtml || cell.innerText
+    }
     if (content && wrapperElem.scrollWidth > wrapperElem.clientWidth) {
       Object.assign(this.tooltipStore, {
         row,
@@ -1608,7 +1613,7 @@ const Methods = {
         visible: true
       })
       if (tooltip) {
-        tooltip.toVisible(cell, UtilTools.formatText(content))
+        tooltip.toVisible(cell, this.tooltipOpts.toHtml ? content : UtilTools.formatText(content))
       }
     }
     return this.$nextTick()

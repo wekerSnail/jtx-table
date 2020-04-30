@@ -1080,6 +1080,15 @@ const apis = [
             enum: '',
             defVal: '300',
             list: []
+          },
+          {
+            name: 'toHtml',
+            desc: '渲染成html',
+            version: '2.7',
+            type: 'Boolean',
+            enum: '',
+            defVal: 'false',
+            list: []
           }
         ]
       },

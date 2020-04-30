@@ -237,6 +237,13 @@ export const UtilTools = {
     const type = name.substring(tIndex + 1, name.length)
     const filename = name.substring(0, tIndex)
     return { filename, type }
+  },
+  toHtml (node) {
+    let tmpNode = document.createElement('div')
+    tmpNode.appendChild(node.cloneNode(true))
+    let str = tmpNode.innerHTML
+    tmpNode = node = null // 解除引用，以便于垃圾回收
+    return str
   }
 }
 
