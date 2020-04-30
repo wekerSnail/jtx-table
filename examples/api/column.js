@@ -173,6 +173,15 @@ const apis = [
         list: []
       },
       {
+        name: 'show-tooltip-all',
+        descKey: 'app.api.tableColumn.desc.showTooltipAll',
+        version: '',
+        type: 'Boolean',
+        enum: '任何情况鼠标悬浮都显示提示',
+        defVal: '继承 table 的 show-tooltip-all',
+        list: []
+      },
+      {
         name: 'show-header-overflow',
         descKey: 'app.api.tableColumn.desc.showHeaderOverflow',
         version: '',

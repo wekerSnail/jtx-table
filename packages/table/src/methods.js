@@ -1606,7 +1606,7 @@ const Methods = {
     } else {
       content = cell.innerHtml || cell.innerText
     }
-    if (content && wrapperElem.scrollWidth > wrapperElem.clientWidth) {
+    if ((content && wrapperElem.scrollWidth > wrapperElem.clientWidth) || column.showTooltipAll) {
       Object.assign(this.tooltipStore, {
         row,
         column,
